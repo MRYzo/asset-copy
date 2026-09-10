@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "_H_,SCS,_S_",
+	ingredients: {
+		"H": { type: "item", tags: ["tool-hammer"], isTool: true },
+		"C": { type: "item", tags: ["tool-chisel"], isTool: true },
+		"S": { type: "block", code: "rock-*", name: "rock", allowedVariants: ["andesite", "granite", "basalt", "peridotite"] },
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "stonecoffinsection-{rock}-north", quantity: 1 }
+}

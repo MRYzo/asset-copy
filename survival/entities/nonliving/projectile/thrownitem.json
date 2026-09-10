@@ -1,0 +1,24 @@
+{
+	code: "thrownitem",
+	class: "EntityThrownItem",
+	tags: ["inanimate", "projectile"],
+	attributes: {
+		isProjectile: true,
+		physics: {
+			groundDragFactor: 1,
+			airDragFactor: 0.25
+		}
+	},
+	hitboxSize: { x: 0.125, y: 0.125 },
+	client: {
+		renderer: "Shape",
+		shape: { base: "item/stone" },
+		size: 1,
+		behaviors: [{ code: "passivephysics" }, { code: "interpolateposition" }],
+	},
+	server: {
+		behaviors: [{ code: "passivephysics" }, { code: "despawn", minSeconds: 300 }, { code: "entitystatetags" }],
+	},
+	sounds: {
+	},
+}

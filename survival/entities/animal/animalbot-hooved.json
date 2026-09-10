@@ -1,0 +1,244 @@
+{
+	code: "animalbot",
+	class: "EntityAnimalBot",
+	tags: ["bot"],
+	variantgroups: [
+		{ code: "species", "states": ["deer", "goat"] },
+		{ code: "type", "states": [
+				"whitetail", "redbrocket", "marsh", "caribou", "water", "pudu", "elk", "taruca", "chital", "guemal", "pampas", "fallow",
+				"angora", "ibexalp", "ibexnub", "markhor", "mountain", "muskox", "nubian", "sirohi", "takingold", "turdag", "valais"
+			] 
+		},
+		{ code: "age", "states": ["baby", "adult"] },
+		{ code: "gender", "states": ["male", "female"] }
+	],
+	allowedVariants: [
+		"animalbot-deer-moose-*",
+		"animalbot-deer-whitetail-*",
+		"animalbot-deer-redbrocket-*", 
+		"animalbot-deer-marsh-*", 
+		"animalbot-deer-caribou-*",
+		"animalbot-deer-water-*",
+		"animalbot-deer-pudu-*",
+		"animalbot-deer-elk-*",
+		"animalbot-deer-taruca-*",
+		"animalbot-deer-chital-*",
+		"animalbot-deer-guemal-*",
+		"animalbot-deer-pampas-*",
+		"animalbot-deer-fallow-*",
+
+		"animalbot-goat-angora-*",
+		"animalbot-goat-ibexalp-*",
+		"animalbot-goat-ibexnub-*",
+		"animalbot-goat-markhor-*",
+		"animalbot-goat-mountain-*",
+		"animalbot-goat-muskox-*",
+		"animalbot-goat-nubian-*",
+		"animalbot-goat-sirohi-*",
+		"animalbot-goat-takingold-*",
+		"animalbot-goat-turdag-*",
+		"animalbot-goat-valais-*"			
+	],
+	hitboxSizeByType: {
+		"animalbot-deer-whitetail-adult-*": { "x": 1.1,"y": 1.1},
+		"animalbot-deer-redbrocket-adult-*": { "x": 0.7,"y": 0.8},
+		"animalbot-deer-marsh-adult-*": { "x": 1.1,"y": 1.3},
+		"animalbot-deer-caribou-adult-*": { "x": 1.1,"y": 1.2},
+		"animalbot-deer-pudu-adult-*": { "x": 0.7,"y": 0.7},
+		"animalbot-deer-elk-adult-*": { "x": 1.3,"y": 1.5},
+		"animalbot-deer-taruca-adult-*": { "x": 0.9,"y": 0.9},
+		"animalbot-deer-chital-adult-*": { "x": 1.1,"y": 1.0},
+		"animalbot-deer-guemal-adult-*": { "x": 0.9,"y": 0.9},
+		"animalbot-deer-pampas-adult-*": { "x": 0.6,"y": 0.7},
+		"animalbot-deer-fallow-adult-*": { "x": 1.0,"y": 1.0},
+		"animalbot-deer-redbrocket-*-baby": { "x": 0.6,"y": 0.6},
+		"animalbot-deer-caribou-*-baby": { "x": 0.9,"y": 0.9},
+		"animalbot-deer-pudu-*-baby": { "x": 0.5,"y": 0.4},
+		"animalbot-deer-taruca-*-baby": { "x": 0.6,"y": 0.6},
+		"animalbot-deer-pampas-*-baby": { "x": 0.5,"y": 0.5},		
+		"animalbot-deer-moose-*": { "x": 1.0,"y": 1.0},	
+
+		"animalbot-goat-angora-adult-*": { "x": 0.8,"y": 0.9},
+		"animalbot-goat-ibexalp-adult-*": { "x": 0.9,"y": 0.9},
+		"animalbot-goat-ibexnub-adult-*": { "x": 0.8,"y": 0.7},
+		"animalbot-goat-markhor-adult-*": { "x": 0.9,"y": 0.9},
+		"animalbot-goat-mountain-adult-*": { "x": 0.9,"y": 1.0},
+		"animalbot-goat-muskox-adult-*": { "x": 1.4,"y": 1.4},
+		"animalbot-goat-nubian-adult-*": { "x": 0.8,"y": 0.8},
+		"animalbot-goat-sirohi-adult-*": { "x": 0.9,"y": 0.9},
+		"animalbot-goat-takingold-adult-*": { "x": 1.2,"y": 1.3},
+		"animalbot-goat-turdag-adult-*": { "x": 0.9,"y": 0.9},
+		"animalbot-goat-valais-adult-*": { "x": 0.8,"y": 0.9},
+		"animalbot-goat-*-baby": { "x": 0.5,"y": 0.5}
+	},
+	selectionBoxSizeByType: {
+		"animalbot-deer-*": { x: 0.8, y: 0.8 },
+		"animalbot-goat-*": { x: 0.8, y: 0.8 }
+	},
+	deadSelectionBoxSizeByType: {
+		"animalbot-deer-*": { x: 0.8, y: 0.8 },
+		"animalbot-goat-*": { x: 0.8, y: 0.8 }
+		},
+	eyeHeightByType: {
+		"animalbot-deer-*": 0.8,
+		"animalbot-goat-*": 0.8,
+		"animalbot-moose-*": 0.8
+		},
+	drops: [],
+	client: {
+		renderer: "Shape",
+		shapeByType: {
+			"*-elk-adult-male": { "base": "entity/animal/mammal/hooved/deer/elk/female", overlays: [ { base: "entity/animal/mammal/hooved/deer/elk/malefringe" }] },
+			"*-elk-adult-female": { "base": "entity/animal/mammal/hooved/deer/elk/female" },
+			"*-fallow-adult-*": { "base": "entity/animal/mammal/hooved/deer/chital/adult" },
+
+			"animalbot-deer-redbrocket-baby-*": { "base": "entity/animal/mammal/hooved/deer/taruca/baby" },
+			"animalbot-deer-marsh-baby-*": { "base": "entity/animal/mammal/hooved/deer/whitetail/baby" },
+			"animalbot-deer-water-baby-*": { "base": "entity/animal/mammal/hooved/deer/taruca/baby" },
+			"animalbot-deer-chital-baby-*": { "base": "entity/animal/mammal/hooved/deer/whitetail/baby" },
+			"animalbot-deer-guemal-baby-*": { "base": "entity/animal/mammal/hooved/deer/taruca/baby" },
+			"animalbot-deer-pampas-baby-*": { "base": "entity/animal/mammal/hooved/deer/taruca/baby" },
+			"animalbot-deer-fallow-baby-*": { "base": "entity/animal/mammal/hooved/deer/whitetail/baby" },
+
+			"animalbot-goat-turdag-adult-*": { base: "entity/animal/mammal/hooved/goat/ibexalp/adult" },
+
+			"animalbot-goat-nubian-baby-*": { base: "entity/animal/mammal/hooved/goat/baby2" },
+			"animalbot-goat-sirohi-baby-*": { base: "entity/animal/mammal/hooved/goat/baby2" },
+			"animalbot-goat-*-baby-male": { base: "entity/animal/mammal/hooved/goat/baby1" },
+			"animalbot-goat-*-baby-female": { base: "entity/animal/mammal/hooved/goat/baby1" },
+
+			"*": { "base": "entity/animal/mammal/hooved/{species}/{type}/{age}" }
+		},
+		textureByType: {
+			"animalbot-deer-marsh-baby-*": { base: "entity/animal/mammal/hooved/deer/whitetail-baby" },
+			"animalbot-deer-fallow-baby-*": { base: "entity/animal/mammal/hooved/deer/whitetail-baby" },
+			"animalbot-deer-chital-baby-*": { base: "entity/animal/mammal/hooved/deer/whitetail-baby" },
+			"animalbot-goat-angora-baby-*": { base: "entity/animal/mammal/hooved/goat/mountain-baby" },
+			"*": { base: "entity/animal/mammal/hooved/{species}/{type}-{age}"}
+		},
+		texturesByType: {
+			"*-angora-*-adult": { "hide": { "base": "entity/animal/mammal/hooved/goat/angora-adult" }, "hair1": { "base": "entity/animal/mammal/hooved/goat/angora-adult" }, "hair2": { "base": "block/transparent" }, "hair3": { "base": "block/transparent" }},
+			"*-mountain-*-adult": { "hide": { "base": "entity/animal/mammal/hooved/goat/mountain-adult" }, "wintercoat": { "base": "entity/animal/mammal/hooved/goat/mountain-wintercoat" }}
+		},
+		behaviors: [
+			{ code: "controlledphysics", stepHeight: 1.1251 }, 
+			{ code: "interpolateposition" },
+			{ code: "floatupwhenstuck", onlyWhenDead: true }
+		],
+		animations: [
+			{
+				code: "hurt",
+				animation: "hurt", 
+				animationSpeed: 2.2,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "die",
+				animation: "death", 
+				animationSpeed: 1.25,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "eat",
+				animation: "eat", 
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "walk",
+				animation: "walk", 
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "cry",
+				animation: "cry", 
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "shamble",
+				animation: "shamble", 
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "lowshamble",
+				animation: "lowshamble", 
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "sleep",
+				animation: "sleep", 
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "sit",
+				animation: "sit", 
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "listen",
+				animation: "listen", 
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "hide",
+				animation: "hide", 
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "idletwitch",
+				animation: "idletwitch", 
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "drill",
+				animation: "drill", 
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{ 
+				code: "idle", 
+				animation: "idle",
+				blendMode: "AddAverage",
+				easeOutSpeed: 4,
+				triggeredBy: { defaultAnim: true }
+			}
+		]
+	},
+	server: {
+		behaviors: [
+			{ code: "controlledphysics", stepHeight: 1.1251 },
+			{ code: "health", currenthealth: 100, maxhealth: 100 },
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
+			{ code: "breathe" }
+		]
+	},
+	soundsByType: {
+		"animalbot-deer-*": {
+			hurt: "creature/hooved/medium/buck-bellow*",
+			death: "creature/hooved/medium/buck-bellow*"
+		}
+	},
+	idleSoundChance: 0
+}

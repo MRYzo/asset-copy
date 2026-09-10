@@ -1,0 +1,14 @@
+{
+	ingredientPattern: "N,W,N",
+	ingredients: {
+		"W": { type: "block", code: "supportbeam-{wood}", quantity: 4 },
+		"N": { type: "item", code: "metalnailsandstrips-{metal}" }
+	},
+	allowedVariants: {
+		metal: ["copper", "blackbronze", "tinbronze", "bismuthbronze", "iron", "silver", "gold", "meteoriciron", "steel", "electrum" ],
+		wood: ["oak", "maple", "kapok", "redwood", "ebony", "walnut", "purpleheart"]
+	},
+	width: 1,
+	height: 3,
+	output: { type: "item", code: "linkage-heavy-oak" }
+}

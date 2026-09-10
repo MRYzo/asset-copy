@@ -1,0 +1,103 @@
+{
+	code: "scrambledeggs",
+	perishableProps: {
+		freshHours: { avg: 96 },
+		transitionHours: { avg: 36 },
+		transitionRatio: 1,
+		transitionedStack: { type: "item", code: "rot" }
+	},
+	shape: { base: "block/food/meal/scrambledeggs" },
+	ingredients: [
+		{
+			code: "egg-base", 
+			validStacks: [
+				{ type: "item", code: "egg-chicken-raw",  shapeElement: "bowl/egg1/*", textureMapping: ["scrambledegg", "group7"] },
+			],
+			minQuantity: 2,
+			maxQuantity: 2,
+			typeName: "egg"
+		},
+		{
+			code: "egg-extra", 
+			validStacks: [
+				{ type: "item", code: "egg-chicken-raw",  shapeElement: "bowl/egg2/*", textureMapping: ["scrambledegg", "group7"] },
+			],
+			minQuantity: 0,
+			maxQuantity: 1,
+			typeName: "egg"
+		},
+		{
+			code: "egg-extra2", 
+			validStacks: [
+				{ type: "item", code: "egg-chicken-raw",  shapeElement: "bowl/egg3/*", textureMapping: ["scrambledegg", "group7"] },
+			],
+			minQuantity: 0,
+			maxQuantity: 1,
+			typeName: "egg"
+		},
+		{
+			code: "cheese-exra", 
+			validStacks: [
+				{ type: "item", code: "cheese-cheddar-1slice",  shapeElement: "bowl/cheese2/*" },
+				{ type: "item", code: "cheese-blue-1slice",  shapeElement: "bowl/cheese2/*" },
+			],
+			minQuantity: 0,
+			maxQuantity: 1,
+			typeName: "cheese"
+		},
+		{
+			code: "cheese-exra2", 
+			validStacks: [
+				{ type: "item", code: "cheese-cheddar-1slice",  shapeElement: "bowl/cheese3/*" },
+				{ type: "item", code: "cheese-blue-1slice",  shapeElement: "bowl/cheese3/*" },
+			],
+			minQuantity: 0,
+			maxQuantity: 1,
+			typeName: "cheese"
+		},
+		{
+			code: "vegetable-extra", 
+			validStacks: [ 
+				{ type: "item", code: "vegetable-cabbage",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "vegetable-carrot",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "vegetable-onion",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "vegetable-parsnip",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "vegetable-turnip",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "vegetable-pumpkin",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "vegetable-cassava",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "vegetable-bellpepper",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "mushroom-*",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "legume-soybean",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "pickledvegetable-*",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "pickledlegume-soybean",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "vegetable-olive",  shapeElement: "bowl/vegetable2/*" },
+				{ type: "item", code: "vegetable-fennel",  shapeElement: "bowl/vegetable2/*" },
+			],
+			minQuantity: 0,
+			maxQuantity: 1,
+			typeName: "vegetable"
+		},		
+		{
+			code: "vegetable-extra2", 
+			validStacks: [ 
+				{ type: "item", code: "vegetable-cabbage",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "vegetable-carrot",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "vegetable-onion",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "vegetable-parsnip",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "vegetable-turnip",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "vegetable-pumpkin",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "vegetable-cassava",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "vegetable-bellpepper",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "mushroom-*",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "legume-soybean",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "pickledvegetable-*",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "pickledlegume-soybean",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "vegetable-olive",  shapeElement: "bowl/vegetable3/*" },
+				{ type: "item", code: "vegetable-fennel",  shapeElement: "bowl/vegetable3/*" },
+			],
+			minQuantity: 0,
+			maxQuantity: 1,
+			typeName: "vegetable"
+		}
+	]
+}

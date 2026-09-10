@@ -1,0 +1,68 @@
+{
+	code: "boss",
+	behaviors: [
+		{ name: "GroundStorable", properties: { layout: 'Quadrants', collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.125, z2: 1 } } }
+	],
+	variantgroups: [
+		{ code: "metal", states: ["tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel"] },
+	],
+	shape: { base: "item/boss" },
+	textures: {
+		"wood-generic": { base: "block/metal/ingot/{metal}" },
+	},
+	attributes: {
+		rackable: true,
+		toolrackTransform: {
+			translation: { x: 0.2, y: 0.3, z: 0 },
+			rotation: { x: 8, y: 45, z: -12 },
+			scale: 1.03
+		},
+		groundStorageTransform: {
+			translation: { x: 0.05, y: -0.88, z: -0.05 },
+			rotation: { x: 180, y: 0, z: 0 }
+		},
+		onTongTransform: {
+			translation: { x: -0.88, y: -0.68, z: -0.14 },
+			rotation: { x: 10, y: -86, z: 87 }
+		},
+		handbook: {
+			groupBy: ["boss-*"]
+		},
+		tongOpening: "medium",
+		onMetalTongTransform: {
+			translation: { x: -1.17, y: -0.22, z: -0.64 },
+			rotation: { x: 2, y: 1, z: -11 },
+			origin: { x: 0.5, y: 0, z: 0.5 }
+		},
+        displayable: {
+            shelf: {
+				behavior: "Stacking",
+				category: "boss",
+                size: { width: 7, height: 1, length: 7 },
+				transform: {
+					translation: { x: 0.0625, y: 0, z: 0.0625 }
+				}
+            }
+        }
+	},
+	maxstacksize: 8,
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 81, y: 135, z: -126 },
+		origin: { x: 0.4899, y: 0.13, z: 0.41 },
+		scale: 2.49
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0.08, z: 0 },
+		rotation: { x: 0, y: 0, z: 180 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.78
+	},
+	tpHandTransform: {
+		translation: { x: -0.8299, y: -0.15, z: -0.82 },
+		rotation: { x: 85, y: 0, z: 2 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.68
+	}
+}

@@ -1,0 +1,60 @@
+{
+	code: "snowshovel",
+	damagedby: ["blockbreaking"],
+	class: "ItemSnowShovel",
+	variantgroups: [
+		{ code: "material", states: ["oak"] },
+	],
+	attributes: {
+		heldItemPitchFollow: 0.5,
+		handbook: {
+			groupBy: ["snowshovel-*"]
+		},
+		toolrackTransform: {
+			translation: { x: -0.5, y: 0.5, z: 0 },
+			rotation: { x: 0, y: 0, z: -1 }
+		},
+		groundStorageTransform: {
+			translation: { x: -1.3, y: 0.01, z: -0.19 },
+			rotation: { x: 37, y: 90, z: -103 },
+			origin: { x: 1.7, y: -0, z: 0.5 },
+			scale: 0.85
+		},
+		rememberToolModeWhenBroken: true,
+		rackable: true
+	},
+	behaviors: [{ 
+		name: "GroundStorable",
+		properties: {
+			layout: 'WallHalves',
+			wallOffY: 2,
+			ctrlKey: true,
+			selectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 0, y2: 0, z2: 0 },
+		}
+	}],
+	shape: { base: "item/tool/snowshovel" },
+	heldTpIdleAnimation: "shovelidle",
+	heldRightReadyAnimation: "shovelready",
+	heldTpHitAnimation: "shoveldig",
+	heldTpUseAnimation: "snowshovel",
+	durability: 1000,
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	guiTransform: {
+		rotation: { x: -39, y: 124, z: -9 },
+		origin: { x: 1.3, y: 0.5, z: 0.7 },
+		scale: 0.91
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 4
+	},
+	tpHandTransform: {
+		translation: { x: -1.34, y: -0.13, z: -0.62 },
+		rotation: { x: 0, y: 0, z: -10 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.8
+	}
+}

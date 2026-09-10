@@ -1,0 +1,36 @@
+[
+    {
+		ingredientPattern: "CT,C_",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-plain", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 },
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-waist-peasantapron" }
+	},
+    {
+		ingredientPattern: "BBB,_S_",
+		requiresTrait: "clothier",
+		ingredients: {
+			"B": { type: "item", code: "cloth-blue", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-waist-reindeer-herder-waistband"  }
+	},
+    {
+		ingredientPattern: "GGG,SRR,_G_",
+		requiresTrait: "clothier",
+		ingredients: {
+			"R": { type: "item", code: "cloth-red", quantity: 2 },
+			"S": { type: "item", code: "sewingkit" },
+			"G": { type: "item", code: "nugget-nativegold", quantity: 4 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-waist-fortune-teller-hip-scarf"  }
+	},
+]

@@ -1,0 +1,269 @@
+[
+	{
+		ingredientPattern: "G_G",
+		ingredients: {
+			"G": { type: "item", code: "drygrass", quantity: 2 },
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "clothes-foot-strawsandals"  }
+	},
+    {
+		ingredientPattern: "HKH,HCH",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-red", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-arctichunter"  }
+	},
+	{
+		ingredientPattern: "_K_,HCH",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-red", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-arctichunter"  }
+	},	
+	{
+		ingredientPattern: "K,H,C",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-red", quantity: 1 }
+		},
+		width: 1,
+		height: 3,
+		output: { type: "item", code: "clothes-foot-arctichunter"  }
+	},
+    {
+		ingredientPattern: "HKH,HCH,SVS",
+		recipeGroup: 1,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-blue", quantity: 1 },
+            "S": { type: "item", code: "stick", quantity: 1 },
+            "V": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-foot-arcticfisher"  }
+	},
+	{
+		ingredientPattern: "_K_,HCH,SVS",
+		recipeGroup: 2,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-blue", quantity: 1 },
+            "S": { type: "item", code: "stick", quantity: 1 },
+            "V": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-foot-arcticfisher"  }
+	},	
+	{
+		ingredientPattern: "_K_,_HC,SVS",
+		recipeGroup: 3,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-blue", quantity: 1 },
+            "S": { type: "item", code: "stick", quantity: 1 },
+            "V": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-foot-arcticfisher"  }
+	},
+    {
+		ingredientPattern: "HKH,HCH,_V_",
+		recipeGroup: 1,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-brown", quantity: 1 },
+            "V": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-foot-embroideredfur"  }
+	},
+	{
+		ingredientPattern: "_K_,HCH,_V_",
+		recipeGroup: 2,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-brown", quantity: 1 },
+            "V": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-foot-embroideredfur"  }
+	},	
+	{
+		ingredientPattern: "_K_,_HC,_V_",
+		recipeGroup: 3,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-brown", quantity: 1 },
+            "V": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-foot-embroideredfur"  }
+	},
+    {
+		ingredientPattern: "BKB",
+		ingredients: {
+			"K": { type: "item", tags: ["tool-knife"], isTool: true },
+			"B": { type: "item", code: "cloth-brown", quantity: 1 }
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "clothes-foot-peasent-slippers"  }
+	},
+    {
+		ingredientPattern: "G_G,G_G",
+		ingredients: {
+			"G": { type: "item", code: "cloth-green", quantity: 2 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-minstrel-boots"  }
+	},
+	{
+		ingredientPattern: "B_B,GSG",
+		requiresTrait: "clothier",
+		ingredients: {
+			"G": { type: "item", code: "cloth-green", quantity: 1 },
+			"B": { type: "item", code: "cloth-black", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-nomad-boots"  }
+	},
+    {
+		ingredientPattern: "HKH,H_H",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-knee-high-fur-boots"  }
+	},
+	{
+		ingredientPattern: "_K_,H_H",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-knee-high-fur-boots"  }
+	},	
+	{
+		ingredientPattern: "K,H",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-knee-high-fur-boots"  }
+	},	
+	{
+		ingredientPattern: "K,H",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-knee-high-fur-boots"  }
+	},
+    {
+		ingredientPattern: "L_L,LTL",
+		recipeGroup: 1,
+		ingredients: {
+			"L": { type: "item", code: "leather-normal-plain", quantity: 2 },
+			"T": { type: "item", code: "flaxtwine" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-worn-leather-boots"  }
+	},
+	{
+		ingredientPattern: "LTL,LTL",
+		recipeGroup: 1,
+		ingredients: {
+			"L": { type: "item", code: "leather-normal-plain", quantity: 3 },
+			"T": { type: "item", code: "flaxtwine" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-high-leather-boots"  }
+	},
+    {
+		ingredientPattern: "LTL,L_L",
+		ingredients: {
+			"L": { type: "item", code: "leather-normal-black", quantity: 2 },
+			"T": { type: "item", code: "flaxtwine" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-tigh-high-boots"  }
+	},
+    {
+		ingredientPattern: "PHP,CSC",
+		requiresTrait: "clothier",
+		recipeGroup: 1,
+		ingredients: {
+			"P": { type: "item", code: "cloth-pink", quantity: 2 },
+			"C": { type: "item", code: "cloth-plain", quantity: 2 },
+			"H": { type: "item", code: "hide-pelt-*", quantity: 2, tags: ["size-small"] },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-fur-lined-reindeer-herder-shoes"  }
+	},
+	{
+		ingredientPattern: "PHP,CSC",
+		requiresTrait: "clothier",
+		recipeGroup: 2,
+		ingredients: {
+			"P": { type: "item", code: "cloth-pink", quantity: 2 },
+			"C": { type: "item", code: "cloth-plain", quantity: 2 },
+			"H": { type: "item", code: "hide-pelt-*", allowedVariants: ["medium", "large", "huge"] },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-foot-fur-lined-reindeer-herder-shoes"  }
+	}
+]

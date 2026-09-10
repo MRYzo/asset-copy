@@ -1,0 +1,16 @@
+[
+	{
+		ingredientPattern: "GKR,FXF,FXF",
+		ingredients: {
+			"K": { type: "item", tags: ["tool-knife"], isTool: true },
+			"F": { type: "item", code: "firewood", quantity: 2 },
+			"X": { type: "item", code: "firewood", quantity: 3 },
+			"G": { type: "item", code: "drygrass", quantity: 9 },
+			"R": { type: "item", code: "rope", quantity: 3 }
+		},
+		width: 3,
+		height: 3,
+		name: "improvised wood armor",
+		output: { type: "item", code: "armor-body-improvised-wood"  }
+	}
+]

@@ -1,0 +1,18 @@
+{
+	ingredient: { type: "item", code: "ingot-*", name: "metal", allowedVariants: ["meteoriciron"] },
+	pattern: [
+		[
+			"__######_###",
+			"###_#_######",
+			"__######_###"
+		],
+		[
+			"_________###",
+			"_________###",
+			"_________###"
+		]
+	],
+	name: "Spear",
+	code: "spearhead-{metal}",
+	output: { type: "item", code: "spearhead-{metal}"  }
+}

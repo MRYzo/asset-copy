@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "SK",
+	ingredients: {
+		"K": { type: "item", tags: ["tool-knife"], isTool: true  },
+		"S": { type: "item", code: "stick" }
+	},
+	width: 2,
+	height: 1,
+	output: { type: "item", code: "wormgrunter", quantity: 1  }
+}

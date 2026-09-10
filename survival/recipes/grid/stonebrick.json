@@ -1,0 +1,24 @@
+[
+	{
+		ingredientPattern: "H,C,S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true },
+			"C": { type: "item", tags: ["tool-chisel"], isTool: true },
+			"S": { type: "block", code: "polishedrockslab-*-down-free", name: "rock", allowedVariants: ["andesite", "basalt", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "peridotite", "phyllite", "sandstone", "shale", "slate", "bauxite", "suevite"] },
+		},
+		width: 1,
+		height: 3,
+		output: { type: "item", code: "stonebrick-{rock}", quantity: 4 }
+	},
+	{
+		ingredientPattern: "H,C,S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true },
+			"C": { type: "item", tags: ["tool-chisel"], isTool: true },
+			"S": { type: "block", code: "rock-travertine" },
+		},
+		width: 1,
+		height: 3,
+		output: { type: "item", code: "stonebrick-travertine", quantity: 4 }
+	}
+]

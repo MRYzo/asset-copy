@@ -1,0 +1,192 @@
+{
+	components: [
+		{
+			code: "testhasmet",
+			owner: "kat",
+			type: "condition",
+			variable: "player.hasmetkat",
+			isNotValue: "true",
+			thenJumpTo: "firstmeet",
+			elseJumpTo: "welcomeback"
+		},
+		{
+			code: "firstmeet",
+			owner: "kat",
+			type: "talk",
+			setVariables: { "player.hasmetkat": "true" },
+			text: [
+				{ value: "dialogue-kat-wellmet", conditions: [{ variable: "player.characterclass", isNotValue: "blackguard" }, { variable: "player.characterclass", isNotValue: "malefactor" }] },
+				{ value: "dialogue-kat-traveler" , condition: { variable: "player.characterclass", isValue: "blackguard" } },
+				{ value: "dialogue-kat-friendlyadvice" , condition: { variable: "player.characterclass", isValue: "malefactor" } }
+			],
+		},
+		{
+			code: "whyhere",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-kat-justpassingthrough", jumpTo: "passing" },
+				{ value: "dialogue-kat-lookingtostay", jumpTo: "staying" }
+			],
+		},
+		{
+			code: "main",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-name", jumpTo: "name" },
+				{ value: "dialogue-profession", jumpTo: "profession" },
+				{ value: "dialogue-location", jumpTo: "location" },
+				{ value: "dialogue-kat-ineedsupplies", jumpTo: "selling" },
+				{ value: "dialogue-kat-somethingforyou", jumpTo: "beataquestdelivery", conditions: [{ variable: "player.beataqueststarted", isValue: "true" }, { variable: "player.beataquestcompleted", isNotValue: "true" }, { variable: "player.inventory", isValue: "{type: 'item', code: 'bread-rye-perfect', stacksize: 1}" }] },
+				{ value: "dialogue-kat-letter", jumpTo: "letter", condition: { variable: "player.inventory", isValue: "{type: 'item', code: 'letter-faded', stacksize: 1}" } }
+			],
+		},
+		{
+			code: "welcomeback",
+			owner: "kat",
+			type: "talk",
+			text: [
+				{ value: "dialogue-kat-ourvillage" }
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "passing",
+			owner: "kat",
+			type: "talk",
+			text: [
+				{ value: "dialogue-kat-fineenough"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "staying",
+			owner: "kat",
+			type: "talk",
+			text: [
+				{ value: "dialogue-kat-findaroom"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "name",
+			owner: "kat",
+			type: "talk",
+			trigger: "revealname",
+			text: [
+				{ value: "dialogue-kat-kat"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "profession",
+			owner: "kat",
+			type: "talk",
+			setVariables: { "player.gaveprofessionkat": "true" },
+			text: [
+				{ value: "dialogue-kat-guard"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "location",
+			owner: "kat",
+			type: "talk",
+			text: [
+				{ value: "dialogue-kat-peaceful"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "letter",
+			owner: "kat",
+			type: "talk",
+			text: [
+				{ value: "dialogue-kat-meansnothingtome"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "selling",
+			owner: "kat",
+			type: "talk",
+			text: [
+				{ value: "dialogue-kat-agnieszka"	}
+			],
+		},
+		{
+			code: "mostpeople",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-kat-advice", jumpTo: "main"	},
+			],
+		},
+        {
+			code: "beataquestdelivery",
+			owner: "kat",
+			type: "talk",
+            setVariables: { "player.beataquestcompleted": "true" },
+            trigger: "takefrominventory",
+			triggerdata: {type: 'item', code: 'bread-rye-perfect', quantity: 1 },
+			text: [
+				{ value: "(Kat breathes in the aroma) Ahh, fresh from the oven." 	},
+			],
+            jumpTo: "beataquestcontinue"
+        },
+        {
+			code: "beataquestcontinue",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-continue", jumpTo: "beataquestdelivery2"	},
+			],
+		},
+        {
+			code: "beataquestdelivery2",
+			owner: "kat",
+			type: "talk",
+			text: [
+				{ value: "dialogue-kat-pairwithcheese" 	},
+			],
+            jumpTo: "beataquestcontinue2"
+        },
+        {
+			code: "beataquestcontinue2",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-continue", jumpTo: "beataquestdelivery3"	},
+			],
+		},
+        {
+			code: "beataquestdelivery3",
+			owner: "kat",
+			type: "talk",
+			text: [
+				{ value: "dialogue-kat-raresmile" 	},
+			],
+            jumpTo: "beataquestcontinue3"
+        },
+        {
+			code: "beataquestcontinue3",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-continue", jumpTo: "beataquestdelivery4"	},
+			],
+		},
+        {
+			code: "beataquestdelivery4",
+			owner: "kat",
+			type: "talk",
+            trigger: "giveitemstack",
+			triggerdata: { type: "item", code: "bandage-clean", stacksize: 6 },
+			text: [
+				{ value: "dialogue-kat-mythanks" 	},
+			],
+            jumpTo: "main"
+        },
+	]
+}

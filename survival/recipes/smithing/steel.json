@@ -1,0 +1,15 @@
+{
+	ingredient: { type: "item", code: "ingot-*", name: "metal", allowedVariants: ["blistersteel"] },
+	name: "blistersteel",
+	pattern: [[
+		"#######",
+		"#######",
+		"#######",
+	],[
+		"#######",
+		"#######",
+		"#######",
+	]],
+	code: "steelingot-{metal}",
+	output: { type: "item", code: "ingot-steel"  }
+}

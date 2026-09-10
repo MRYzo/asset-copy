@@ -1,0 +1,189 @@
+[
+	{
+		// All these recipes are just matching templates. The actual quantity is determined in code in ItemNugget.OnCreatedByCrafting. The quantity is read from the ore attributes from the ore json file
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "ore-poor-{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+        skipVariants: {
+            ore: [ "galena_nativesilver", "quartz_nativesilver", "quartz_nativegold" ]
+        },
+        output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "ore-medium-{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+        skipVariants: {
+            ore: [ "galena_nativesilver", "quartz_nativesilver", "quartz_nativegold" ]
+        },
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "ore-rich-{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+        skipVariants: {
+            ore: [ "galena_nativesilver", "quartz_nativesilver", "quartz_nativegold" ]
+        },
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "ore-bountiful-{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+        skipVariants: {
+            ore: [ "galena_nativesilver", "quartz_nativesilver", "quartz_nativegold" ]
+        },
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "ore-poor-*_{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "ore-medium-*_{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "ore-rich-*_{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "ore-bountiful-*_{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+
+
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "crystalizedore-poor-{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+        skipVariants: {
+            ore: [ "galena_nativesilver", "quartz_nativesilver", "quartz_nativegold" ]
+        },
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "crystalizedore-medium-{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+        skipVariants: {
+            ore: [ "galena_nativesilver", "quartz_nativesilver", "quartz_nativegold" ]
+        },
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "crystalizedore-rich-{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+        skipVariants: {
+            ore: [ "galena_nativesilver", "quartz_nativesilver", "quartz_nativegold" ]
+        },
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "crystalizedore-bountiful-{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+        skipVariants: {
+            ore: [ "galena_nativesilver", "quartz_nativesilver", "quartz_nativegold" ]
+        },
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "crystalizedore-poor-*_{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "crystalizedore-medium-*_{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "crystalizedore-rich-*_{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	},
+	{
+		ingredientPattern: "H	S",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true  },
+			"S": { type: "item", code: "crystalizedore-bountiful-*_{ore}-*" }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "nugget-{ore}", quantity: 1  }
+	}
+]

@@ -1,0 +1,79 @@
+{
+	code: "earthworm",
+	class: "EntityAgent",
+	tags: ["animal", "huntable", "habitat-land"],
+	weight: 0.1,
+	collisionBoxSize: { x: 0.2, y: 0.1 },
+	selectionBoxSize: { x: 0.3, y: 0.15 },
+	deadHitboxSize: { x: 0.2, y: 0.1 },
+	eyeHeight: 0.1,
+	drops: [],
+	attributes: {
+		spawnAnimation: "dig-out"
+	},
+	client: {
+		renderer: "Shape",
+		shape: { base: "entity/animal/invertebrate/earthworm" },
+		behaviors: [
+			{ code: "repulseagents" }, 
+			{ code: "controlledphysics", stepHeight: 1.1251 }, 
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
+			{ code: "interpolateposition" },
+			{ code: "rightclickpickup" },
+		],
+		animations: [
+			{
+				code: "die",
+				animation: "die", 
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "Average",
+				triggeredBy: { onControls: ["dead"] }
+			},
+			{ 
+				code: "idle", 
+				animation: "idle",
+				blendMode: "AddAverage",
+				easeOutSpeed: 4,
+				triggeredBy: { defaultAnim: true },
+			},
+			{ 
+				code: "walk", 
+				animation: "walk",
+				blendMode: "Average",
+			},
+			{ 
+				code: "dig-out", 
+				animation: "dig-out",
+				blendMode: "Average",
+				weight: 20,
+			}			
+		]
+	},
+	server: {
+		behaviors: [
+			{ code: "repulseagents" }, 
+			{ code: "controlledphysics", stepHeight: 1.1251 },
+			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 32, minSeconds: 150 },
+			{ code: "health", currenthealth: 1, maxhealth: 1 },
+			{ code: "rightclickpickup", collectedStack: { type: "item", code: "creature-earthworm" } },
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
+			{ code: "breathe" },
+			{ 
+				code: "taskai",
+				aitasks: [
+					{
+						code: "wander", 
+						priority: 1.0, 
+						priorityForCancel: 1.35,
+						movespeed: 0.0006,
+						animationSpeed: 0.8,
+						animation: "walk",
+						preferredLightLevel: 12
+					}
+				]
+			},
+			{ code: "entitystatetags" }
+		]
+	}
+}

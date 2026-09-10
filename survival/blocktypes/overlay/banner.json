@@ -1,0 +1,38 @@
+{
+	code: "overlay",
+	behaviors: [ {name: "Decor", properties: {sides: ["north", "east", "south", "west", "up", "down"], notFullFace:true, canAttachToAnything:true, thickness: 0.0 }} ],
+	attributes: {
+		handbook: {
+			exclude: true
+		},
+		ignoreSounds: true
+	},
+	variantgroups: [
+		{ code: "type", states: ["banner"] },
+		{ code: "format", states: ["trim"] },
+		{ code: "variant", states: ["1", "2", "3", "4", "5", "6", "7", "8"] }
+	],
+	renderPass: "Decor",
+	drawtype: "surfacelayer",
+	doNotRenderAtLod2: true,
+	shapeInventory: {
+		base: "block/basic/layers/0voxel-up", rotateX: 90
+	},
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	blockmaterial: "Stone",
+	creativeinventory: { "general": ["*"], "clutter": ["*"] },
+	replaceable: 5500,
+	resistance: 0,
+	lightAbsorption: 0,
+	textures: { all: {  base: "block/overlay/banner/{format}{variant}" } },
+	vertexflags: { zOffset: 1 },
+	materialDensity: 400,
+	drops: [],
+	guiTransform: {
+		rotate: false,
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.3, z: 0 },
+		scale: 2.35
+	}
+}

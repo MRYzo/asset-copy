@@ -1,0 +1,52 @@
+{
+	code: "fishinghook",
+	class: "ItemFishingPole",
+	heldRightReadyAnimation: null,
+	enabled: false,
+	heldTpUseAnimation: null,
+	damagedby: ["blockbreaking"],
+	behaviors: [
+		{ name: "GroundStorable", properties: { layout: 'Quadrants', collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.125, z2: 1 } } },
+	],
+	variantgroups: [
+		{ code: "size", states: ["small"]},
+		{ code: "material", states: ["bone", "copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel" ] },
+	],
+	shapeByType: {
+		"*-bone": { base: "item/tool/fishing/hook-bone" },
+		"*": { base: "item/tool/fishing/hook-metal" }
+	},
+	texturesByType: {
+		"*-bone": {},
+		"*": {
+			"metal": { base: "block/metal/ingot/{material}" }
+		}
+	},
+	attributes: {
+		groundStorageTransform: {
+			rotation: { x: 0, y: -29, z: 0 },
+			origin: { x: 0.5, y: 0, z: 0.5 }
+		},
+		handbook: {
+			groupBy: ["fishinghook-*"]
+		}
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	guiTransform: {
+		rotation: { x: -52, y: 1, z: 4 },
+		origin: { x: 0.53, y: 0.1, z: 0.5 },
+		scale: 6
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 5
+	},
+	tpHandTransform: {
+		translation: { x: -0.78, y: -0.15, z: -0.6 },
+		rotation: { x: 90, y: -37, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.85
+	}
+}

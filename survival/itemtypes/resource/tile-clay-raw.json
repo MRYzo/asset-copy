@@ -1,0 +1,127 @@
+{
+	code: "claytile",
+	maxstacksize: 64,
+	behaviors: [{
+		name: "GroundStorable",
+		properties: {
+			layout: 'Stacking',
+			placeRemoveSound: 'sounds/block/ceramicplace',
+			stackingModel: 'item/claytile-pile',
+			modelItemsToStackSizeRatio: 1,
+			upSolid: true,
+			stackingCapacity: 64,
+			transferQuantity: 1,
+			bulkTransferQuantity: 16,
+			maxFireable: 32,
+			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0156, z2: 1 },
+			cbScaleYByLayer: 1
+		}
+	}],
+	variantgroups: [
+		{ code: "state", states: [ "raw" ] },
+		{ code: "pattern", states: [ "plain" ] },
+		{ code: "color", states: ["blue", "fire", "red"] },
+	],
+	shape: { base: "item/claytile" },
+	textures: {
+		"material": { base: "block/clay/{color}clay" },
+		"sides": { base: "block/clay/{color}clay" },
+	},
+	attributes: {
+		displaycaseable: true,
+		shelvable: true,
+        displayable: {
+            shelf: {
+                size: { width: 8, height: 1, length: 8 }
+            }
+        },
+		onTongTransform: {
+			translation: { x: -1.4, y: -0.32, z: -0.7 },
+			rotation: { x: 91, y: 9, z: 4 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.8
+		},
+		handbook: {
+			groupBy: ["claytile-{state}-*"]
+		},
+		onMetalTongTransform: {
+			translation: { x: -1.13, y: -0.18, z: -0.5 },
+			rotation: { x: 0, y: 2, z: -11 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 1.04
+		}
+	},
+	attributesByType:{
+		"*-red":{
+			beehivekiln:{
+				"0": { "type": "item", "code": "claytile-fired-plain-tan" },
+				"1": { "type": "item", "code": "claytile-fired-plain-orange" },
+				"2": { "type": "item", "code": "claytile-fired-plain-red" },
+				"3": { "type": "item", "code": "claytile-fired-plain-brown" }
+			}
+		},
+		"*-blue":{
+			beehivekiln:{
+				"0": { "type": "item", "code": "claytile-fired-plain-cream"},
+				"1": { "type": "item", "code": "claytile-fired-plain-gray"},
+				"2": { "type": "item", "code": "claytile-fired-plain-black"},
+				"3": { "type": "item", "code": "claytile-fired-plain-black"}
+			}
+		},
+		"*-fire":{
+			beehivekiln:{
+				"0": { "type": "item", "code": "claytile-fired-plain-fire"},
+				"1": { "type": "item", "code": "claytile-fired-plain-fire"},
+				"2": { "type": "item", "code": "claytile-fired-plain-fire"},
+				"3": { "type": "item", "code": "claytile-fired-plain-fire"}
+			}
+		}
+	},
+	combustiblePropsByType: {
+		"*-red": {
+			meltingPoint: 600,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "fire",
+			requiresContainer: false,
+			smeltedStack: { "type": "item", "code": "claytile-fired-plain-earthyorange" }
+		},
+		"*-blue": {
+			meltingPoint: 600,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "fire",
+			requiresContainer: false,
+			smeltedStack: { "type": "item", "code": "claytile-fired-plain-blue" }
+		},
+		"*-fire": {
+			meltingPoint: 600,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "fire",
+			requiresContainer: false,
+			smeltedStack: { "type": "item", "code": "claytile-fired-plain-fire" }
+		}
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	materialDensity: 2600,
+	guiTransform: {
+		rotate: false,
+		translation: { x: -0, y: 0, z: 0 },
+		rotation: { x: -37, y: -40, z: -147 },
+		origin: { x: 0.55, y: 0.02, z: 0.5 },
+		scale: 2.72
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 4.65
+	},
+	tpHandTransform: {
+		translation: { x: -0.55, y: -0.3, z: -0.56 },
+		rotation: { x: -72, y: 97, z: 18 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 1
+	}
+}

@@ -1,0 +1,53 @@
+{
+	code: "rivulet",
+	behaviors:
+	[
+		{
+			name: "FiniteSpreadingLiquid",
+			properties:
+			{
+				carver: true,
+				spreadDelay: 50
+			}
+		}
+	],
+	attributes: {
+		
+	},
+	shape: { base: "block/basic/cube" },
+	variantgroups: [
+		{ code: "type", states: ["water", "rapidwater"] }
+	],
+	drawtype: "liquid",
+	renderpass: "liquid",
+	matterstate: "liquid",
+	blockmaterial: "water",
+	faceCullMode: "liquid",
+	liquidCode: "water",
+	snowCoverage: false,
+	materialdensity: 1000,
+	creativeinventory: {  },
+	replaceable: 9500,
+	lightAbsorption: 1,
+	climateColorMap: "climateWaterTint",
+	drops: [],
+	liquidLevel: 7,
+	textures: {
+		all: { base: "block/liquid/water" },
+		specialSecondTexture: { base: "block/liquid/water2" }
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	collisionbox: null,
+	selectionbox: null,
+	heldTpIdleAnimation: "holdbothhandslarge", heldRightReadyAnimation: "heldblockready", heldTpUseAnimation: "twohandplaceblock",
+	tpHandTransform: {
+		translation: { x: -1.23, y: -0.91, z: -0.8 },
+		rotation: { x: -2, y: 25, z: -78 },
+		scale: 0.4
+	}
+}

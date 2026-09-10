@@ -1,0 +1,36 @@
+[
+	{
+		ingredientPattern: "HC,_R",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true, toolDurabilityCost: 10 },
+			"C": { type: "item", tags: ["tool-chisel"], isTool: true, toolDurabilityCost: 20 },
+			"R": { type: "block", code: "rock-{rock}" }
+		},
+		allowedVariants: {
+			rock: ["chert", "claystone", "sandstone"]
+		},
+		name: "grindstone",
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "grindstone-{rock}"  }
+	},
+	{
+		ingredientPattern: "HGS,PAP,PNP",
+		ingredients: {
+			"H": { type: "item", tags: ["tool-hammer"], isTool: true, toolDurabilityCost: 5 },
+			"S": { type: "item", tags: ["tool-saw"], isTool: true, toolDurabilityCost: 5 },
+			"A": { type: "block", code: "woodenaxle-ud" },
+			"P": { type: "item", code: "plank-*", quantity: 4 },
+			"N": { type: "item", code: "metalnailsandstrips-{metal}", quantity: 2 },
+			"G": { type: "item", code: "grindstone-{rock}" }
+		},
+		allowedVariants: {
+			metal: ["copper", "blackbronze", "tinbronze", "bismuthbronze", "iron", "silver", "gold", "meteoriciron", "steel", "electrum" ],
+			rock: ["chert", "claystone", "sandstone"]
+		},
+		name: "grindstone",
+		width: 3,
+		height: 3,
+		output: { type: "block", code: "grindingwheel-wood-north"  }
+	}
+]

@@ -1,0 +1,39 @@
+[
+	{
+		ingredientPattern: "BBB,BCB,BBB",
+		ingredients: {
+			"C": { type: "item", code: "mortar" },
+			"B": { type: "item", code: "claytile-fired-plain-{color}", quantity:1 }
+		},
+		allowedVariants: {
+			color: ["blue", "fire", "black", "brown", "cream", "earthyorange", "gray", "orange", "red", "tan"]
+		},
+		width: 3,
+		height: 3,
+		output: { type: "block", code: "tile-2x2-plain-{color}", quantity: 4  }
+	},
+	{
+		ingredientPattern: "BBB,BCB,BBB",
+		ingredients: {
+			"C": { type: "item", code: "mortar" },
+			"B": { type: "item", code: "claytile-fired-{pattern}-{color}", quantity:1 }
+		},
+		allowedVariants: {
+			pattern: ["center", "circle"],
+			color: ["red"]
+		},
+		width: 3,
+		height: 3,
+		output: { type: "block", code: "tile-2x2-{pattern}-{color}", quantity: 4  }
+	},
+	{
+		ingredientPattern: "BBB,BCB,BBB",
+		ingredients: {
+			"C": { type: "item", code: "mortar" },
+			"B": { type: "item", code: "tile-stone-travertine", quantity:1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "block", code: "tile-2x2-plain-travertine", quantity: 4  }
+	}
+]

@@ -1,0 +1,67 @@
+{
+	code: "bracket",
+	behaviors: [
+		{ name: "GroundStorable", 
+			properties: {
+				layout: 'Stacking',
+				placeRemoveSound: 'sounds/block/ingot',
+				stackingModel: 'item/part/bracket-heavy-pile',
+				upSolid: false,
+				modelItemsToStackSizeRatio: 19,
+				stackingCapacity: 15,
+				transferQuantity: 1,
+				bulkTransferQuantity: 3,
+				collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.2, z2: 1 },
+				cbScaleYByLayer: 0.33
+			}
+		}
+	],
+	variantgroups: [
+		{ code: "type", states: ["heavy"] },
+		{ code: "metal", states: ["iron", "meteoriciron", "steel"] },
+	],
+	shape: { base: "item/part/bracket-heavy" },
+	textures: {
+		"iron": { base: "block/metal/sheet-plain/{metal}*" },
+	},
+	attributes: {
+		groundStorageTransform: {
+			origin: { x: 0.5, y: -0, z: 0.5 }
+		},
+		onTongTransform: {
+			translation: { x: -0.85, y: -0.2, z: -0.52 },
+			rotation: { x: -84, y: -19, z: -5 },
+			origin: { x: 0.5, y: -0, z: 0.5 }
+		},
+		handbook: {
+			groupBy: ["bracket-*"]
+		},
+		tongOpening: "medium",
+		onMetalTongTransform: {
+			translation: { x: -1.1, y: -0.2, z: -0.6 },
+			rotation: { x: 0, y: 0, z: -5 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.94
+		}
+	},
+	maxstacksize: 8,
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	heldTpIdleAnimation: "holdbothhandslarge",
+	guiTransform: {
+		rotation: { x: 142, y: -17, z: -6 },
+		origin: { x: 0.46, y: 0.2, z: 0.41 },
+		scale: 2.49
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0.08, z: 0 },
+		rotation: { x: 0, y: 0, z: 180 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.78
+	},
+	tpHandTransform: {
+		translation: { x: -0.55, y: 0.12, z: -0.3 },
+		rotation: { x: 11, y: 12, z: -88 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 1
+	}
+}

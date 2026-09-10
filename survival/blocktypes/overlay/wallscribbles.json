@@ -1,0 +1,58 @@
+{
+    code: "wallscribbles",
+    behaviors: [{name: "Decor", properties: {sides: [ "north", "east", "south", "west", "up", "down" ], notFullFace: true, thickness: 0.0}}],
+    variantgroups: [
+        {
+            code: "type",
+            states: [ "scribbles", "art", "tally", "maze", "text", "carving" ]
+        }
+    ],
+    attributes: {
+        handbook: {
+            exclude: true
+        },
+        ignoreSounds: true
+    },
+    renderPass: "Decor",
+    drawtype: "surfacelayer",
+    doNotRenderAtLod2: true,
+    randomizeRotations: false,
+    shapeInventory: {
+        base: "block/basic/layers/0voxel-up", rotateX: 90
+    },
+    sidesolid: { "all": false },
+    sideopaque: { "all": false },
+    blockmaterial: "Stone",
+    creativeinventory: {
+        "general": [ "*" ],
+        "clutter": [ "*" ]
+    },
+    replaceable: 5500,
+    resistance: 0,
+    lightAbsorption: 0,
+    texturesByType: {
+        "*": { all: { base: "block/overlay/scribbles/{type}*" } }
+    },
+	vertexflags: {
+		zOffset: 1
+	},
+    drops: [],
+	guiTransform: {
+		rotation: { x: -5, y: 180, z: 0 },
+		scale: 1.24,
+		rotate: false
+	},
+    tpHandTransform: {
+        rotation: {
+            x: 0,
+            y: -85,
+            z: -45
+        },
+        origin: {
+            x: 0.5,
+            y: 0.6,
+            z: 0.3
+        }
+    },
+    materialDensity: 400
+}

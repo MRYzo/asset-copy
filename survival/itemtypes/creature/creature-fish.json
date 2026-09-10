@@ -1,0 +1,149 @@
+{
+	code: "creature-fish",
+	class: "ItemCreature",
+	maxstacksize: 64,
+	variantgroups: [
+		{ "code": "habitat", "states": ["freshwater", "saltwater", "reef"] },
+		{ "code": "type", 
+			"states": [ 
+				"angel", "butterfly", "clown", "puffer", "tang", "trigger", "wrasse",
+				"alewife", "bream", "chub", "gurnard", "haddock", "hake", "herring", "mackerel", "pollock", "perch", "crappie", "piranha", "trout",
+				"barracuda", "grouper", "salmon", "snapper", "tuna", "wolf", "bass", "carp", "catfish", "pickerel", "tilapia", "walleye",
+				"amberjack", "mahi-mahi", "wreckfish", "pike",
+				"coelacanth", "sturgeon", "arapaima", "sheatfish"
+			]
+		},
+		{ "code": "species", 
+			"states": [
+				"common", "banded", "bicolor", "black", "blackwedged", "copperband", "creole", "longspine", "powderblue", "titan", "yellowstripe",
+				"alaska", "atlantic", "bay", "cape", "pacific", "sea", "silver", "brown", "european", "rainbow", "river", "shad", "white", "yellow",
+				"bering", "great", "pink", "red", "skipjack", "blue", "chain", "channel", "coho", "grass", "largemouth", "nile", "smallmouth",
+				"yellowtail", "northern",
+				"arapaima", "gigas"				
+			] 
+		},
+		{ "code": "age", "states": ["adult"] }
+	],
+	allowedVariants: [
+		"creature-fish-reef-angel-bicolor-*",
+		"creature-fish-reef-butterfly-blackwedged-*",
+		"creature-fish-reef-butterfly-copperband-*",
+		"creature-fish-reef-clown-black-*",
+		"creature-fish-reef-clown-common-*",
+		"creature-fish-reef-clown-yellowstripe-*",
+		"creature-fish-reef-puffer-longspine-*",
+		"creature-fish-reef-tang-banded-*",
+		"creature-fish-reef-tang-powderblue-*",
+		"creature-fish-reef-trigger-titan-*",
+		"creature-fish-reef-wrasse-creole-*",
+		
+		"creature-fish-saltwater-bream-sea-*",
+		"creature-fish-saltwater-gurnard-cape-*",
+		"creature-fish-saltwater-haddock-common-*",
+		"creature-fish-saltwater-hake-silver-*",
+		"creature-fish-saltwater-herring-atlantic-*",
+		"creature-fish-saltwater-mackerel-atlantic-*",
+		"creature-fish-saltwater-pollock-alaska-*",
+		"creature-fish-saltwater-perch-pacific-*",
+		
+		"creature-fish-saltwater-barracuda-great-*",
+		"creature-fish-saltwater-grouper-black-*",
+		"creature-fish-saltwater-salmon-pink-*",
+		"creature-fish-saltwater-snapper-red-*",
+		"creature-fish-saltwater-tuna-skipjack-*",
+		"creature-fish-saltwater-wolf-bering-*",
+
+		"creature-fish-saltwater-amberjack-yellowtail-*",
+		"creature-fish-saltwater-mahi-mahi-common-*",
+		"creature-fish-saltwater-wreckfish-atlantic-*",
+
+		"creature-fish-saltwater-coelacanth-common-*",
+		"creature-fish-saltwater-sturgeon-atlantic-*",
+
+		"creature-fish-freshwater-alewife-shad-*",
+		"creature-fish-freshwater-chub-river-*",
+		"creature-fish-freshwater-crappie-black-*",
+		"creature-fish-freshwater-crappie-white-*",
+		"creature-fish-freshwater-perch-european-*",
+		"creature-fish-freshwater-perch-yellow-*",
+		"creature-fish-freshwater-piranha-black-*",
+		"creature-fish-freshwater-piranha-red-*",
+		"creature-fish-freshwater-trout-brown-*",
+		"creature-fish-freshwater-trout-rainbow-*",
+		
+		"creature-fish-freshwater-bass-largemouth-*",
+		"creature-fish-freshwater-bass-smallmouth-*",
+		"creature-fish-freshwater-carp-common-*",
+		"creature-fish-freshwater-carp-grass-*",
+		"creature-fish-freshwater-catfish-blue-*",
+		"creature-fish-freshwater-catfish-channel-*",
+		"creature-fish-freshwater-pickerel-chain-*",
+		"creature-fish-freshwater-salmon-coho-*",
+		"creature-fish-freshwater-tilapia-nile-*",
+		"creature-fish-freshwater-tilapia-red-*",
+		"creature-fish-freshwater-walleye-common-*",
+
+		"creature-fish-freshwater-pike-northern-*",
+
+		"creature-fish-freshwater-arapaima-arapaima-*",
+		"creature-fish-freshwater-arapaima-gigas-*",
+		"creature-fish-freshwater-sheatfish-black-*",
+		"creature-fish-freshwater-sheatfish-white-*"
+	],
+	shape: { base: "entity/animal/fish/{habitat}/{type}-{age}" },
+	textures: { "skin": { base: "entity/animal/fish/{habitat}/{type}-{species}-{age}*"} },
+	creativeinventory: { "general": ["*"], "items": ["*"], "creatures": ["*"] },
+	materialDensity: 600,
+	heldRightReadyAnimation: "holdbothhands",
+	heldTpIdleAnimation: "holdbothhands",	
+	guiTransformByType: {		
+		"creature-fish-saltwater-sturgeon-*": {
+			rotation: { x: -172, y: -57, z: 21 },
+			origin: { x: 0.24, y: 0.07, z: 0.69 },
+			scale: 3.44
+		},
+		"creature-fish-freshwater-pike-*": {
+			rotation: { x: 180, y: -59, z: 21 },
+			origin: { x: 0.3, y: 0.25, z: 0.61 },
+			scale: 2.4
+		},
+		"creature-fish-freshwater-sheatfish-*": {
+			rotation: { x: 180, y: -59, z: 21 },
+			origin: { x: 0.3, y: 0.25, z: 0.61 },
+			scale: 2.4
+		},
+		"creature-fish-freshwater-arapaima-*": {
+			rotation: { x: 180, y: -59, z: 21 },
+			origin: { x: -0.1, y: 0.25, z: 0.61 },
+			scale: 2.4
+		},
+		"@creature-fish-saltwater-(mahi-mahi|grouper|coelacanth)-.*": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 180, y: -59, z: 21 },
+			origin: { x: 0.3, y: 0.25, z: 0.61 },
+			scale: 2.4
+		},
+		"*": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 180, y: -59, z: 21 },
+			origin: { x: 0.3, y: 0.27, z: 0.44 },
+			scale: 2.4
+		}
+	},	
+	tpHandTransformByType: {
+		"*": {
+			translation: { x: -1, y: -0.2, z: -0.6 },
+			rotation: { x: -66, y: -158, z: 116 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 0.61
+		}
+	},
+	groundTransformByType: {
+		"*": {
+			translation: { x: 0.2, y: 0.01, z: 0 },
+			rotation: { x: 90, y: 0, z: -2 },
+			origin: { x: 0.5, y: 0.5, z: 0.5299 },
+			scale: 5
+		}
+	}
+}

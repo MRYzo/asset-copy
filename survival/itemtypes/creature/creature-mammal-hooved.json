@@ -1,0 +1,299 @@
+{
+	code: "creature",
+	class: "ItemCreature",
+	maxstacksize: 64,
+	variantgroups:  [ 
+		{ code: "group", states: ["deer", "gazelle", "goat", "pig", "sheep"] },
+		{ code: "type", states: ["caribou", "chital", "elk", "fallow", "guemal", "marsh", "moose", "pampas", "pudu", "redbrocket", "taruca", "water", "whitetail",
+								"thomson", 
+								"angora", "ibexalp", "ibexnub", "markhor", "mountain", "muskox", "nubian", "sirohi", "takingold", "turdag", "valais",
+								"eurasian","redriver","warthog",
+								"bighorn", "mouflon" ]
+		},
+		{ code: "age", states: ["baby", "adult", "elder"] },
+		{ code: "gender", states: ["male", "female"] }
+	] ,
+	allowedVariants: [
+		"creature-deer-caribou-*", "creature-deer-chital-*", "creature-deer-elk-*", "creature-deer-fallow-*", "creature-deer-guemal-*", "creature-deer-marsh-*", "creature-deer-moose-*", "creature-deer-pampas-*", "creature-deer-pudu-*", "creature-deer-redbrocket-*", "creature-deer-taruca-*", "creature-deer-water-*", "creature-deer-whitetail-*",
+		"creature-gazelle-thomson-*",
+		"creature-goat-angora-*", "creature-goat-ibexalp-*", "creature-goat-ibexnub-*", "creature-goat-markhor-*", "creature-goat-mountain-*", "creature-goat-muskox-*", "creature-goat-nubian-*", "creature-goat-sirohi-*", "creature-goat-takingold-*", "creature-goat-turdag-*", "creature-goat-valais-*",
+		"creature-pig-eurasian-*","creature-pig-redriver-*","creature-pig-warthog-*",
+		"creature-sheep-bighorn-*", "creature-sheep-mouflon-*"
+	],
+	skipVariants: [
+		"creature-deer-caribou-elder-*", "creature-deer-chital-elder-*", "creature-deer-elk-elder-*", "creature-deer-fallow-elder-*", "creature-deer-guemal-elder-*", "creature-deer-marsh-elder-*", "creature-deer-moose-elder-*", "creature-deer-pampas-elder-*", "creature-deer-pudu-elder-*", "creature-deer-redbrocket-elder-*", "creature-deer-taruca-elder-*", "creature-deer-water-elder-*", "creature-deer-whitetail-elder-*",
+		"creature-gazelle-thomson-elder-*",
+		"creature-goat-angora-elder-*", "creature-goat-ibexalp-elder-*", "creature-goat-ibexnub-elder-*", "creature-goat-markhor-elder-*", "creature-goat-mountain-elder-*", "creature-goat-muskox-elder-*", "creature-goat-nubian-elder-*", "creature-goat-sirohi-elder-*", "creature-goat-takingold-elder-*", "creature-goat-turdag-elder-*", "creature-goat-valais-elder-*",
+		"creature-pig-redriver-elder-*","creature-pig-warthog-elder-*",
+		"creature-sheep-bighorn-elder-*", "creature-sheep-mouflon-elder-*"
+	],
+	shapeByType: {
+		"creature-deer-elk-adult-male": { base: "entity/animal/mammal/hooved/deer/elk/female", overlays: [ { base: "entity/animal/mammal/hooved/deer/elk/malefringe" }] },
+		"creature-deer-elk-adult-female": { base: "entity/animal/mammal/hooved/deer/elk/female" },
+		"creature-deer-fallow-adult-*": { base: "entity/animal/mammal/hooved/{group}/chital/{age}" },
+		"creature-deer-redbrocket-baby-*": { base: "entity/animal/mammal/hooved/deer/taruca/baby" },
+		"creature-deer-marsh-baby-*": { base: "entity/animal/mammal/hooved/deer/whitetail/baby" },
+		"creature-deer-water-baby-*": { base: "entity/animal/mammal/hooved/deer/taruca/baby" },
+		"creature-deer-chital-baby-*": { base: "entity/animal/mammal/hooved/deer/whitetail/baby" },
+		"creature-deer-guemal-baby-*": { base: "entity/animal/mammal/hooved/deer/taruca/baby" },
+		"creature-deer-pampas-baby-*": { base: "entity/animal/mammal/hooved/deer/taruca/baby" },
+		"creature-deer-fallow-baby-*": { base: "entity/animal/mammal/hooved/deer/whitetail/baby" },
+
+		"*-thomson-adult-male": { base: "entity/animal/mammal/hooved/{group}/{type}/{type}-{gender}" },
+		"*-thomson-adult-female": { base: "entity/animal/mammal/hooved/{group}/{type}/{type}-{gender}" },
+		"*-thomson-baby-male": { base: "entity/animal/mammal/hooved/{group}/{type}/{type}-{age}" },
+		"*-thomson-baby-female": { base: "entity/animal/mammal/hooved/{group}/{type}/{type}-{age}" },
+
+		"creature-goat-turdag-adult-*": { base: "entity/animal/mammal/hooved/{group}/ibexalp/adult" },
+		"creature-goat-muskox-baby-*": { base: "entity/animal/mammal/hooved/{group}/muskox/baby" },
+		"creature-goat-takingold-baby-*": { base: "entity/animal/mammal/hooved/{group}/takingold/baby" },
+		"creature-goat-nubian-baby-*": { base: "entity/animal/mammal/hooved/{group}/baby2" },
+		"creature-goat-sirohi-baby-*": { base: "entity/animal/mammal/hooved/{group}/baby2" },
+		"creature-goat-*-baby-male": { base: "entity/animal/mammal/hooved/{group}/baby1" },
+		"creature-goat-*-baby-female": { base: "entity/animal/mammal/hooved/{group}/baby1" },
+
+		"creature-pig-eurasian-elder-*": { base: "entity/animal/mammal/hooved/pig/eurasian/elder" },
+		"creature-pig-redriver-adult-*": { base: "entity/animal/mammal/hooved/pig/redriver/adult" },
+		"creature-pig-redriver-baby-*": { base: "entity/animal/mammal/hooved/pig/eurasian/baby" },
+		"creature-pig-warthog-baby-*": { base: "entity/animal/mammal/hooved/pig/eurasian/baby" },
+		"creature-pig-*": { base: "entity/animal/mammal/hooved/{group}/{type}/{age}" },
+
+		"*-bighorn-adult-*": { base: "entity/animal/mammal/hooved/{group}/{type}/{gender}" },
+		"*-bighorn-baby-*": { base: "entity/animal/mammal/hooved/{group}/{type}/baby" },
+		"*-mouflon-adult-*": { base: "entity/animal/mammal/hooved/{group}/{type}/adult" },
+		"*-mouflon-baby-*": { base: "entity/animal/mammal/hooved/{group}/bighorn/baby" },
+
+		"*": { base: "entity/animal/mammal/hooved/{group}/{type}/{age}" }
+	},
+	texturesByType: {
+		"creature-deer-marsh-baby-*": { "hide": { base: "entity/animal/mammal/hooved/deer/whitetail-baby" }},
+		"creature-deer-fallow-baby-*": { "hide": { base: "entity/animal/mammal/hooved/deer/whitetail-baby" }},
+		"creature-deer-chital-baby-*": { "hide": { base: "entity/animal/mammal/hooved/deer/whitetail-baby" }},
+		"creature-goat-angora-adult-*": { "hide": { base: "entity/animal/mammal/hooved/goat/angora-adult" }, "hair1": { base: "entity/animal/mammal/hooved/goat/angora-adult" }, "hair2": { base: "block/transparent" }, "hair3": { base: "block/transparent" }},
+		"creature-goat-mountain-adult-*": { "hide": { base: "entity/animal/mammal/hooved/goat/mountain-adult" }, "wintercoat": { base: "entity/animal/mammal/hooved/goat/mountain-wintercoat" }},
+		"creature-goat-angora-baby-*": { "hide": { base: "entity/animal/mammal/hooved/{group}/mountain-baby" }},
+		"creature-pig-redriver-baby-*": { "hide": { base: "entity/animal/mammal/hooved/pig/eurasian-baby" }},
+		"*": { "hide": { base: "entity/animal/mammal/hooved/{group}/{type}-{age}*" }}
+	},
+	attributes: {
+		stepParentShapesByType: {
+			"*-deer-whitetail-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers06" } ],
+			"*-deer-redbrocket-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers04" } ],
+			"*-deer-marsh-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers07" } ],
+			"*-deer-caribou-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers08" } ],
+			"*-deer-water-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers01" } ],
+			"*-deer-pudu-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers04" } ],
+			"*-deer-elk-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/malefringe" }, { base: "entity/animal/mammal/hooved/{group}/{type}/antlers07" } ],
+			"*-deer-taruca-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers05" } ],
+			"*-deer-chital-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers08" } ],
+			"*-deer-guemal-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers05" } ],
+			"*-deer-pampas-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers07" } ],
+			"*-deer-fallow-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers08" } ],
+
+			"*-goat-angora-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers09" } ],
+			"*-goat-ibexalp-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers07" } ],
+			"*-goat-ibexnub-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers09" } ],
+			"*-goat-markhor-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers09" } ],
+			"*-goat-mountain-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers06" } ],
+			"*-goat-muskox-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers05" } ],
+			"*-goat-nubian-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers04" } ],
+			"*-goat-sirohi-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers04" } ],
+			"*-goat-takingold-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers05" } ],
+			"*-goat-turdag-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers07" } ],
+			"*-goat-valais-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers08" } ],
+
+			"*-goat-angora-adult-female": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers07" } ],
+			"*-goat-ibexalp-adult-female": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers04" } ],
+			"*-goat-ibexnub-adult-female": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers03" } ],
+			"*-goat-markhor-adult-female": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers02" } ],
+			"*-goat-mountain-adult-female": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers03" } ],
+			"*-goat-muskox-adult-female": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers05" } ],
+			"*-goat-nubian-adult-female": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers03" } ],
+			"*-goat-sirohi-adult-female": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers03" } ],
+			"*-goat-takingold-adult-female": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers05" } ],
+			"*-goat-turdag-adult-female": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers02" } ],
+			"*-goat-valais-adult-female": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers07" } ],
+			
+			"*-pig-eurasian-elder-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/elder-tusk-05" } ],
+			"*-pig-eurasian-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/adult-tusk-05" } ],
+			"*-pig-redriver-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/eurasian/adult-tusk-05" } ],
+			"*-pig-warthog-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/adult-tusk-04" } ],
+
+			"*-sheep-mouflon-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers06" }, { base: "entity/animal/mammal/hooved/{group}/{type}/mane" } ],
+			"*-sheep-bighorn-adult-male": [ { base: "entity/animal/mammal/hooved/{group}/{type}/antlers08" } ],
+		}
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "creatures": ["*"] },
+	materialDensity: 600,
+	heldTpIdleAnimationByType: {
+		"*-baby-male":	"holdbothhands",
+		"*-baby-female": "holdbothhands",
+		"*":	"holdunderarm"
+	},
+	guiTransformByType: {
+		"creature-gazelle-*": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.5, y: 0.8, z: 0.5 },
+			scale: 0.97
+		},
+		"creature-pig-*-baby-male": {
+			rotate: true,
+			rotation: { x: -14, y: -50, z: -180 },
+			origin: { x: 0.6, y: 0.25, z: 0.5 },
+			scale: 2
+		},
+		"creature-pig-*-baby-female": {
+			rotate: true,
+			rotation: { x: -14, y: -50, z: -180 },
+			origin: { x: 0.6, y: 0.25, z: 0.5 },
+			scale: 2
+		},
+		"creature-pig-eurasian-elder-*": {
+			rotate: true,
+			rotation: { x: -14, y: -50, z: -180 },
+			origin: { x: 0.2, y: 0.75, z: 0.5 },
+			scale: 1.14
+		},
+		"creature-pig-*": {
+			rotate: true,
+			rotation: { x: -14, y: -50, z: -180 },
+			origin: { x: 0.5, y: 0.55, z: 0.5 },
+			scale: 1.14
+		},
+		"creature-deer-moose-baby-*": {
+			rotate: true,
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.55, y: 0.7, z: 0.5 },
+			scale: 0.91
+		},
+		"creature-deer-*-baby-male": {
+			rotate: true,
+			rotation: { x: -11, y: -52, z: -180 },
+			scale: 1.15
+		},
+		"creature-deer-*-baby-female": {
+			rotate: true,
+			rotation: { x: -11, y: -52, z: -180 },
+			scale: 1.15
+		},
+		"creature-deer-moose-*": {
+			rotate: true,
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.5, y: 1, z: 0.5 },
+			scale: 0.72
+		},
+		"creature-deer-elk-*": {
+			rotate: true,
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.7, y: 0.8, z: 0.5 },
+			scale: 0.83
+		},
+		"creature-deer-*": {
+			rotate: true,
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.58, y: 0.8, z: 0.5 },
+			scale: 0.9
+		},
+		"creature-sheep-*-adult-male": {
+			rotate: true,
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.5, y: 0.68, z: 0.5 },
+			scale: 1.1
+		},
+		"creature-sheep-*-adult-female": {
+			rotate: true,
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.5, y: 0.68, z: 0.5 },
+			scale: 1.1
+		},
+		"creature-goat-*-adult-male": {
+			rotate: true,
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.5, y: 0.65, z: 0.5 },
+			scale: 1.15
+		},
+		"creature-goat-*-adult-female": {
+			rotate: true,
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.5, y: 0.65, z: 0.5 },
+			scale: 1.15
+		},
+		"*-baby-male": {
+			rotate: true,
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.6, y: 0.4, z: 0.5 },
+			scale: 1.67
+		},
+		"*-baby-female": {
+			rotate: true,
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.6, y: 0.4, z: 0.5 },
+			scale: 1.67
+		}
+	},	
+	tpHandTransformByType: {
+		"creature-gazelle-*": {
+			translation: { x: -0.9, y: -0.9, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.45
+		},
+		"creature-sheep-*": {
+			translation: { x: -0.9, y: -0.9, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.45
+		},
+		"creature-pig-eurasian-elder-*": {
+			translation: { x: -0.6, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 1, z: -100 },
+			scale: 0.5
+		},
+		"creature-pig-*-adult-*": {
+			translation: { x: -0.9, y: -0.4, z: -0.7 },
+			rotation: { x: 4, y: -180, z: 2 },
+			origin: { x: 0.35, y: 0.25, z: 0.5 },
+			scale: 0.5
+		},
+		"creature-pig-*": {
+			translation: { x: -0.8, y: -0.6, z: -0.7 },
+			rotation: { x: -141, y: -20, z: -109 },
+			origin: { x: 0.35, y: 0.25, z: 0.5 },
+			scale: 0.64
+		},
+		"creature-deer-moose-*": {
+			translation: { x: -0.9, y: -0.9, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.45
+		},
+		"creature-deer-*": {
+			translation: { x: -0.9, y: -0.9, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.45
+ 		},
+		"creature-tameddeer-*": {
+			translation: { x: -0.9, y: -0.9, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.45
+		},
+		"creature-goat-*": {
+			translation: { x: -0.9, y: -0.9, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.45
+		}
+	},
+	groundTransformByType: {
+		"creature-deer-moose-*": {
+			translation: { x: 0.2, y: 0, z: 0 },
+			rotation: { x: -8, y: -63, z: -7 }
+		},
+		"creature-deer-*": {
+			translation: { x: 0.2, y: 0, z: 0 },
+			rotation: { x: -8, y: -63, z: -7 }
+		},
+		"creature-goat-*": {
+			translation: { x: 0.2, y: 0, z: 0 },
+			rotation: { x: -8, y: -63, z: -7 }
+		},
+	}
+}

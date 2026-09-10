@@ -1,0 +1,165 @@
+[
+	{
+		code: "en",
+		englishname: "English",
+		name: "English"
+	},
+	{
+		code: "ar",
+		englishname: "Arabic (99% complete)",
+		name: "عربى"
+	},
+	{
+		code: "be",
+		englishname: "Belarusian (99% complete)",
+		name: "Беларуская"
+	},
+	
+	{
+		code: "cs",
+		englishname: "Czech (100% complete)",
+		name: "Čech"
+	},
+	{
+		code: "da",
+		englishname: "Danish (52% complete)",
+		name: "Dansk"
+	},
+	{
+		code: "nl",
+		englishname: "Dutch (36% complete)",
+		name: "Nederlands"
+	},
+	{
+		code: "fi",
+		englishname: "Finnish (34% complete)",
+		name: "Viimeistely"
+	},
+	{
+		code: "fr",
+		englishname: "French (100% complete)",
+		name: "Français"
+	},
+	{
+		code: "de",
+		englishname: "German (100% complete)",
+		name: "Deutsch"
+	},
+	{
+		code: "hu",
+		englishname: "Hungarian (90% complete)",
+		name: "Magyar"
+	},
+	{
+		code: "eo",
+		englishname: "Esperanto (37% complete)",
+		name: "Esperanto"
+	},
+	{
+		code: "is",
+		englishname: "Icelandic (99% complete)",
+		name: "Íslenska"
+	},
+	{
+		code: "it",
+		englishname: "Italian (99% complete)",
+		name: "Italiano"
+	},
+	{
+		code: "ja",
+		englishname: "Japanese (85% complete)",
+		name: "日本語",
+		linebreakBehavior: "AfterCharacter"
+	},
+	{
+		code: "ko",
+		englishname: "Korean (100% complete)",
+		name: "한국어",
+		linebreakBehavior: "AfterCharacter"
+	},
+	{
+		code: "li",
+		englishname: "Lithuanian (49% complete)",
+		name: "Lietuvių"
+	},
+	{
+		code: "no",
+		englishname: "Norwegian (75% complete)",
+		name: "Norsk"
+	},
+	{
+		code: "pl",
+		englishname: "Polish (99% complete)",
+		name: "Polski"
+	},
+	{
+		code: "pt-pt",
+		englishname: "Portuguese (33% complete)",
+		name: "Português"
+	},
+	{
+		code: "pt-br",
+		englishname: "Portuguese (Brazil) (100% complete)",
+		name: "Português, brasileira"
+	},
+	{
+		code: "ru",
+		englishname: "Russian (100% complete)",
+		name: "Русский"
+	},
+	{
+		code: "sr",
+		englishname: "Serbian (30% complete)",
+		name: "Српски"
+	},
+	{
+		code: "es-es",
+		englishname: "Spanish (91% complete)",
+		name: "Español"
+	},
+	{
+		code: "es-419",
+		englishname: "Spanish, Latin America (90% complete)",
+		name: "Español, latinoamerica"
+	},	
+	{
+		code: "sk",
+		englishname: "Slovak (100% complete)",
+		name: "Slovensky"
+	},
+	{
+		code: "sv-se",
+		englishname: "Swedish (45% complete)",
+		name: "Svenska"
+	},
+	{
+		code: "th",
+		englishname: "Thai (51% complete)",
+		name: "แบบไทย"
+	},
+	{
+		code: "tr",
+		englishname: "Turkish (90% complete)",
+		name: "Türkçe"
+	},
+	{
+		code: "uk",
+		englishname: "Ukrainian (99% complete)",
+		name: "Українська"
+	},
+	{
+		code: "vi",
+		englishname: "Vietnamese (90% complete)",
+		name: "Tiếng Việt"
+	},	
+	{
+		code: "zh-cn",
+		englishname: "Chinese Simplified (99% complete)",
+		name: "Chinese Simplified"
+	},
+	{
+		code: "zh-tw",
+		englishname: "Chinese Traditional (90% complete)",
+		name: "Chinese Traditional"
+	}
+]

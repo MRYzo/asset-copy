@@ -1,0 +1,103 @@
+[
+	{
+		ingredientPattern: "L,S",
+		ingredients: {
+			"L": { type: "item", code: "*", name: "leather", allowedvariants: ["leather-normal-plain", "hide-pelt-small"], quantity: 1 },
+			"S": { type: "item", code: "treeseed-*", name: "seed", "allowedvariants": ["acacia", "birch", "walnut", "redwood", "oak", "pine", "larch", "ebony", "purpleheart", "kapok", "maple"],  quantity: 1 }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-arm-{seed}"  }
+	},
+    {
+		ingredientPattern: "L,S",
+		ingredients: {
+			"L": { type: "item", code: "*", name: "leather", allowedvariants: ["leather-normal-plain", "hide-pelt-small"], quantity: 1 },
+			"S": { type: "block", code: "sapling-*bamboo-free", quantity: 1 }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-arm-bamboo"  }
+	},
+    {
+		ingredientPattern: "L,S",
+		ingredients: {
+			"L": { type: "item", code: "*", name: "leather", allowedvariants: ["leather-normal-plain", "hide-pelt-small"], quantity: 1 },
+			"S": { type: "item", code: "cattailroot", quantity: 1 }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-arm-cattail"  }
+	},
+    {
+		ingredientPattern: "L,S",
+		ingredients: {
+			"L": { type: "item", code: "*", name: "leather", allowedvariants: ["leather-normal-plain", "hide-pelt-small"], quantity: 1 },
+			"S": { type: "item", code: "papyrusroot", quantity: 1 }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-arm-papyrus"  }
+	},
+    {
+		ingredientPattern: "L,S",
+		ingredients: {
+			"L": { type: "item", code: "*", name: "leather", allowedvariants: ["leather-normal-plain", "hide-pelt-small"], quantity: 1 },
+			"S": { type: "item", code: "tuleroot", quantity: 1 }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-arm-tule"  }
+	},
+    {
+		ingredientPattern: "L,S",
+		ingredients: {
+			"L": { type: "item", code: "*", name: "leather", allowedvariants: ["leather-normal-plain", "hide-pelt-small"], quantity: 1 },
+			"S": { type: "item", code: "treeseed-crimsonkingmaple", quantity: 1 }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-arm-maplered"  }
+	},
+    {
+		ingredientPattern: "L,S",
+		ingredients: {
+			"L": { type: "item", code: "*", name: "leather", allowedvariants: ["leather-normal-plain", "hide-pelt-small"], quantity: 1 },
+			"S": { type: "item", code: "coralchunk-*", quantity: 1 }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-arm-coral"  }
+	},
+    {
+		ingredientPattern: "L,S",
+		ingredients: {
+			"L": { type: "item", code: "*", name: "leather", allowedvariants: ["leather-normal-plain", "hide-pelt-small"], quantity: 1 },
+			"S": { type: "item", code: "treeseed-*cypress", quantity: 1 }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-arm-cypress"  }
+	},
+    {
+		ingredientPattern: "L,S",
+		ingredients: {
+			"L": { type: "item", code: "*", name: "leather", allowedvariants: ["leather-normal-plain", "hide-pelt-small"], quantity: 1 },
+			"S": { type: "item", code: "*", name: "misc", allowedvariants: ["feather", "flint"], quantity: 1 }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-arm-{misc}"  }
+	},
+    {
+		ingredientPattern: "LTL",
+		recipeGroup: 1,
+		ingredients: {
+			"L": { type: "item", code: "leather-normal-plain", quantity: 2 },
+			"T": { type: "item", code: "flaxtwine" }
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "clothes-arm-leather-bracers"  }
+	},
+]

@@ -1,0 +1,84 @@
+{
+	code: "claytile",
+	maxstacksize: 64,
+	behaviors: [{
+		name: "GroundStorable",
+		properties: {
+			layout: 'Stacking',
+			placeRemoveSound: 'sounds/block/ceramicplace',
+			stackingModel: 'item/claytile-pile',
+			modelItemsToStackSizeRatio: 1,
+			upSolid: true,
+			stackingCapacity: 64,
+			transferQuantity: 1,
+			bulkTransferQuantity: 16,
+			maxFireable: 32,
+			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0156, z2: 1 },
+			cbScaleYByLayer: 1
+		}
+	}],
+	variantgroups: [
+		{ code: "state", states: [ "fired" ] },
+		{ code: "pattern", states: [ "center", "circle", "plain" ] },
+		{ code: "color", states: ["blue", "fire", "black", "brown", "cream", "earthyorange", "gray", "orange", "red", "tan"] },
+	],
+	allowedVariants: [
+		"claytile-fired-plain-*",
+		"claytile-fired-center-red",
+		"claytile-fired-circle-red"
+	],
+	shape: { base: "item/claytile" },
+	texturesByType: {
+		"claytile-fired-*": {
+			"material": { base: "block/clay/tile/2x2/{pattern}/{color}1" },
+			"sides": { base: "block/clay/tile/2x2/plain/{color}1" },
+		}
+	},
+	attributes: {
+		displaycaseable: true,
+		shelvable: true,
+        displayable: {
+            shelf: {
+                size: { width: 8, height: 1, length: 8 }
+            }
+        },
+		shatteredStack: { type: "block", code: "clayshattered-singlecenter" },
+		onTongTransform: {
+			translation: { x: -1.4, y: -0.32, z: -0.7 },
+			rotation: { x: 91, y: 9, z: 4 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.8
+		},
+		handbook: {
+			groupBy: ["claytile-{state}-*"]
+		},
+		onMetalTongTransform: {
+			translation: { x: -1.13, y: -0.18, z: -0.5 },
+			rotation: { x: 0, y: 2, z: -11 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 1.04
+		},
+		inContainerTexture: { base: "block/clay/tile/2x2/{pattern}/{color}1" }
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	materialDensity: 2600,
+	guiTransform: {
+		rotate: false,
+		translation: { x: -0, y: 0, z: 0 },
+		rotation: { x: -37, y: -40, z: -147 },
+		origin: { x: 0.55, y: 0.02, z: 0.5 },
+		scale: 2.72
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 4.65
+	},
+	tpHandTransform: {
+		translation: { x: -0.55, y: -0.3, z: -0.56 },
+		rotation: { x: -72, y: 97, z: 18 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 1
+	}
+}

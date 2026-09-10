@@ -1,0 +1,42 @@
+{
+	code: "sail-large",
+	behaviors: [
+		{ name: "GroundStorable", 
+			properties: {
+				layout: 'Stacking',
+				placeRemoveSound: 'sounds/block/planks',
+				stackingModel: 'item/part/sail-large-pile',
+				modelItemsToStackSizeRatio: 13,
+				stackingCapacity: 5,
+				transferQuantity: 1,
+				bulkTransferQuantity: 4,
+				collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.2, z2: 1 },
+				cbScaleYByLayer: 1
+			}
+		}
+	],
+	variantgroups: [
+		{ code: "wood", states: ["oak"] },
+	],
+	shape: { base: "item/part/sail-large" },
+	creativeinventory: { "general": ["*"], "items": ["*"], "mechanics": ["*"] },
+	maxstacksize: 4,
+	materialDensity: 510,
+	guiTransform: {
+		rotation: { x: 0, y: -42, z: -131 },
+		origin: { x: 0.9, y: 0.35, z: 0.8 },
+		scale: 0.9
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -1, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 5
+	},
+	tpHandTransform: {
+		translation: { x: -0.6, y: 0.21, z: -0.53 },
+		rotation: { x: -89, y: 3, z: 4 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 0.7
+	}
+}

@@ -1,0 +1,116 @@
+[
+	{
+		ingredientPattern: "BCB,_S_",
+		requiresTrait: "clothier",
+		ingredients: {
+			"B": { type: "item", code: "cloth-black", quantity: 1 },
+			"C": { type: "item", code: "cloth-brown", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "hoovedwearables-blanket-commoner"  }
+	},
+    {
+		ingredientPattern: "BGB,_S_",
+		requiresTrait: "clothier",
+		ingredients: {
+			"B": { type: "item", code: "cloth-blue", quantity: 1 },
+			"G": { type: "item", code: "cloth-gray", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "hoovedwearables-blanket-plaidblue"  }
+	},
+	{
+		ingredientPattern: "BBB,FSF",
+		requiresTrait: "clothier",
+		ingredients: {
+			"B": { type: "item", code: "cloth-blue", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" },
+			"F": { type: "item", code: "flaxtwine" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "hoovedwearables-blanket-azure-embroidered"  }
+	},
+    {
+		ingredientPattern: "BCB,_F_",
+		ingredients: {
+			"B": { type: "item", code: "cloth-brown", quantity: 1 },
+			"C": { type: "item", code: "cloth-blue", quantity: 1 },
+			"F": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "hoovedwearables-blanket-earthtone"  }
+	},
+    {
+		ingredientPattern: "GYG,_S_",
+		requiresTrait: "clothier",
+		ingredients: {
+			"G": { type: "item", code: "cloth-green", quantity: 1 },
+			"Y": { type: "item", code: "cloth-yellow", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "hoovedwearables-blanket-fancygreen"  }
+	},
+    {
+		ingredientPattern: "HKF",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"F": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "hoovedwearables-blanket-hide"  }
+	},
+	{
+		ingredientPattern: "HKF",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"F": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "hoovedwearables-blanket-hide"  }
+	},
+    {
+		ingredientPattern: "CCC,_F_",
+		ingredients: {
+			"C": { type: "item", code: "cloth-plain", quantity: 1 },
+			"F": { type: "item", code: "flaxtwine", quantity: 1 },
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "hoovedwearables-blanket-plaincloth"  }
+	},
+	{
+		ingredientPattern: "CCC,_S_",
+		requiresTrait: "clothier",
+		ingredients: {
+			"C": { type: "item", code: "cloth-plain", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "hoovedwearables-blanket-chateau"  }
+	},
+    {
+		ingredientPattern: "RBR,_S_",
+		requiresTrait: "clothier",
+		ingredients: {
+			"R": { type: "item", code: "cloth-red", quantity: 1 },
+			"B": { type: "item", code: "cloth-blue", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "hoovedwearables-blanket-herder"  }
+	},
+]

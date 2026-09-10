@@ -1,0 +1,38 @@
+[
+	{
+		ingredientPattern: "R	L",
+		requiresTrait: "improviser",
+		ingredients: {
+			"R": { type: "item", code: "rope" },
+			"L": { type: "block", code: "linen-*" }
+		},
+		recipegroup: 1,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "sling", quantity: 1  }
+	},
+	{
+		ingredientPattern: "R	L",
+		requiresTrait: "improviser",
+		ingredients: {
+			"R": { type: "item", code: "rope" },
+			"L": { type: "item", code: "leather-normal-plain" }
+		},
+		recipegroup: 2,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "sling", quantity: 1  }
+	},
+	{
+		ingredientPattern: "R	L",
+		requiresTrait: "improviser",
+		ingredients: {
+			"R": { type: "item", code: "rope" },
+			"L": { type: "item", code: "hide-pelt-*", tags: { anyOf:["size-small", "size-medium"]}}
+		},
+		recipegroup: 3,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "sling", quantity: 1  }
+	}
+]

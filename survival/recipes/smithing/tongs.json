@@ -1,0 +1,13 @@
+{
+	ingredient: { type: "item", code: "ingot-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "meteoriciron", "steel"] },
+	pattern: [[
+		"__________###",
+		"###########__",
+		"_______##____",
+		"###########__",
+		"__________###",
+	]],
+	name: "Tongs",
+	code: "metaltongs-{metal}",
+	output: { type: "item", code: "tongsmetal-standard-{metal}"  }
+}

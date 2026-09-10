@@ -1,0 +1,410 @@
+{
+	components: [
+		{
+			code: "testhasmet",
+			owner: "gerhardt",
+			type: "condition",
+			variable: "player.hasmetgerhardt",
+			isNotValue: "true",
+			thenJumpTo: "firstmeet",
+			elseJumpTo: "welcomeback"
+		},
+		{
+			code: "firstmeet",
+			owner: "gerhardt",
+			type: "talk",
+			setVariables: { "player.hasmetgerhardt": "true" },
+			text: [
+				{ value: "dialogue-gerhardt-nothing", condition: { variable: "player.characterclass", isNotValue: "hunter" } },
+				{ value: "dialogue-gerhardt-keeneyes" , condition: { variable: "player.characterclass", isValue: "hunter" } }
+			],
+		},
+		{
+			code: "main",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-name", jumpTo: "name" },
+				{ value: "dialogue-profession", jumpTo: "profession" },
+				{ value: "dialogue-location", jumpTo: "location" },
+				{ value: "dialogue-trade", jumpTo: "trade" },
+                { value: "dialogue-work", jumpTo: "work", conditions: [{ variable: "player.gerhardtqueststarted", isNotValue: "true" }, { variable: "player.gerhardtquestcompleted", isNotValue: "true" }] },
+                { value: "dialogue-workreminder", jumpTo: "workremind", conditions: [{ variable: "player.gerhardtqueststarted", isValue: "true" }, { variable: "player.gerhardtquestcompleted", isNotValue: "true" }] },
+                { value: "dialogue-gerhardt-herehides", jumpTo: "workcomplete", conditions: [{ variable: "player.gerhardtqueststarted", isValue: "true" }, { variable: "player.gerhardtquestcompleted", isNotValue: "true" }, { variable: "player.inventory", isValue: "{type: 'item', code: 'hide-raw-small', stacksize: 10}" }] },
+				{ value: "dialogue-gerhardt-foryou", jumpTo: "wallquest", conditions: [{ variable: "player.wallqueststarted", isValue: "true" }, { variable: "player.wallquestcompleted", isNotValue: "true" }, { variable: "player.inventory", isValue: "{type: 'block', code: 'flower-wilddaisy-free', stacksize: 1}" }] },
+				{ value: "dialogue-gerhardt-letter", jumpTo: "letter", condition: { variable: "player.inventory", isValue: "{type: 'item', code: 'letter-faded', stacksize: 1}" } },
+				{ value: "dialogue-gerhardt-devastation", jumpTo: "deadland", condition: { variable: "player.readnote", isValue: "true" } },
+				{ value: "dialogue-gerhardt-ilostthemap", jumpTo: "maprepeat", conditions: [{ variable: "player.gavemapgerhardt", isValue: "true" }, { variable: "player.inventory", isNotValue: "{type: 'item', code: 'locatormap-devastationarea', stacksize: 1}" }] },
+			],
+		},
+		{
+			code: "welcomeback",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-mayyourarrows" }
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "name",
+			owner: "gerhardt",
+			type: "talk",
+			trigger: "revealname",
+			text: [
+				{ value: "dialogue-gerhardt-gerhardt"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "profession",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-ihunt"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "location",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-nadiya"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "trade",
+			owner: "gerhardt",
+			trigger: "opentrade"
+		},
+		{
+			code: "letter",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-hermit"	}
+			],
+			jumpTo: "whytobias"
+		},
+		{
+			code: "whytobias",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-whycallhim", jumpTo: "thetobias"	},
+				{ value: "dialogue-gerhardt-howtofindhim", jumpTo: "tobiasfind"	}
+			],
+		},
+		{
+			code: "thetobias",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-madman"	}
+			],
+			jumpTo: "whytobias"
+		},
+		{
+			code: "tobiasfind",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-sorceror"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "deadland",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-deadland"	}
+			],
+			jumpTo: "howtogetthere"
+		},
+		{
+			code: "howtogetthere",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-howtogetthere", jumpTo: "death", condition: { variable: "player.gavemapgerhardt", isNotValue: "true" }	},
+				{ value: "dialogue-gerhardt-howtogetthere", jumpTo: "alreadydid", condition: { variable: "player.gavemapgerhardt", isValue: "true" }	},
+			],
+		},
+		{
+			code: "alreadydid",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-alreadydid"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "death",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-willnottell"	}
+			],
+		},
+		{
+			code: "noworry",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-noneedtoworry", jumpTo: "stubborn"	}
+			],
+		},
+		{
+			code: "stubborn",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-yourkindarestubborn"	}
+			],
+			jumpTo: "continuestubborn"
+		},
+		{
+			code: "continuestubborn",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-continue", jumpTo: "stubborn2"	}
+			],
+		},
+		{
+			code: "stubborn2",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-takethis"	}
+			],
+			trigger: "giveitemstack",
+			triggerdata: { type: "item", code: "locatormap-devastationarea", stacksize: 1 },
+			setVariables: { "player.gavemapgerhardt": "true" },
+			jumpTo: "main"
+		},
+		{
+			code: "maprepeat",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-afterbadgering"	}
+			],
+			trigger: "giveitemstack",
+			triggerdata: { type: "item", code: "locatormap-devastationarea", stacksize: 1 },
+			setVariables: { "player.gavemapgerhardt": "true" },
+			jumpTo: "main"
+		},
+        {
+			code: "wallquest",
+			owner: "gerhardt",
+			type: "talk",
+            trigger: "takefrominventory",
+			triggerdata: {type: 'block', code: 'flower-wilddaisy-free', quantity: 1 },
+			text: [
+				{ value: "dialogue-gerhardt-stares"	}
+			],
+			jumpTo: "continuequest"
+		},
+        {
+			code: "continuequest",
+			owner: "player",
+			type: "talk",
+            setVariables: { "player.wallquestcompleted": "true" },
+			text: [
+				{ value: "dialogue-continue", jumpTo: "wallquest2"	}
+			],
+		},
+        {
+			code: "wallquest2",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-icanguess"	}
+			],
+			jumpTo: "continuequest2"
+		},
+        {
+			code: "continuequest2",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-continue", jumpTo: "wallquest3"	}
+			],
+		},
+        {
+			code: "wallquest3",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-neverknew"	}
+			],
+			jumpTo: "continuequest3"
+		},
+        {
+			code: "continuequest3",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-continue", jumpTo: "wallquest4"	}
+			],
+		},
+        {
+			code: "wallquest4",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-flowergarden"	}
+			],
+			jumpTo: "continuequest4"
+		},
+        {
+			code: "continuequest4",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-continue", jumpTo: "wallquest5"	}
+			],
+		},
+        {
+			code: "wallquest5",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-plentyreminders"	}
+			],
+			jumpTo: "wallquestchoice"
+		},
+        {
+			code: "wallquestchoice",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-honored", jumpTo: "wallquestaccept"	},
+				{ value: "dialogue-gerhardt-keepit", jumpTo: "wallquestreject"	},
+			],
+		},
+        {
+			code: "wallquestaccept",
+			owner: "gerhardt",
+			type: "talk",
+            trigger: "giveitemstack",
+			triggerdata: { type: "item", code: "clothes-nadiya-arm-armlet-teeth", stacksize: 1 },
+			text: [
+				{ value: "dialogue-gerhardt-givethanks"	}
+			],
+			jumpTo: "main"
+		},
+        {
+			code: "wallquestreject",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-suityourself"	}
+			],
+			jumpTo: "main"
+		},
+        {
+			code: "work",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-trampledthrough"	}
+			],
+			jumpTo: "gerhardtquestchoice"
+		},
+        {
+			code: "workremind",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-smallhides"	}
+			],
+			jumpTo: "main"
+		},
+        {
+			code: "gerhardtquestchoice",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-yougotit", jumpTo: "gerhardtquestaccept"	},
+				{ value: "dialogue-gerhardt-tenhides", jumpTo: "gerhardtquesthesitant"	},
+				{ value: "dialogue-nothanks", jumpTo: "gerhardtquestreject"	},
+			],
+		},
+        {
+			code: "gerhardtquestaccept",
+			owner: "gerhardt",
+			type: "talk",
+            setVariables: { "player.gerhardtqueststarted": "true" },
+			text: [
+				{ value: "dialogue-gerhardt-goodhunting"	}
+			],
+			jumpTo: "main"
+		},
+        {
+			code: "gerhardtquesthesitant",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-gettowork"	}
+			],
+			jumpTo: "gerhardtquestresponse"
+		},
+        {
+			code: "gerhardtquestresponse",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-fine", jumpTo: "gerhardtquestaccept"	},
+				{ value: "dialogue-nothanks", jumpTo: "gerhardtquestreject"	},
+			],
+		},
+        {
+			code: "gerhardtquestreject",
+			owner: "gerhardt",
+			type: "talk",
+			text: [
+				{ value: "dialogue-gerhardt-stopbothering"	}
+			],
+			jumpTo: "main"
+		},
+        {
+			code: "workcomplete",
+			owner: "gerhardt",
+			type: "talk",
+            setVariables: { "player.gerhardtquestcompleted": "true" },
+            trigger: "takefrominventory",
+			triggerdata: {type: 'item', code: 'hide-raw-small', quantity: 10 },
+			text: [
+				{ value: "dialogue-gerhardt-goodenough"	}
+			],
+			jumpTo: "gerhardtquestcontinue"
+		},
+        {
+			code: "gerhardtquestcontinue",
+			owner: "player",
+			type: "talk",
+            trigger: "giveitemstack",
+			triggerdata: { type: "item", code: "gear-rusty", stacksize: 12 },
+			text: [
+				{ value: "dialogue-continue", jumpTo: "workcomplete2"	}
+			],
+		},
+        {
+			code: "workcomplete2",
+			owner: "gerhardt",
+			type: "talk",
+            trigger: "giveitemstack",
+			triggerdata: { type: "item", code: "arrow-iron", stacksize: 6 },
+			text: [
+				{ value: "dialogue-gerhardt-somespares"	}
+			],
+			jumpTo: "main"
+		},
+	]
+}

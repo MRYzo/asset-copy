@@ -1,0 +1,21 @@
+[
+	{
+		ingredientPattern: "T	S",
+		ingredients: {
+			"T": { type: "item", code: "shovelhead-*", name: "material"  },
+			"S": { type: "item", code: "stick" }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "shovel-{material}", quantity: 1, recipeAttributes: { "applyquenchablebuffs": true  }  }
+	},
+	{
+		ingredientPattern: "_P_,_P_,PPP",
+		ingredients: {
+			"P": { type: "item", code: "plank-*" }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "snowshovel-oak", quantity: 1  }
+	}
+]

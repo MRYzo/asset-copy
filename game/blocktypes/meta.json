@@ -1,0 +1,63 @@
+{
+	code: "meta",
+	classByType: {
+		"*-spawner": "BlockSpawner",
+		"*-connector": "BlockTileConnector",
+		"*-selectablecollider": "BlockMetaRemainSelectable"
+	},
+	entityClassByType: {
+		"*-spawner": "Spawner",
+		"*-music": "MusicTrigger",
+		"*-connector": "TileConnector"
+	},
+	attributes: {
+		handbook: {
+			exclude: true
+		},
+		canChiselByType: {
+			"*-collider": true,
+			"*-selectablecollider": true
+		}
+	},
+	variantgroups: [
+		{ code:"type", states: ["filler", "pathway", "underground", "spawner", "collider", "selectablecollider", "music", "blocklayer", "connector","aboveground",] },
+	],
+	shape: { base: "block/basic/cube" },
+	drawtypeByType: {
+		"*-connector": "json",
+		"*": "cube"
+	},
+	creativeinventory: { "general": ["*"], "meta": ["*"] },
+	drops: [],
+	blockmaterial: "Meta",
+	faceCullMode: "Merge",
+	vertexFlags: {
+		zOffset: 7
+	},
+	renderPass: "meta",
+	replaceable: 900,
+	lightAbsorption: 0,
+	texturesByType: {
+		"*-connector": {
+			all: { base: "block/meta/{type}" },
+			verticals: { base: "block/meta/{type}-up" },
+			east: { base: "block/meta/{type}-up", rotation: 270 },
+			west: { base: "block/meta/{type}-up", rotation: 90 }
+		},
+		"*": { 
+			all: { base: "block/meta/{type}" } 
+		}
+	},
+	resistance: 0.25,
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	collisionboxByType: {
+		"*-collider": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 1, z2: 1 },
+		"*-selectablecollider": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 1, z2: 1 },
+		"*": null,
+	}
+}

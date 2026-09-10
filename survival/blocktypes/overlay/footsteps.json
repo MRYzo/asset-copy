@@ -1,0 +1,44 @@
+{
+	code: "overlay-footsteps",
+	behaviors: [ {name: "Decor", properties: {sides: ["north", "east", "south", "west", "up", "down"], notFullFace:true, thickness: 0.0 }} ],
+	attributes: {
+		handbook: {
+			exclude: true
+		},
+		ignoreSounds: true
+	},
+	variantgroups: [
+		{ code: "type", states: ["eidolon", "tracks"] },
+		{ code: "variant", states: ["1", "2", "3", "4", "5"] },
+	],
+	allowedVariants: [
+		"eidolon-*",
+		"*-tracks-1",
+		"*-tracks-2",
+		"*-tracks-3"
+	],
+	renderPass: "Decor",
+	drawtype: "surfacelayer",
+	doNotRenderAtLod2: true,
+	shapeInventory: {
+		base: "block/basic/layers/0voxel-up", rotateX: 90
+	},
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	blockmaterial: "Stone",
+	creativeinventory: { "general": ["*"], "clutter": ["*"] },
+	replaceable: 5500,
+	resistance: 0,
+	lightAbsorption: 0,
+	texturesByType: {
+		"*": { all: {  base: "block/overlay/footsteps/{type}-{variant}" } },
+	},
+	vertexflags: {
+		zOffset: 1
+	},
+	drops: [],
+	guiTransform: {
+		origin: { x: 0.5, y: 0.5, z: 0 }
+	},
+	materialDensity: 400
+}

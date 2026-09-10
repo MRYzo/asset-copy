@@ -1,0 +1,617 @@
+{
+	code: "pig",
+	class: "EntityAgent",
+	tags: ["animal", "huntable", "adult", "habitat-land"],
+	weight: 150,
+	variantgroups:  [
+		{ code: "type", states: ["eurasian", "redriver", "warthog"]},
+		{ code: "age", states: ["adult", "elder"] },
+		{ code: "gender", states: ["male", "female"] },
+	] ,
+	skipvariants: [
+		"*-redriver-elder-*",
+		"*-warthog-elder-*"
+	],
+	hitboxSizeByType: {
+		"pig-eurasian-elder-*": { x: 1.1, y: 1.2 },
+		"*": { x: 0.99, y: 0.8 }
+	},
+	deadHitboxSizeByType: {
+		"pig-eurasian-elder-*": { x: 1.1, y: 0.6 },
+		"*": { x: 0.99, y: 0.5 }
+	},
+	eyeHeight: 0.7,
+	attributes: {
+		harshWinterSpawnRate: 0,
+		creatureDiet: {
+			foodCategories: ["Grain", "Fruit", "Vegetable", "Protein"],
+			weightedFoodTags: [
+				{ weight: 0.7, code: "grain" },
+				{ weight: 0.9, code: "fruitmash" },
+				{ weight: 0.9, code: "fruit" },
+				{ weight: 1, code: "tastyvegetable" },
+				{ weight: 1, code: "nibbleCrop" },
+				{ weight: 0.2, code: "cassava" }
+			],
+			skipFoodTags: ["rice", "parsnip"]
+		},
+		trappable: {
+			"small": { 
+				trapChance: 0.0,	
+				trapDestroyChanceByType: {
+					"pig-eurasian-elder-*": 0.99,
+					"*-adult-male": 0.7,
+					"*-adult-female": 0.6
+				}
+			},
+			"large": { 
+				trapChance: 0.0,
+				trapDestroyChanceByType: {
+					"pig-eurasian-elder-*": 0.5,
+					"*-adult-male": 0.1,
+					"*-adult-female": 0.1
+				}
+			}
+		},
+		handbook: {
+			groupcode: "creaturegroup-pig",
+			trappableGroupCode: "creaturegroup-pig-{type}-{age}"
+		}
+	},
+	drops: [],
+	client: {
+		renderer: "Shape",
+		shape: {base: "entity/animal/mammal/hooved/pig/{type}/{age}" },
+		texture: { base: "entity/animal/mammal/hooved/pig/{type}-{age}"},
+		sizeByType: {
+			"*-adult-male": 1.1,
+			"*-adult-female": 0.9
+		},
+		behaviors: [
+			{ code: "repulseagents" },
+			{ code: "controlledphysics", stepHeight: 1.1251 },
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
+			{ code: "interpolateposition" },
+			{ code: "multiply", "enabledByType": { "*-female": true, "*": false } },
+			{ code: "harvestable" },
+			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
+			{ code: "ropetieable", minGeneration: 2 },
+			{ code: "antlergrowth" }
+		],
+		animations: [
+			{
+				code: "attack",
+				animation: "Attack",
+				animationSpeed: 2.2,
+				weight: 10,
+				blendMode: "AddAverage"
+			},
+			{
+				code: "roar",
+				animation: "Roar",
+				animationSpeed: 2.2,
+				weight: 10,
+				blendMode: "AddAverage"
+			},
+			{
+				code: "hurt",
+				animation: "hurt",
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "AddAverage"
+			},
+			{
+				code: "die",
+				animation: "die",
+				animationSpeed: 1,
+				weight: 10,
+				blendMode: "Average",
+				triggeredBy: { onControls: ["dead"] }
+			},
+			{
+				code: "idle",
+				animation: "idle",
+				blendMode: "AddAverage",
+				easeOutSpeed: 4,
+				triggeredBy: { defaultAnim: true }
+			},
+			{
+				code: "sleep",
+				animation: "sleep",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average"
+			},
+			{
+				code: "sit",
+				animation: "sit",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average"
+			},
+			{
+				code: "eat",
+				animation: "Eat",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average"
+			},
+			{
+				code: "swim",
+				animation: "Swim",
+				supressDefaultAnimation: true,
+				blendMode: "Average"
+			},
+			{
+				code: "walk",
+				animation: "Walk",
+				supressDefaultAnimation: true,
+				blendMode: "Average"
+			},
+			{
+				code: "run",
+				animation: "Run",
+				supressDefaultAnimation: true,
+				blendMode: "Average"
+			}
+		]
+	},
+	server: {
+		behaviors: [
+			{ code: "repulseagents" },
+			{ code: "controlledphysics", stepHeight: 1.1251 },
+			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
+			{ code: "health",
+				currenthealthByType: {
+					"pig-eurasian-elder-*": 45,
+					"*": 15
+				},
+				maxhealthByType: {
+					"pig-eurasian-elder-*": 45,
+					"*": 15
+				}
+			},
+			{ code: "deaddecay",
+				hoursToDecay: 96,
+				decayedBlockByType: {
+					"pig-eurasian-elder-*": "carcass-large",
+					"*": "carcass-medium"
+				}
+			},
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
+			{ code: "harvestable",
+				drops: [
+					{
+						type: "item",
+						code: "redmeat-raw",
+						quantityByType: {
+							"pig-eurasian-elder-*": { avg: 18, var: 4 },
+							"*": { avg: 9, var: 1.5 }
+						}
+					},
+					{
+						type: "item",
+						code: "hide-raw-medium",
+						quantityByType: {
+							"pig-eurasian-elder-*": { avg: 0, var: 0 },
+							"*": { avg: 1.5, var: 0 }
+						}
+					},
+					{
+						type: "item",
+						code: "hide-raw-large",
+						quantityByType: {
+							"pig-eurasian-elder-*": { avg: 1, var: 0 },
+							"*": { avg: 0, var: 0 }
+						}
+					},
+					{
+						type: "item",
+						code: "fat",
+						quantityByType: {
+							"pig-eurasian-elder-*": { avg: 4, var: 0 },
+							"*": { avg: 2, var: 0 }
+						}
+					}
+				]
+			},
+			{ code: "breathe" },
+			{
+				code: "multiply",
+				enabledByType: {
+					"*-female": true,
+					"*": false
+				},
+				spawnEntityCodes: [ { code:"pig-{type}-baby-male"}, {code: "pig-{type}-baby-female"} ],
+				spawnQuantityMin: 2,
+				spawnQuantityMax: 6,
+				requiresNearbyEntityCodes: ["pig-{type}-adult-male", "pig-{type}-elder-male"],
+				requiresNearbyEntityRange: 10,
+				pregnancyDays: 25,
+				multiplyCooldownDaysMin: 6,
+				multiplyCooldownDaysMax: 11,
+				portionsEatenForMultiply: 10
+			},
+			{
+				code: "emotionstates",
+				states: [
+					{ code: "fleeondamage", duration: 60, chance: 0.8, slot: 0, priority: 5, accumType: "max", whenHealthRelBelow: 0.4 },
+					{ code: "aggressiveondamage",
+						durationByType: {
+							"*-female": 15,
+							"*": 20
+						},
+						chanceByType: {
+							"*-female": 0.6,
+							"*": 0.9
+						},
+						slot: 0,
+						priority: 2,
+						accumType: "noaccum"
+					},
+					{ code: "fleeondamage", duration: 10, chance: 1, slot: 0, priority: 1, accumType: "max" },
+					{ code: "alarmherdondamage", chance: 1, slot: 1, priority: 1, accumType: "max" },
+					{ code: "aggressivearoundentities", duration: 60, chance: 1, slot: 2, priority: 1, entityCodes: ["pig-{type}-baby-male", "pig-{type}-baby-female"], maxGeneration: 2 }
+				]
+			},
+			{
+				code: "taskai",
+				aiCreatureType: "LandCreature",
+				aitasks: [
+					{
+						code: "meleeattack",
+						//"This attack will happen if the mob is in aggressiveondamage emotionstate.  Does NOT expire with generations.",
+						entityCodes: ["player"],
+						priority: 2.1,
+						damageByType: {
+							"*-eurasian-elder-male": 10,
+							"*-eurasian-elder-female": 8,
+							"*-female": 4,
+							"*": 5
+						},
+						damageTierByType: {
+							"pig-eurasian-elder-male": 2,
+							"*": 1
+						},
+						minCooldownByType: {
+							"*-female": 1000,
+							"*": 1500
+						},
+						maxCooldownByType: {
+							"*-female": 1500,
+							"*": 2500
+						},
+						attackDurationMs: 900,
+						damagePlayerAtMs: 300,
+						animation: "Attack",
+						animationSpeed: 1.2,
+						sound: "creature/pig/attack",
+						whenInEmotionState: "aggressiveondamage"
+					},
+					{
+						code: "meleeattack",
+						//"This attack will happen if the mob is NOT in aggressiveondamage emotionstate. Stops after high enough generation",
+						entityCodes: ["player"],
+						priority: 2,
+						damageByType: {
+							"*-eurasian-elder-male": 10,
+							"*-eurasian-elder-female": 8,
+							"*-female": 4,
+							"*": 5
+						},
+						damageTierByType: {
+							"pig-eurasian-elder-male": 2,
+							"*": 1
+						},
+						minCooldownByType: {
+							"*-female": 1000,
+							"*": 1500
+						},
+						maxCooldownByType: {
+							"*-female": 1500,
+							"*": 2500
+						},
+						attackDurationMs: 900,
+						damagePlayerAtMs: 300,
+						animation: "Attack",
+						animationSpeed: 1.2,
+						sound: "creature/pig/attack",
+						whenNotInEmotionState: "aggressiveondamage",
+						maxGeneration: 2
+					},
+					{
+						code: "fleeentity",
+						//"This task flee at high speed when in fleeondamage, regardless of generation.",
+						entityCodes: ["player", "bear-*"],
+						priority: 1.8,
+						seekingRange: 18,
+						animation: "Run",
+						animationSpeed: 1.2,
+						movespeedByType: {
+							"*-adult-*": 0.05,
+							"*-elder-*": 0.055
+						},
+						sound: "creature/pig/hurt",
+						whenInEmotionState: "fleeondamage"
+					},
+					{
+						code: "seekentity",
+						//"This task will seek the player when in aggressiveondamage emotion. This occurs regardless of generation.",
+						entityCodes: ["player"],
+						priority: 1.5,
+						mincooldown: 1000,
+						maxcooldown: 1500,
+						movespeedByType: {
+							"*-adult-*": 0.042,
+							"*-elder-*": 0.055
+						},
+						seekingRange: 16,
+						animation: "Canter",
+						animationSpeed: 1.2,
+						whenInEmotionState: "aggressiveondamage"
+					},
+					{
+						code: "seekentity",
+						//"This task will seek the player when the mob has babies.  Will stop after high enough generation when the aggressivearoundentities emotionstate stops triggering.",
+						entityCodes: ["player"],
+						priority: 1.5,
+						mincooldown: 1000,
+						maxcooldown: 1500,
+						movespeedByType: {
+							"*-adult-*": 0.042,
+							"*-elder-*": 0.055
+						},
+						seekingRange: 8,
+						animation: "Canter",
+						animationSpeed: 1.2,
+						whenInEmotionState: "aggressivearoundentities",
+					},
+					{
+						code: "followleadholder",
+						minGeneration: 2,
+						priority: 1.45,
+						animation: "Trot",
+						animationSpeed: 1.8,
+						movespeedByType: {
+							"*-adult-*": 0.012,
+							"*-elder-*": 0.021
+						},
+					},
+					{
+						code: "seekentity",
+						//"This task seeks out the player if they get very close.  Intended to result in an attack, and prevent easy fencing in. Does not happen after high enough generation.",
+						entityCodes: ["player"],
+						priority: 1.44,
+						mincooldown: 1000,
+						maxcooldown: 1500,
+						seekingRange: 7,
+						movespeed: 0.05,
+						animation: "Canter",
+						animationSpeed: 1.2,
+						maxGeneration: 2
+					},
+					{
+						code: "getoutofwater",
+						executionChance: 0.04,
+						priority: 1.4,
+						movespeed: 0.015,
+						animation: "Swim",
+						animationSpeed: 1
+					},
+					{
+						code: "stayclosetoentity",
+						enabledByType: {
+							"*-male": false,
+							"*": true
+						},
+						priority: 1.37,
+						entityCode: "pig-{type}-{age}-male",
+						maxDistance: 10,
+						searchRange: 25,
+						movespeedByType: {
+							"*-adult-*": 0.0085,
+							"*-elder-*": 0.014
+						},
+						animation: "Trot",
+						animationSpeed: 1.2
+					},
+					{
+						code: "fleeentity",
+						//"This task flees at a trot, when asleep, but not aggressive, at short range as if the player awoke the animal by getting close. Will not occur after high enough generation.",
+						entityCodes: ["player", "bear-*"],
+						priority: 1.36,
+						movespeed: 0.025,
+						seekingRange: 10,
+						animation: "trot",
+						animationSpeed: 1.2,
+						sound: "creature/pig/hurt",
+						maxGeneration: 2
+					},
+					{
+						code: "idle",
+						animation: "Sleep",
+						priority: 1.35,
+						minduration: 200000,
+						maxduration: 800000,
+						mincooldown: 10000,
+						maxcooldown: 30000,
+						priorityForCancel: 1.35,
+						whenNotInEmotionState: "aggressiveondamage",
+						duringDayTimeFrames: [ { fromHour: 4, toHour: 15 } ],
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 6,
+						stopOnHurt: true
+					},
+					{
+						code: "fleeentity",
+						//"This task flees at a trot, when awake, but not aggressive, at a medium range. Will not occur after high enough generation.",
+						entityCodes: ["player", "bear-*"],
+						priority: 1.32,
+						movespeed: 0.022,
+						seekingRange: 14,
+						animation: "trot",
+						animationSpeed: 1.2,
+						sound: "creature/pig/hurt",
+						maxGeneration: 1
+					},
+					{
+						code: "seekfoodandeat",
+						movespeed: 0.004,
+						priority: 1.3,
+						animationSpeed: 1,
+						animation: "Walk",
+						eatAnimation: "Eat",
+						eatSound: "creature/animal-eat2",
+						eatTime: 1.5,
+						mincooldownHours: 1,
+						maxcooldownHours: 4
+					},
+					{
+						code: "idle",
+						animation: "Eat",
+						priority: 1.2,
+						priorityForCancel: 1.35,
+						minduration: 3200,
+						maxduration: 3200,
+						mincooldown: 6000,
+						maxcooldown: 20000,
+						animationSpeed: 1,
+						whenNotInEmotionState: "aggressiveondamage"
+					},
+					{
+						code: "wander",
+						animation: "Walk",
+						priority: 1.0,
+						movespeedByType: {
+							"*-adult-*": 0.003,
+							"*-elder-*": 0.0045
+						},
+						animationSpeed: 1,
+						preferredLightLevel: 20,
+						priorityForCancel: 1.35
+					},
+					{
+						code: "idle",
+						animation: "Sit",
+						priority: 0.9,
+						minduration: 5000,
+						maxduration: 30000,
+						mincooldown: 2000,
+						maxcooldown: 120000,
+						priorityForCancel: 1.28,
+						whenNotInEmotionState: "aggressiveondamage",
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 5
+					},
+					{
+						code: "lookaround",
+						priority: 0.5
+					}
+				]
+			},
+			{ code: "ropetieable", minGeneration: 2 },
+			{ code: "pettable", minGeneration: 1 },
+			{ code: "entitystatetags" },
+			{
+				code: "antlergrowth",
+				itemBaseName: "tusk-pig-{type}-{age}",
+				variantsByType: {
+					//Remember to add variants to antlers itemtype,
+					"pig-eurasian-*-male": ["02", "03", "04", "05"],
+					"pig-redriver-*-male": ["02", "03", "04", "05"],
+					"pig-warthog-*-male": ["02", "03", "04"],
+					"pig-*-female": ["01"]
+				},
+				c1: "Disables the yearly interval of growing and shedding and uses the growDurationMonths value instead to grow the antlers once",
+				beginGrowMonth: -1,
+				growDurationMonths: 12,
+				noItemDrop: true,
+			}
+		],
+		spawnconditions: {
+			worldgen: {
+				TriesPerChunkByType: {
+					"pig-eurasian-elder-male": { avg: 0.004, var: 0 },
+					"pig-eurasian-adult-male": { avg: 0.04, var: 0 },
+					"pig-redriver-adult-male": { avg: 0.02, var: 0 },
+					"pig-warthog-adult-male": { avg: 0.02, var: 0 },
+					"*-female": { avg: 0, var: 0 }
+				},
+				tryOnlySurface: true,
+				minLightLevel: 10,
+				groupSizeByType: {
+					"*-elder-male": { dist: "verynarrowgaussian", avg: 1.5, var: 0.5 },
+					"*-adult-male": { dist: "verynarrowgaussian", avg: 2.5, var: 1.5 }
+				},
+				insideBlockCodes: ["air", "tallgrass-*", "snowlayer-*", "flower-*", "fern-*", "tallfern", "leaves-*", "wildvine-*", "mushroom-*", "crop-*", "loosestones-*", "looseboulders-*", "loosestick-*"],
+				companionsByType: {
+					"*-elder-male": [ "pig-{type}-elder-female" ],
+					"*-adult-male": [ "pig-{type}-adult-female", "pig-{type}-adult-female", "pig-{type}-baby-male", "pig-{type}-baby-female" ]
+				}
+			},
+			runtime: {
+				group: "neutral",
+				maxQuantityByGroupByType: {
+					"pig-eurasian-elder-*": { code: "pig-*", maxQuantity: 1 },
+					"pig-eurasian-adult-*": { code: "pig-*", maxQuantity: 5 },
+					"pig-redriver-*": { code: "pig-*", maxQuantity: 2 },
+					"pig-warthog-*": { code: "pig-*", maxQuantity: 2 }
+				},
+				spawnCapPlayerScaling: 0.0,
+				chanceByType: {
+					"pig-eurasian-elder-male": .00003,
+					"pig-eurasian-adult-male": .0003,
+					"pig-redriver-adult-male": .00015,
+					"pig-warthog-adult-male": .00015
+				},
+				tryOnlySurface: true,
+				minLightLevel: 10,
+				groupSize: { dist: "verynarrowgaussian", avg: 2, var: 2 },
+				insideBlockCodes: ["air", "tallgrass-*", "snowlayer-*", "flower-*", "fern-*", "tallfern", "leaves-*", "wildvine-*", "mushroom-*", "crop-*", "loosestones-*", "looseboulders-*", "loosestick-*"],
+				companionsByType: {
+					"*-elder-male": [ "pig-{type}-elder-female" ],
+					"*-adult-male": [ "pig-{type}-adult-female", "pig-{type}-adult-female", "pig-{type}-baby-male", "pig-{type}-baby-female" ]
+				}
+			}
+		},
+		spawnconditionsByType: {
+			"pig-eurasian-*": {
+				climate: {
+					minTemp: 0,
+					maxTemp: 20,
+					minRain: 0.4,
+					maxRain: 1,
+					minForestOrShrubs: 0.4,
+					maxY: 1.3
+				}
+			},
+			"pig-redriver-*": {
+				climate: {
+					minTemp: 20,
+					maxTemp: 40,
+					minRain: 0.5,
+					minForestOrShrubs: 0.5,
+					maxY: 1.5
+				}
+			},
+			"pig-warthog-*": {
+				climate: {
+					minTemp: 20,
+					maxTemp: 40,
+					minRain: 0.2,
+					maxRain: 0.5,
+					minForestOrShrubs: 0,
+					maxForest: 0.5,
+					maxShrubs: 0.5,
+					maxY: 1.2
+				}
+			}
+		}
+	},
+	sounds: {
+		hurt: "creature/pig/hurt",
+		death: "creature/pig/hurt",
+		idle: { path: "creature/pig/idle", pitch: { avg: 1, var: 0.25 } }
+	},
+	idleSoundChance: 0.01
+}

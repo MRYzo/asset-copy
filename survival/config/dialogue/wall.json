@@ -1,0 +1,200 @@
+{
+	components: [
+		{
+			code: "testhasmet",
+			owner: "wall",
+			type: "condition",
+			variable: "player.hasmetwall",
+			isNotValue: "true",
+			thenJumpTo: "firstmeet",
+			elseJumpTo: "welcomeback"
+		},
+		{
+			code: "firstmeet",
+			owner: "wall",
+			type: "talk",
+			setVariables: { "player.hasmetwall": "true" },
+			text: [
+				{ value: "dialogue-wall-anotherdistraction" }
+			],
+		},
+		{
+			code: "main",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-name", jumpTo: "name" },
+				{ value: "dialogue-profession", jumpTo: "profession" },
+				{ value: "dialogue-location", jumpTo: "location" },
+				{ value: "dialogue-trade", jumpTo: "trade" },
+				{ value: "dialogue-work", jumpTo: "work", conditions: [{ variable: "player.wallqueststarted", isNotValue: "true" }, { variable: "player.wallquestcompleted", isNotValue: "true" }] },
+				{ value: "dialogue-workreminder", jumpTo: "workreminder", conditions: [{ variable: "player.wallqueststarted", isValue: "true" }, { variable: "player.wallquestcompleted", isNotValue: "true" }] },
+				{ value: "dialogue-wall-deliveredflowers", jumpTo: "workcomplete", conditions: [{ variable: "player.wallqueststarted", isValue: "true" }, { variable: "player.wallquestcompleted", isValue: "true" }, { variable: "player.wallquestrewarded", isNotValue: "true" }] },
+				{ value: "dialogue-wall-letter", jumpTo: "letter", condition: { variable: "player.inventory", isValue: "{type: 'item', code: 'letter-faded', stacksize: 1}" } }
+			],
+		},
+		{
+			code: "welcomeback",
+			owner: "wall",
+			type: "talk",
+			text: [
+				{ value: "dialogue-wall-leadintogold" }
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "name",
+			owner: "wall",
+			type: "talk",
+			trigger: "revealname",
+			text: [
+				{ value: "dialogue-wall-wall"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "profession",
+			owner: "wall",
+			type: "talk",
+			text: [
+				{ value: "dialogue-wall-collectherbs"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "location",
+			owner: "wall",
+			type: "talk",
+			text: [
+				{ value: "dialogue-wall-nadiya"	}
+			],
+			jumpTo: "main"
+		},
+		{
+			code: "trade",
+			owner: "wall",
+			trigger: "opentrade"
+		},
+		{
+			code: "letter",
+			owner: "wall",
+			type: "talk",
+			text: [
+				{ value: "dialogue-wall-plantsoralchemy"	}
+			],
+			jumpTo: "main"
+		},
+        {
+			code: "work",
+			owner: "wall",
+			type: "talk",
+			text: [
+				{ value: "Nothing I need help with."	}
+			],
+			jumpTo: "continue"
+		},
+        {
+			code: "continue",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-continue", jumpTo: "work2" },
+			],
+		},
+        {
+			code: "work2",
+			owner: "wall",
+			type: "talk",
+			text: [
+				{ value: "Wait..."	}
+			],
+			jumpTo: "continue2"
+		},
+        {
+			code: "continue2",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-continue", jumpTo: "work3" },
+			],
+		},
+        {
+			code: "work3",
+			owner: "wall",
+			type: "talk",
+			text: [
+				{ value: "dialogue-wall-bringflowers"	}
+			],
+			jumpTo: "questchoice"
+		},
+        {
+			code: "questchoice",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-wall-acceptflowers", jumpTo: "questaccept" },
+				{ value: "dialogue-rathernot", jumpTo: "questrefuse" },
+			],
+		},
+        {
+			code: "questaccept",
+			owner: "wall",
+			type: "talk",
+            setVariables: { "player.wallqueststarted": "true" },
+            trigger: "giveitemstack",
+			triggerdata: { type: "block", code: "flower-wilddaisy-free", stacksize: 1 },
+			text: [
+				{ value: "dialogue-wall-dontbother"	}
+			],
+			jumpTo: "main"
+		},
+        {
+			code: "questrefuse",
+			owner: "wall",
+			type: "talk",
+			text: [
+				{ value: "dialogue-wall-toosentimental"	}
+			],
+			jumpTo: "main"
+		},
+        {
+			code: "workreminder",
+			owner: "wall",
+			type: "talk",
+			text: [
+				{ value: "dialogue-wall-justbring"	}
+			],
+			jumpTo: "main"
+		},
+        {
+			code: "workcomplete",
+			owner: "wall",
+			type: "talk",
+			text: [
+				{ value: "dialogue-wall-good" }
+			],
+			jumpTo: "workcompletechoice"
+		},
+        {
+			code: "workcompletechoice",
+			owner: "player",
+			type: "talk",
+			text: [
+				{ value: "dialogue-reward", jumpTo: "workcompletereward" },
+				{ value: "dialogue-alright", jumpTo: "main" },
+			],
+		},
+        {
+			code: "workcompletereward",
+			owner: "wall",
+			type: "talk",
+            setVariables: { "player.wallquestrewarded": "true" },
+            trigger: "giveitemstack",
+			triggerdata: { type: "item", code: "gear-rusty", stacksize: 2 },
+			text: [
+				{ value: "dialogue-wall-takethese" }
+			],
+			jumpTo: "main"
+		},
+	]
+}

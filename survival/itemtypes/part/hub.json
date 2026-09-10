@@ -1,0 +1,53 @@
+{
+	code: "hub",
+	behaviors: [
+		{ name: "GroundStorable", properties: { layout: 'Quadrants', placeRemoveSound: 'sounds/player/build',	collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.125, z2: 1 } } }
+	],
+	variantgroups: [
+		{ code: "type", states: ["light4way"] },
+		{ code: "metal", states: ["iron", "meteoriciron", "steel"] },
+	],
+	shape: { base: "item/part/hub-{type}" },
+	textures: {
+		"metal": { base: "block/metal/sheet/{metal}*" },
+	},
+	attributes: {
+		groundStorageTransform: {
+			rotation: { x: 0, y: 25, z: 0 },
+			origin: { x: 0.5, y: 0, z: 0.5 }
+		},
+		onTongTransform: {
+			translation: { x: -0.85, y: -0.2, z: -0.52 },
+			rotation: { x: -84, y: -19, z: -5 },
+			origin: { x: 0.5, y: -0, z: 0.5 }
+		},
+		handbook: {
+			groupBy: ["bracket-*"]
+		},
+		onMetalTongTransform: {
+			translation: { x: -0.9, y: -0.25, z: -0.55 },
+			rotation: { x: 35, y: 0, z: -102 },
+			origin: { x: 0.5, y: 0, z: 0.5 }
+		}
+	},
+	maxstacksize: 8,
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	heldTpIdleAnimation: "holdbothhandslarge",
+	guiTransform: {
+		rotation: { x: 142, y: -17, z: -6 },
+		origin: { x: 0.43, y: 0.3, z: 0.4 },
+		scale: 2.49
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0.2, z: 0 },
+		rotation: { x: 0, y: 0, z: 180 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 4
+	},
+	tpHandTransform: {
+		translation: { x: -0.62, y: 0.22, z: -0.25 },
+		rotation: { x: 11, y: 14, z: -169 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 1
+	}
+}

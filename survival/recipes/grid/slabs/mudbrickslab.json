@@ -1,0 +1,31 @@
+[
+	{
+		ingredientPattern: "CLC,G_G",
+		enabled: true,
+		ingredients: {
+			"G": { type: "item", code: "drygrass", quantity: 2 },
+			"C": { type: "item", code: "clay-*", quantity: 1 },
+			"L": { type: "block", code: "soil-*-none", name: "grade", allowedVariants: ["low", "medium"]  }
+		},
+		name: "mudbrick",
+		width: 3,
+		height: 2,
+		recipeGroup: 2,
+		output: { type: "block", code: "mudbrickslab-dark-down-free", quantity: 4  }
+	},
+	{
+		ingredientPattern: "CSC,GLG",
+		enabled: true,
+		ingredients: {
+			"G": { type: "item", code: "drygrass", quantity: 2 },
+			"S": { type: "block", code: "sand-*" },
+			"C": { type: "item", code: "clay-*", quantity: 2 },
+			"L": { type: "block", code: "soil-*-none", name: "grade", allowedVariants: ["low", "medium"]  }
+		},
+		name: "mudbrick",
+		width: 3,
+		height: 2,
+		recipeGroup: 2,
+		output: { type: "block", code: "mudbrickslab-light-down-free", quantity: 4  }
+	}
+]

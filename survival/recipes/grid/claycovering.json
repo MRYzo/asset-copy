@@ -1,0 +1,32 @@
+{
+	ingredientPattern: "TC",
+	ingredients: {
+		"T": { type: "item", code: "*", name: "tool", allowedVariants: [
+			"axehead-iron", "axehead-meteoriciron", "axehead-steel",
+			"bladehead-falx-iron", "bladehead-falx-meteoriciron", "bladehead-falx-steel",
+			"hammerhead-iron", "hammerhead-meteoriciron", "hammerhead-steel",
+			"hoehead-iron", "hoehead-meteoriciron", "hoehead-steel",
+			"knifeblade-iron", "knifeblade-meteoriciron", "knifeblade-steel",
+			"pickaxehead-iron", "pickaxehead-meteoriciron", "pickaxehead-steel",
+			"prospectingpickhead-iron", "prospectingpickhead-meteoriciron", "prospectingpickhead-steel",
+			"sawblade-iron", "sawblade-meteoriciron", "sawblade-steel",
+			"scythehead-iron", "scythehead-meteoriciron", "scythehead-steel",
+			"shovelhead-iron", "shovelhead-meteoriciron", "shovelhead-steel",
+			"spearhead-iron", "spearhead-meteoriciron", "spearhead-steel",
+			"chisel-iron", "chisel-meteoriciron", "chisel-steel",
+			"shears-iron", "shears-meteoriciron", "shears-steel",
+			"crowbar-iron", "crowbar-meteoriciron", "crowbar-steel",
+			"cleaverhead-iron", "cleaverhead-meteoriciron", "cleaverhead-steel",
+			"tongsmetal-standard-iron", "tongsmetal-standard-meteoriciron", "tongsmetal-standard-steel",
+			"wrench-iron", "wrench-meteoriciron", "wrench-steel",
+			"bladehead-short-iron"
+		]},
+		"C": { type: "item", code: "clay-fire" }
+	},
+	name: "claycovering",
+	shapeless: true,
+	copyAttributesFrom: 'T',
+	width: 2,
+	height: 1,
+	output: { type: "item", code: "{tool}", attributes: { clayCovered: true } }
+}

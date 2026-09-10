@@ -1,0 +1,50 @@
+{
+	code: "bobber",
+	class: "EntityBobber",
+	tags: ["inanimate"],
+	weight: 2,
+	variantgroups: [
+		{ code: "type", states: ["normal"] },
+	],
+	attributes: {
+		waterBobbing: true,
+		shouldSwivelFromMotion: false,
+		speedMultiplier: 1,
+		swimmingOffsetY: 0.1,
+		junkCatchChance: 0.05,
+		junkCatches: [
+			{ type: "item", code: "stick", weight: 200 },
+			{ type: "item", code: "clutter-fishing/oldboot", weight: 3 },
+			{ type: "item", code: "clutter-fishing/counterfeitgear", weight: 1 },
+			{ type: "item", code: "clothes-emblem-cursedgemstone", weight: 1 },
+			{ type: "item", code: "clothes-emblem-flyingfishfigurine", weight: 1 },
+			{ type: "item", code: "clutter-fishing/brokensword", weight: 1 },
+			{ type: "item", code: "clutter-fishing/coprolite", weight: 1 },
+			{ type: "item", code: "clutter-fishing/heavilywornunderwear", weight: 1 },
+			{ type: "item", code: "clutter-fishing/oversizedspoon", weight: 1 }
+		]
+	},
+	hitboxSize: { x: 0.1, y: 0.2, z: 0.1 },
+	behaviorConfigs: {
+		passivephysics: {
+			groundDragFactor: 1, 
+			airDragFactor: 0.25, 
+			gravityFactor: 0.75
+		}
+	},
+	client: {
+		size: 1,
+		renderer: "Shape",
+		shape: { base: "item/tool/fishing/bobber" },
+		behaviors: [
+			{ code: "passivephysics" },
+			{ code: "interpolateposition" }
+		]
+	},
+	server: {
+		behaviors: [
+			{ code: "passivephysics" }
+		]
+	},
+	sounds: { }
+}

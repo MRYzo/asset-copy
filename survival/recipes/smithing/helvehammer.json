@@ -1,0 +1,22 @@
+{
+	ingredient: { type: "item", code: "ingot-*", name: "metal", allowedVariants: ["tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"] },
+	pattern: [[
+		"_######",
+		"#######",
+		"#######",
+		"_######"
+	],[
+		"_######",
+		"#######",
+		"#######",
+		"_######"
+	],[
+		"_######",
+		"#######",
+		"#######",
+		"_######"
+	]],
+	name: "Helve hammer head",
+	code: "helvehammerhead-{metal}",
+	output: { type: "item", code: "helvehammerhead-{metal}"  }
+}

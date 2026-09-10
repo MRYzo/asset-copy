@@ -1,0 +1,23 @@
+[
+	{
+		enabled: false,
+		ingredientPattern: "T	S",
+		ingredients: {
+			"T": { type: "item", code: "punchset-letters-loose-*", name: "metal"  },
+			"S": { type: "item", code: "plank-*" },
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "punchset-letters-cased-{metal}", quantity: 1  }
+	},
+	{
+		enabled: false,
+		ingredientPattern: "T",
+		ingredients: {
+			"T": { type: "item", code: "punchset-letters-cased-*", name: "metal"  },
+		},
+		width: 1,
+		height: 1,
+		output: { type: "item", code: "punchset-letters-loose-{metal}", quantity: 1  }
+	}
+]

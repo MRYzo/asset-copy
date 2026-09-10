@@ -1,0 +1,72 @@
+[
+	{
+		name: "fishingpole",
+		ingredientPattern: "SSS,RRR",
+		ingredients: {
+			"S": { type: "item", code: "stick" },
+			"R": { type: "item", code: "{line}" }
+		},
+		allowedVariants: {
+			line: ["rope", "flaxtwine"]
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "fishingpole-simple-wood"  }
+	},
+	{
+		name: "fishingpole",
+		ingredientPattern: "SSS,RRR",
+		ingredients: {
+			"S": { type: "item", code: "bamboostakes" },
+			"R": { type: "item", code: "{line}" }
+		},
+		allowedVariants: {
+			line: ["rope", "flaxtwine"]
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "fishingpole-simple-bamboo"  }
+	},
+	{
+		// Adding bait, attribute data added through code on crafted 
+		name: "fishingpole-bait",
+		recipeGroup: 2,
+		ingredientPattern: "P,B",
+		shapeless: true,
+		ingredients: {
+			"P": { type: "item", code: "fishingpole-simple-{type}", allowedVariants: ["wood", "bamboo"] },
+			"B": { type: "item", code: "fishingbait-{material}" }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "fishingpole-simple-{type}"  }
+	},
+	{
+		// Adding bait, attribute data added through code on crafted 
+		name: "fishingpole-bait-earthworm",
+		recipeGroup: 2,
+		ingredientPattern: "P,B",
+		shapeless: true,
+		ingredients: {
+			"P": { type: "item", code: "fishingpole-simple-{type}", allowedVariants: ["wood", "bamboo"] },
+			"B": { type: "item", code: "creature-earthworm" }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "fishingpole-simple-{type}"  }
+	},
+	{
+		// Adding bait, attribute data added through code on crafted 
+		name: "fishingpole-bait-earthworm-dead",
+		recipeGroup: 2,
+		ingredientPattern: "P,B",
+		shapeless: true,
+		ingredients: {
+			"P": { type: "item", code: "fishingpole-simple-{type}", allowedVariants: ["wood", "bamboo"] },
+			"B": { type: "item", code: "creature-earthworm-dead" }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "fishingpole-simple-{type}"  }
+	}
+]

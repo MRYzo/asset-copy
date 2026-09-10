@@ -1,0 +1,451 @@
+[
+    {
+		ingredientPattern: "HKH,HCH,T_T",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 2, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"C": { type: "item", code: "cloth-red", quantity: 1  },
+			"T": { type: "item", code: "flaxtwine", quantity: 1  },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-arctichunter"  }
+	},
+    {
+		ingredientPattern: "HKH,HCH,T_T",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-red", quantity: 1  },
+            "T": { type: "item", code: "flaxtwine", quantity: 1  },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-arctichunter"  }
+	},
+	{
+		ingredientPattern: "HKH,HCH,T_T",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"], returnedStack: { type: "item", code: "hide-pelt-small" }  },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"C": { type: "item", code: "cloth-red", quantity: 1  },
+            "T": { type: "item", code: "flaxtwine", quantity: 1  },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-arctichunter"  }
+	},
+	{
+		ingredientPattern: "HKH,HCH,T_T",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"], returnedStack: { type: "item", code: "hide-pelt-medium" } },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-red", quantity: 1  },
+            "T": { type: "item", code: "flaxtwine", quantity: 1  },
+
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-arctichunter"  }
+	},
+    {
+		ingredientPattern: "HKH,HCH,_S_",
+		recipeGroup: 1,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 2, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"C": { type: "item", code: "cloth-blue", quantity: 1  },
+			"S": { type: "item", code: "sewingkit", quantity: 1  },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-arcticfisher"  }
+	},
+    {
+		ingredientPattern: "HKH,HCH,_S_",
+		recipeGroup: 2,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-blue", quantity: 1  },
+            "S": { type: "item", code: "sewingkit", quantity: 1  },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-arcticfisher"  }
+	},
+	{
+		ingredientPattern: "HKH,HCH,_S_",
+		recipeGroup: 3,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"], returnedStack: { type: "item", code: "hide-pelt-small" }  },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"C": { type: "item", code: "cloth-blue", quantity: 1  },
+            "S": { type: "item", code: "sewingkit", quantity: 1  },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-arcticfisher"  }
+	},
+	{
+		ingredientPattern: "HKH,HCH,_S_",
+		recipeGroup: 3,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"], returnedStack: { type: "item", code: "hide-pelt-medium" } },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-blue", quantity: 1  },
+            "S": { type: "item", code: "sewingkit", quantity: 1  },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-arcticfisher"  }
+	},
+    {
+		ingredientPattern: "HKH,HCH,_S_",
+		recipeGroup: 1,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 2, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"C": { type: "item", code: "cloth-white", quantity: 1  },
+			"S": { type: "item", code: "sewingkit", quantity: 1  },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-embroideredfur"  }
+	},
+    {
+		ingredientPattern: "HKH,HCH,_S_",
+		recipeGroup: 2,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-white", quantity: 1  },
+            "S": { type: "item", code: "sewingkit", quantity: 1  },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-embroideredfur"  }
+	},
+	{
+		ingredientPattern: "HKH,HCH,_S_",
+		recipeGroup: 3,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"], returnedStack: { type: "item", code: "hide-pelt-small" }  },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"C": { type: "item", code: "cloth-white", quantity: 1  },
+            "S": { type: "item", code: "sewingkit", quantity: 1  },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-embroideredfur"  }
+	},
+	{
+		ingredientPattern: "HKH,HCH,_S_",
+		recipeGroup: 3,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"], returnedStack: { type: "item", code: "hide-pelt-medium" } },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-white", quantity: 1  },
+            "S": { type: "item", code: "sewingkit", quantity: 1  },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-embroideredfur"  }
+	},
+    {
+		ingredientPattern: "CTC,C_C",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-{color}", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+        allowedVariants: {
+			color: ["plain", "gray", "brown", "blue" ]
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-braies{color}"  }
+	},
+    {
+		ingredientPattern: "C_D,C_D,T_T",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-black", quantity: 1 },
+			"D": { type: "item", code: "cloth-yellow", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-hoseyellowblack"  }
+	},
+    {
+		ingredientPattern: "C_D,C_D,T_T",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-orange", quantity: 1 },
+			"D": { type: "item", code: "cloth-white", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-hosewhiteorange"  }
+	},
+    {
+		ingredientPattern: "C_D,C_D,T_T",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-white", quantity: 1 },
+			"D": { type: "item", code: "cloth-red", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-hoseredwhite"  }
+	},
+    {
+		ingredientPattern: "C_D,C_D,T_T",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-pink", quantity: 1 },
+			"D": { type: "item", code: "cloth-purple", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-hosepurplepink"  }
+	},
+    {
+		ingredientPattern: "C_D,C_D,T_T",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-blue", quantity: 1 },
+			"D": { type: "item", code: "cloth-orange", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-hoseorangeblue"  }
+	},
+    {
+		ingredientPattern: "C_D,C_D,T_T",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-yellow", quantity: 1 },
+			"D": { type: "item", code: "cloth-green", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-hosegreenyellow"  }
+	},
+    {
+		ingredientPattern: "C_D,C_D,T_T",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-purple", quantity: 1 },
+			"D": { type: "item", code: "cloth-gray", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-hosegraypurple"  }
+	},
+    {
+		ingredientPattern: "C_D,C_D,T_T",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-gray", quantity: 1 },
+			"D": { type: "item", code: "cloth-brown", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-hosebrowngray"  }
+	},
+    {
+		ingredientPattern: "C_D,C_D,T_T",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-pink", quantity: 1 },
+			"D": { type: "item", code: "cloth-blue", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-hosebluepink"  }
+	},
+    {
+		ingredientPattern: "C_D,C_D,T_T",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-red", quantity: 1 },
+			"D": { type: "item", code: "cloth-black", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-lowerbody-hoseblackred"  }
+	},
+    {
+		ingredientPattern: "G_G,G_G",
+		recipeGroup: 1,
+		ingredients: {
+			"G": { type: "item", code: "drygrass", quantity: 2 },
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-grass"  }
+	},
+    {
+		ingredientPattern: "BCB,BSB",
+		requiresTrait: "clothier",
+		ingredients: {
+			"B": { type: "item", code: "cloth-black", quantity: 1 },
+			"C": { type: "item", code: "cloth-blue", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-reindeer-herder-trousers"  }
+	},
+	{
+		ingredientPattern: "BCB,BSB",
+		requiresTrait: "clothier",
+		ingredients: {
+			"B": { type: "item", code: "cloth-black", quantity: 1 },
+			"C": { type: "item", code: "cloth-brown", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-fine-trousers"  }
+	},
+    {
+		ingredientPattern: "B_B,B_B",
+		ingredients: {
+			"B": { type: "item", code: "cloth-blue", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-tattered-peasent-gown"  }
+	},
+    {
+		ingredientPattern: "B_B,B_B",
+		ingredients: {
+			"B": { type: "item", code: "cloth-brown", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-workmans-gown"  }
+	},
+    {
+		ingredientPattern: "G_G,GSG",
+		requiresTrait: "clothier",
+		ingredients: {
+			"G": { type: "item", code: "cloth-green", quantity: 2 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-nomad-trousers"  }
+	},
+    {
+		ingredientPattern: "HKH,H_H",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-raw-hide-trousers"  }
+	},
+	{
+		ingredientPattern: "_K_,H_H",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-raw-hide-trousers"  }
+	},
+	{
+		ingredientPattern: "K,H",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", tags: ["size-large"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-raw-hide-trousers"  }
+	},
+	{
+		ingredientPattern: "K,H",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", tags: ["size-huge"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-raw-hide-trousers"  }
+	},
+    {
+		ingredientPattern: "C_C,C_C",
+		ingredients: {
+			"C": { type: "item", code: "cloth-plain", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-homespun-pants"  }
+	},
+    {
+		ingredientPattern: "CSC,C_C,",
+		requiresTrait: "clothier",
+		ingredients: {
+			"C": { type: "item", code: "cloth-plain", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-pastoral-pants"  }
+	},
+	
+	{
+		ingredientPattern: "C_C,CSC",
+		requiresTrait: "clothier",
+		ingredients: {
+			"C": { type: "item", code: "cloth-plain", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-chateau-pants"  }
+	},
+    {
+		ingredientPattern: "C_C,CSC",
+		requiresTrait: "clothier",
+		ingredients: {
+			"C": { type: "item", code: "cloth-purple", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-lowerbody-minstrel-pants"  }
+	},
+]

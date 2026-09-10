@@ -1,0 +1,48 @@
+{
+	code: "tileslab",
+	inheritFrom: "blocktypes/clay/brickslab",
+	behaviors: [
+		{
+			name: "OmniRotatable",
+			properties: {
+				"rotateSides": true,
+				"facing": "block"
+			}
+		},
+		{ name: "WrenchOrientable", properties: { baseCode: "tileslab-{states}-{color}-*-{cover}" } }
+	],
+	variantgroups: [
+		{ code: "format", "states": [ "2x2" ] },
+		{ code: "pattern", "states": [ "center", "circle", "plain" ] },
+		{ code: "color", states: ["blue", "fire", "black", "brown", "cream", "earthyorange", "gray", "orange", "red", "tan" ] },
+		{ code: "rot", states: ["north", "east", "south", "west", "up", "down"] },
+		{ code: "cover", states: ["free", "snow"] }
+	],
+	allowedVariants: [
+		"tileslab-2x2-plain-*",
+		"tileslab-2x2-center-red-*",
+		"tileslab-2x2-circle-red-*"
+	],
+	shapeByType: {
+		"*-snow": { base: "block/basic/slab/snow-slab-{rot}" },
+		"*": { base: "block/basic/slab/slab-{rot}" },
+	},
+	textures: {
+		horizontals: {base: "block/clay/tile/{format}/{pattern}/{color}*" },
+		up: {base: "block/clay/tile/{format}/{pattern}/{color}*" },
+		down: {base: "block/clay/tile/{format}/{pattern}/{color}*" },
+	},
+	attributes: {
+		canChisel: true,
+		chiselShapeFromCollisionBox: true,
+		handbook: {
+			groupBy: ["tile*"]
+		},
+		liquidBarrierOnSidesByType: {
+		   "*-down-*": [ 0.5, 0.5, 0.5, 0.5 ]
+		}
+	},
+	drops: [
+		{ code: "tileslab-{format}-{pattern}-{color}-down-free" }
+	]
+}

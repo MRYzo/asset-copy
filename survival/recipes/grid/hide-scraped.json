@@ -1,0 +1,85 @@
+[
+{
+	ingredientPattern: "K,H",
+	enabled: true,
+	shapeless: true,
+	ingredients: {
+		"K": { type: "item", tags: ["tool-knife"], isTool: true },
+		"H": { type: "item", code: "hide-soaked-*", quantity: 1, name: "size", allowedVariants: ["small", "medium", "large", "huge"] },
+	},
+	name: "scrapedhide",
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "hide-scraped-{size}", quantity: 1 }
+},
+{
+	ingredientPattern: "K,H",
+	enabled: true,
+	shapeless: true,
+	ingredients: {
+		"K": { type: "item", tags: ["tool-knife"], isTool: true, toolDurabilityCost: 4 },
+		"H": { type: "item", code: "hide-soaked-bear-*-complete", quantity: 1, name: "species", allowedVariants: ["polar", "brown"] },
+	},
+	recipegroup: 1,
+	name: "scrapedhide",
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "hide-scraped-huge", quantity: 1 }
+},
+{
+	ingredientPattern: "K,H",
+	enabled: true,
+	shapeless: true,
+	ingredients: {
+		"K": { type: "item", tags: ["tool-knife"], isTool: true, toolDurabilityCost: 3 },
+		"H": { type: "item", code: "hide-soaked-bear-*-complete", quantity: 1, name: "species", allowedVariants: ["black", "panda"] },
+	},
+	recipegroup: 1,
+	name: "scrapedhide",
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "hide-scraped-large", quantity: 1 }
+},
+{
+	ingredientPattern: "K,H",
+	enabled: true,
+	shapeless: true,
+	ingredients: {
+		"K": { type: "item", tags: ["tool-knife"], isTool: true, toolDurabilityCost: 2 },
+		"H": { type: "item", code: "hide-soaked-bear-sun-complete", quantity: 1 },
+	},
+	recipegroup: 1,
+	name: "scrapedhide",
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "hide-scraped-medium", quantity: 1 }
+},
+{
+	ingredientPattern: "K,H",
+	enabled: true,
+	shapeless: true,
+	ingredients: {
+		"K": { type: "item", tags: ["tool-knife"], isTool: true },
+		"H": { type: "item", code: "hide-soaked-small", quantity: 1 },
+	},
+	recipegroup: 1,
+	name: "scrapedhide",
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "hide-scraped-small", quantity: 1 }
+},
+{
+	ingredientPattern: "K,H",
+	enabled: true,
+	shapeless: true,
+	ingredients: {
+		"K": { type: "item", tags: ["tool-knife"], isTool: true },
+		"H": { type: "item", code: "hide-soaked-*", quantity: 1, name: "species", allowedVariants: ["fox-red", "fox-arctic", "raccoon-common"] },
+	},
+	recipegroup: 1,
+	name: "scrapedhide",
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "hide-scraped-small", quantity: 1 }
+}
+]

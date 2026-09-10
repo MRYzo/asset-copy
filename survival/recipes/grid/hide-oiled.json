@@ -1,0 +1,180 @@
+[
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-raw-*", name: "species", quantity: 4, tags: ["size-small"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 4 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-raw-*", name: "species", quantity: 3, tags: ["size-small"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 3 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-raw-*", name: "species", quantity: 2, tags: ["size-small"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 2 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-raw-*", name: "species", quantity: 1, tags: ["size-small"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 1 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-raw-*", name: "species", quantity: 2, tags: ["size-medium"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 2 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-raw-*", name: "species", quantity: 1, tags: ["size-medium"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 1 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-raw-*", name: "species", quantity: 1, tags: ["size-large"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 1 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 2 },
+			"H": { type: "item", code: "hide-raw-*", name: "species", quantity: 1, tags: ["size-huge"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}" }
+	},
+
+	
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-salted-*", name: "species", quantity: 4, tags: ["size-small"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 4 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-salted-*", name: "species", quantity: 3, tags: ["size-small"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 3 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-salted-*", name: "species", quantity: 2, tags: ["size-small"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 2 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-salted-*", name: "species", quantity: 1, tags: ["size-small"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 1 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-salted-*", name: "species", quantity: 2, tags: ["size-medium"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 2 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-salted-*", name: "species", quantity: 1, tags: ["size-medium"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 1 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 1 },
+			"H": { type: "item", code: "hide-salted-*", name: "species", quantity: 1, tags: ["size-large"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}", quantity: 1 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "fat-rendered", quantity: 2 },
+			"H": { type: "item", code: "hide-salted-*", name: "species", quantity: 1, tags: ["size-huge"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-oiled-{species}" }
+	}
+]

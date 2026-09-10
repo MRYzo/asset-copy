@@ -1,0 +1,100 @@
+{
+	code: "crop",
+	class: "BlockCrop",
+	behaviors: [{name: "Unstable"}],
+	variantgroups: [
+		{ code: "type", states: ["fennel"] },
+		{ code: "stage", states: ["1", "2", "3", "4", "5", "6", "7", "8", "9"] },
+	],
+	shapeByType: {
+		"*-1": { base: "block/plant/crop/fennel/fennel1-3" },
+		"*-2": { base: "block/plant/crop/fennel/fennel1-3" },
+		"*-3": { base: "block/plant/crop/fennel/fennel1-3" },
+		"*-4": { base: "block/plant/crop/fennel/fennel4-5" },
+		"*-5": { base: "block/plant/crop/fennel/fennel4-5" },
+		"*": { base: "block/plant/crop/fennel/fennel6-9" }
+	},
+	texturesByType: {
+	"@.*-(1|2|3)": { 
+			root: { base: "block/plant/crop/fennel/root1" },
+			large1: { base: "block/plant/crop/fennel/{stage}-large1" },
+			large2: { base: "block/plant/crop/fennel/{stage}-large2" },
+			large3: { base: "block/plant/crop/fennel/{stage}-large3" }
+		},
+		"*": { 
+			root: { base: "block/plant/crop/fennel/root1" },
+			large1: { base: "block/plant/crop/fennel/{stage}-large1" },
+			large2: { base: "block/plant/crop/fennel/{stage}-large2" },
+			large3: { base: "block/plant/crop/fennel/{stage}-large3" },
+			small1: { base: "block/plant/crop/fennel/{stage}-small1" },
+			small2: { base: "block/plant/crop/fennel/{stage}-small2" }
+		}
+	},
+	attributes: {
+		foodTags: ["nibbleCrop"],
+		butterflyFeedByType: {
+			"*-7": true,
+			"*-8": true,
+			"*": false
+		},
+		beeFeedByType: {
+			"*-7": true,
+			"*-8": true,
+			"*": false
+		},
+		sitHeight: 0.35,
+		tickGrowthProbability: 0.05,
+		handbook: {
+			include: true
+		}
+	},
+	creativeinventory: { "general": [""], "plants": [""] },
+	renderpass: "OpaqueNoCull",
+	blockmaterial: "Plant",
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	replaceable: 3000,
+	lightAbsorption: 0,
+	resistance: 0.5,
+	sounds: {
+		place: "block/plant",
+		break: "block/plant",
+		hit: "block/plant"
+	},
+	rainPermeable: false,
+	dropsByType: {
+		"*-8": [
+			{ type: "item", code: "seeds-fennel", quantity: { avg: 0.99 }  },
+			{ type: "item", code: "vegetable-fennel", quantity: { avg: 3, var: 1 }  },
+		],
+		"*-9": [
+			{ type: "item", code: "seeds-fennel", quantity: { avg: 1.2 }  },
+			{ type: "item", code: "vegetable-fennel", quantity: { avg: 11, var: 2 }  },
+		],
+		"*": [
+			{ type: "item", code: "seeds-fennel", quantity: { avg: 0.7 }  },
+		]
+	},
+	cropProps: {
+		requiredNutrient: "N",
+		nutrientConsumption: 35,
+		growthStages: 9,
+		totalGrowthMonths: 2.67,
+		coldDamageBelow: -8,
+		damageGrowthStuntMul: 0.75,
+		coldDamageRipeMul: 0.5,
+		heatDamageAbove: 35
+	},
+	collisionbox: null,
+	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.25, z2: 0.9375 },
+	materialDensity: 200,
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 10,
+	},
+	frostable: true
+}

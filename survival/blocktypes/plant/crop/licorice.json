@@ -1,0 +1,84 @@
+{
+	code: "crop",
+	// This represents Glycyrrhiza glabra
+	class: "BlockCrop",
+	behaviors: [{name: "Unstable"}],
+	variantgroups: [
+		{ code: "type", states: ["licorice"] },
+		{ code: "stage", states: ["1", "2", "3", "4", "5", "6", "7", "8", "9"] },
+	],
+	shape: { base: "block/plant/crop/licorice/licorice" },
+	textures: { 
+		large1: { base: "block/plant/crop/licorice/{stage}-large1" },
+		large2: { base: "block/plant/crop/licorice/{stage}-large2" },
+		small1: { base: "block/plant/crop/licorice/{stage}-small1" },
+		small2: { base: "block/plant/crop/licorice/{stage}-small2" }
+	},
+	attributes: {
+		foodTags: ["nibbleCrop"],
+		butterflyFeedByType: {
+			"*-7": true,
+			"*-8": true,
+			"*": false
+		},
+		beeFeedByType: {
+			"*-7": true,
+			"*-8": true,
+			"*": false
+		},
+		sitHeight: 0.35,
+		tickGrowthProbability: 0.05,
+		handbook: {
+			include: true
+		}
+	},
+	creativeinventory: { "general": [""], "plants": [""] },
+	renderpass: "OpaqueNoCull",
+	blockmaterial: "Plant",
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	replaceable: 3000,
+	lightAbsorption: 0,
+	resistance: 0.5,
+	sounds: {
+		place: "block/plant",
+		break: "block/plant",
+		hit: "block/plant"
+	},
+	rainPermeable: false,
+	dropsByType: {
+		"*-8": [
+			{ type: "item", code: "seeds-licorice", quantity: { avg: 0.99 }  },
+			{ type: "item", code: "spice-licorice-raw", quantity: { avg: 3, var: 1 }  },
+		],
+		"*-9": [
+			{ type: "item", code: "seeds-licorice", quantity: { avg: 1.2 }  },
+			{ type: "item", code: "spice-licorice-raw", quantity: { avg: 11, var: 2 }  },
+		],
+		"*": [
+			{ type: "item", code: "seeds-licorice", quantity: { avg: 0.7 }  },
+		]
+	},
+	cropProps: {
+		requiredNutrient: "P",
+		nutrientConsumption: 35,
+		growthStages: 9,
+		totalGrowthMonths: 2.67,
+		coldDamageBelow: -8,
+		damageGrowthStuntMul: 0.75,
+		coldDamageRipeMul: 0.5,
+		heatDamageAbove: 35
+	},
+	collisionbox: null,
+	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.25, z2: 0.9375 },
+	materialDensity: 200,
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 10,
+	},
+	frostable: true
+}

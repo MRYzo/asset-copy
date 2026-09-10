@@ -1,0 +1,103 @@
+{
+	code: "windmillrotor",
+	class: "BlockWindmillRotor",
+	entityClass: "Generic",
+	entityBehaviors: [
+		{ name: "Burning" }, 
+		{ name: "MPWindmillRotor", properties: { powerMulByType: { "windmillrotor-wood-*": 1, "windmillrotor-metal-*": 1.25 } } }
+	],
+	behaviors: [{name: "HorizontalOrientable"}],
+	attributes: {
+		handbook: {
+			groupBy: ["windmillrotor-{tier}-*"]
+		},
+		sailStack: { 
+			type: "item", 
+			codeByType: {
+				"windmillrotor-wood-*": "sail",
+				"windmillrotor-metal-*": "sail-large-oak"
+			},
+			quantity: 4 
+		},
+		sailedShapesByType: {
+			"windmillrotor-wood-*": { maxLength: 5, wildcardPath: "block/wood/mechanics/windmill-{length}blade" },
+			"windmillrotor-metal-*": { maxLength: 10, wildcardPath: "block/metal/mechanics/windmill-{length}blade" }
+		}
+	},
+	variantgroups: [
+		{ code: "tier", states:["wood", "metal"] },
+		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
+	],
+	creativeinventory: { "general": ["*-north"], "mechanics": ["*-north"] },
+	shapebytype: {
+		"*-north": { base: "block/{tier}/mechanics/windmillrotor", rotateY: 90 },
+		"*-east": { base: "block/{tier}/mechanics/windmillrotor", rotateY: 0 },
+		"*-south": { base: "block/{tier}/mechanics/windmillrotor", rotateY: 270 },
+		"*-west": { base: "block/{tier}/mechanics/windmillrotor", rotateY: 180 }
+	},
+	blockmaterial: "Wood",
+	textures: {
+		wood: { base: "block/wood/planks/generic" },
+		cloth: { base: "block/cloth/linen/normal1" }
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 20,
+	},
+	rainPermeable: true,
+	drops: [
+		{ type: "block", code: "windmillrotor-{tier}-north" }
+	],
+	resistance: 3.5,
+	lightAbsorption: 0,
+	maxStackSize: 4,
+	heldTpIdleAnimation: "holdbothhandslarge",
+	guiTransformByType: {
+		"*-metal-north": {
+			translation: { x: 0, y: 2, z: 0 },
+			scale: 1.53
+		},
+		"*": {
+			origin: { x: 0.45, y: 0.5, z: 0.5 },
+			scale: 1.74
+		}
+	},
+	tpHandTransformByType: {
+		"*-metal-north": {
+			translation: { x: -0.85, y: -0.6, z: -0.33 },
+			rotation: { x: 13, y: -74, z: 0 },
+			scale: 0.7
+		},
+		"*": {
+			translation: { x: -0.6, y: -0.4, z: -0.33 },
+			rotation: { x: -77, y: 1, z: 31 },
+			scale: 0.8
+		}
+	},
+	groundTransformByType: {
+		"*-metal-north": {
+			translation: { x: 0.02, y: 0.94, z: 0 },
+			rotation: { x: 88, y: 0, z: 1 },
+			origin: { x: 0.5, y: 0.5, z: -0 },
+			scale: 5
+		},
+		"*": {
+			translation: { x: 0.3, y: 0.03, z: -0.3 },
+			rotation: { x: 31, y: 0, z: 39 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 5
+		}
+	},
+	sounds: {
+		"hit": "block/planks",
+		"break": "block/planks",
+		"place": "block/planks",
+		"walk": "walk/wood"
+	}
+}

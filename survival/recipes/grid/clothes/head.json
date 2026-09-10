@@ -1,0 +1,214 @@
+[
+    {
+		ingredientPattern: "H,K",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", quantity: 2, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-head-hide"  }
+	},
+    {
+		ingredientPattern: "H,K",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-head-hide"  }
+	},
+	{
+		ingredientPattern: "H,K",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", quantity: 1, tags: ["size-large"], returnedStack: { type: "item", code: "hide-raw-small" }  },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-head-hide"  }
+	},
+	{
+		ingredientPattern: "H,K",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", quantity: 1, tags: ["size-huge"], returnedStack: { type: "item", code: "hide-raw-medium" } },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-head-hide"  }
+	},
+    {
+		ingredientPattern: "FFF",
+		recipeGroup: 1,
+		ingredients: {
+			"F": { type: "block", code: "flower-*", quantity: 1 },
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "clothes-head-wreathflower"  }
+	},
+    {
+		ingredientPattern: "C_,_C",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-plain", quantity: 1 },
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-head-wimple"  }
+	},
+    {
+		ingredientPattern: "_T,CC",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-blue", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 },
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-head-phrygian"  }
+	},
+    {
+		ingredientPattern: "CC,_C,_T",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-{color}", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 },
+		},
+        skipVariants: {
+			color: ["mordant", "plain" ]
+		},
+		width: 2,
+		height: 3,
+		output: { type: "item", code: "clothes-head-liripipe{color}"  }
+	},
+    {
+		ingredientPattern: "BB,_B",
+		ingredients: {
+			"B": { type: "item", code: "cloth-blue", quantity: 1 }
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-head-peasent-head-scarf"  }
+	},
+    {
+		ingredientPattern: "FHF,_K_",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-{species}", quantity: 1 },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"F": { type: "item", code: "flaxtwine", quantity: 1 }
+		},
+		allowedVariants: {
+			species: ["fox-red", "fox-arctic", "raccoon-common" ]
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-head-furhattail-{species}"  }
+	},
+	{
+		ingredientPattern: "F,H,K",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-{species}", quantity: 1 },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"F": { type: "item", code: "flaxtwine", quantity: 2, }
+		},
+		allowedVariants: {
+			species: ["fox-red"]
+		},
+		width: 1,
+		height: 3,
+		output: { type: "item", code: "clothes-head-furhatwide-{species}"  }
+	},
+	{
+		ingredientPattern: "F,H,K",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-small", "color-gray"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"F": { type: "item", code: "flaxtwine", quantity: 2, }
+		},
+		width: 1,
+		height: 3,
+		output: { type: "item", code: "clothes-head-furhatwide-generic-gray"  }
+	},
+	{
+		ingredientPattern: "F,H,K",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-small", "color-white"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"F": { type: "item", code: "flaxtwine", quantity: 2, }
+		},
+		width: 1,
+		height: 3,
+		output: { type: "item", code: "clothes-head-furhatwide-generic-white"  }
+	},
+    {
+		ingredientPattern: "RR,S_",
+		requiresTrait: "clothier",
+		ingredients: {
+			"R": { type: "item", code: "cloth-red", quantity: 2 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-head-minstrel-hat"  }
+	},
+    {
+		ingredientPattern: "RG,SR",
+		requiresTrait: "clothier",
+		ingredients: {
+			"R": { type: "item", code: "cloth-red", quantity: 2 },
+			"S": { type: "item", code: "sewingkit" },
+			"G": { type: "item", code: "nugget-nativegold", quantity: 4 }
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-head-fortune-tellers-scarf"  }
+	},
+    {
+		ingredientPattern: "B,K",
+		ingredients: {
+			"B": { type: "item", code: "bamboostakes", quantity: 1 },
+			"K": { type: "item", tags: ["tool-knife"], isTool: true }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "clothes-head-bamboo-conehat"  }
+	},
+	{
+		ingredientPattern: "BBB,K__",
+		ingredients: {
+			"B": { type: "item", code: "bamboostakes", quantity: 1 },
+			"K": { type: "item", tags: ["tool-knife"], isTool: true }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-head-bamboo-conehat-large"  }
+	},
+	{
+		ingredientPattern: "_B_,B_B",
+		ingredients: {
+			"B": { type: "item", code: "drygrass", quantity: 2 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-head-straw-hat"  }
+	},
+	{
+		ingredientPattern: "_B_,BSB",
+		requiresTrait: "clothier",
+		ingredients: {
+			"B": { type: "item", code: "cloth-black", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-head-tophat"  }
+	}
+]

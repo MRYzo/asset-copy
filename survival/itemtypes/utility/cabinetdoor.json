@@ -1,0 +1,62 @@
+{
+	code: "cabinetdoor",
+	behaviors: [ { name: "TypedTexture" } ],
+	creativeinventoryStacks: [
+		{
+			tabs: [ "general", "decorative" ],
+			stacks: [
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "birch" } },
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "oak" } },
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "maple" } },
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "pine" } },
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "acacia" } },
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "kapok" } },
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "baldcypress" } },
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "larch" } },
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "redwood" } },
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "ebony" } },
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "walnut" } },
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "purpleheart" } },			
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "aged" } },
+				{ type: "item", code: "cabinetdoor-{size}-{type}", attributes: { "wood": "veryaged" } }
+			]
+		}
+	],
+	variantgroups: [
+		{ code: "size", states: ["1block" ] },
+		{ code: "type", states: ["solid", "glassframed" ] },
+	],
+	attributes: {
+		materialTypes: ["wood", "metal", "glass", "section"],
+		translationEntries: ["material-{wood}", "material-{metal}", "glass-{glass}", null],
+		defaults: ["oak", "iron", "vintage", "middle"],
+		textureMapping: {
+			"doors": "block/wood/cabinet/1block/doors/solid/{section}/{wood}",
+			"hardware": "block/metal/plate/{metal}",
+			"glass": "block/glass/{glass}",
+			"wood-back": "block/wood/cabinet/1block/wood/side/{wood}",
+			"wood-side": "block/wood/cabinet/1block/wood/side/{wood}",
+			"wood-top": "block/wood/cabinet/1block/wood/top/wood-top1/{wood}"
+		}		
+	},
+	shape: { base: "block/wood/cabinet/1block/door/{type}/middle" },
+	maxstacksize: 1,
+	guiTransform: {
+		translation: { x: 2, y: 0, z: 0 },
+		rotation: { x: 140, y: -161, z: 0 },
+		origin: { x: 0.5, y: 0.5, z: 0.62 },
+		scale: 1.66
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -90, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.5, z: 0.62 },
+		scale: 3.58
+	},
+	tpHandTransform: {
+		translation: { x: -0.78, y: -0.4, z: -0.63 },
+		origin: { x: 0.5, y: 0.5, z: 0.23 },
+		rotation: { x: 0, y: 180, z: 39 },
+		scale: 0.71
+	}
+}

@@ -1,0 +1,39 @@
+{
+	code: "overlay-dirt",
+	behaviors: [ {name: "Decor", properties: {sides: ["north", "east", "south", "west", "up", "down"], notFullFace:true, canAttachToAnything:true, thickness: 0.0 }} ],
+	attributes: {
+		handbook: {
+			exclude: true
+		},
+		ignoreSounds: true
+	},
+	variantgroups: [
+		{ code: "type", states: ["sparse"] },
+		{ code: "variant", states: ["1", "2", "3", "4", "5", "6"] },
+	],
+	shapeInventory: {
+		base: "block/basic/layers/0voxel-up", rotateX: 90
+	},
+	texturesByType: {
+		"*": { all: {  base: "block/overlay/grime/{type}{variant}" } },
+	},
+	renderPass: "Decor",
+	drawtype: "surfacelayer",
+	randomizeRotations: true,
+	doNotRenderAtLod2: true,
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	blockmaterial: "Stone",
+	creativeinventory: { "general": ["*"], "clutter": ["*"] },
+	replaceable: 5500,
+	resistance: 0,
+	lightAbsorption: 0,
+	vertexflags: {
+		zOffset: 1
+	},
+	drops: [],
+	guiTransform: {
+		origin: { x: 0.5, y: 0.5, z: 0 }
+	},
+	materialDensity: 400
+}

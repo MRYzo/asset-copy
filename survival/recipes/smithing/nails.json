@@ -1,0 +1,33 @@
+[
+{
+	ingredient: { type: "item", code: "ingot-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuth", "bismuthbronze", "blackbronze", "brass", "silver", "gold", "iron", "meteoriciron", "steel", "molybdochalkos", "electrum"] },
+	pattern: [[
+		"##_##_##",
+		"##_##_##",
+		"##_##_##",
+		"##_##_##",
+		"##_##_##",
+		"##_##_##",
+	]],
+	name: "4 sets of nails",
+	code: "4setsofnails-{metal}",
+	output: { type: "item", code: "metalnailsandstrips-{metal}", stacksize: 4  }
+},
+{
+	ingredient: { type: "item", code: "ingot-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuth", "bismuthbronze", "blackbronze", "brass", "silver", "gold", "iron", "meteoriciron", "steel", "molybdochalkos", "electrum"] },
+	pattern: [[
+		"##_##_##",
+		"##_##_##",
+		"##_##_##",
+		"##_##_##",
+		"##_##_##",
+		"##_##_##",
+		"##_##_##",
+		"##_##_##",
+		"##_##_##"
+	]],
+	name: "8 sets of nails",
+	code: "8setsofnails-{metal}",
+	output: { type: "item", code: "metalnailsandstrips-{metal}", stacksize: 8  }
+}
+]

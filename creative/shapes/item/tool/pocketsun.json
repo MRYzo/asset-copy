@@ -1,0 +1,71 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+		"minisun": [16,16]
+	},
+	"textures": {
+		"minisun": "item/tool/pocketsun"
+	},
+	"elements": [
+		{
+			"name": "origin",
+			"from": [ 8.0, 0.0, 8.0 ],
+			"to": [ 8.0, 0.0, 8.0 ],
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"up": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"down": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false }
+			},
+			"children": [
+				{
+					"name": "NS",
+					"from": [ 0.0, -8.0, -8.0 ],
+					"to": [ 0.0, 8.0, 8.0 ],
+					"renderPass": 3,
+					"faces": {
+						"north": { "texture": "#minisun", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false },
+						"east": { "texture": "#minisun", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "glow": 255, "windMode": [-1,-1,-1,-1], "reflectiveMode": 3 },
+						"south": { "texture": "#minisun", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false },
+						"west": { "texture": "#minisun", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "windMode": [-1,-1,-1,-1], "enabled": false },
+						"up": { "texture": "#minisun", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false },
+						"down": { "texture": "#minisun", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false }
+					}
+				},
+				{
+					"name": "EW",
+					"from": [ -8.0, -8.0, 0.0 ],
+					"to": [ 8.0, 8.0, 0.0 ],
+					"faces": {
+						"north": { "texture": "#minisun", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+						"east": { "texture": "#minisun", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "glow": 255, "enabled": false },
+						"south": { "texture": "#minisun", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "glow": 255, "windMode": [-1,-1,-1,-1], "reflectiveMode": 3 },
+						"west": { "texture": "#minisun", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false },
+						"up": { "texture": "#minisun", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+						"down": { "texture": "#minisun", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false }
+					}
+				},
+				{
+					"name": "D",
+					"from": [ -8.0, 0.0, -8.0 ],
+					"to": [ 8.0, 0.0, 8.0 ],
+					"faces": {
+						"north": { "texture": "#minisun", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+						"east": { "texture": "#minisun", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+						"south": { "texture": "#minisun", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+						"west": { "texture": "#minisun", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+						"up": { "texture": "#minisun", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "glow": 255, "windMode": [-1,-1,-1,-1], "reflectiveMode": 3 },
+						"down": { "texture": "#minisun", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false }
+					}
+				}
+			]
+		}
+	]}

@@ -1,0 +1,174 @@
+[
+	{
+		code: "stinkbait-doughx1",
+		perishableProps: {
+			freshHours: { avg: 36 },
+			transitionHours: { avg: 24 },
+			transitionRatio: 0.1,
+			transitionedStack: { type: "item", code: "rot" }
+		},
+		shape: { base: "block/food/meal/liquid" },
+		ingredients: [
+			{ 
+				code: "water", 
+				validStacks: [ { type: "item",  code: "waterportion" } ],
+				minQuantity: 1,
+				maxQuantity: 1,
+				portionSizeLitres: 1,
+			},
+			{
+				code: "fennel", 
+				validStacks: [ { type: "item", code: "vegetable-fennel" }, { type: "item", code: "spice-licorice-raw" } ],
+				minQuantity: 1,
+				maxQuantity: 1
+			},
+			{
+				code: "dough", 
+				validStacks: [ { type: "item", code: "dough-*" } ],
+				minQuantity: 1,
+				maxQuantity: 1
+			}
+		],
+		cooksInto: { type: "Item", code: "fishingbait-dough", quantity: 3 }
+	},
+	{
+		code: "stinkbait-redmeatx1",
+		perishableProps: {
+			freshHours: { avg: 36 },
+			transitionHours: { avg: 24 },
+			transitionRatio: 0.1,
+			transitionedStack: { type: "item", code: "rot" }
+		},
+		shape: { base: "block/food/meal/liquid" },
+		ingredients: [
+			{ 
+				code: "water", 
+				validStacks: [ { type: "item",  code: "waterportion" } ],
+				minQuantity: 1,
+				maxQuantity: 1,
+				portionSizeLitres: 1,
+			},
+			{
+				code: "fennel", 
+				validStacks: [ { type: "item", code: "vegetable-fennel" }, { type: "item", code: "spice-licorice-raw" } ],
+				minQuantity: 1,
+				maxQuantity: 1
+			},
+			{
+				code: "meat", 
+				validStacks: [
+					{ type: "item", code: "redmeat-raw" },
+					{ type: "item", code: "redmeat-cooked" }
+				],
+				minQuantity: 1,
+				maxQuantity: 1
+			}
+		],
+		cooksInto: { type: "Item", code: "fishingbait-redmeat", quantity: 4 }
+	},
+	{
+		code: "stinkbait-bushmeatx1",
+		perishableProps: {
+			freshHours: { avg: 36 },
+			transitionHours: { avg: 24 },
+			transitionRatio: 0.1,
+			transitionedStack: { type: "item", code: "rot" }
+		},
+		shape: { base: "block/food/meal/liquid" },
+		ingredients: [
+			{ 
+				code: "water", 
+				validStacks: [ { type: "item",  code: "waterportion" } ],
+				minQuantity: 1,
+				maxQuantity: 1,
+				portionSizeLitres: 1,
+			},
+			{
+				code: "fennel", 
+				validStacks: [ { type: "item", code: "vegetable-fennel" }, { type: "item", code: "spice-licorice-raw" } ],
+				minQuantity: 1,
+				maxQuantity: 1
+			},
+			{
+				code: "meat", 
+				validStacks: [
+					{ type: "item", code: "bushmeat-raw" },
+					{ type: "item", code: "bushmeat-cooked" }
+				],
+				minQuantity: 1,
+				maxQuantity: 1
+			}
+		],
+		cooksInto: { type: "Item", code: "fishingbait-bushmeat", quantity: 3 }
+	},
+	{
+		code: "stinkbait-fishmeatx1",
+		perishableProps: {
+			freshHours: { avg: 36 },
+			transitionHours: { avg: 24 },
+			transitionRatio: 0.1,
+			transitionedStack: { type: "item", code: "rot" }
+		},
+		shape: { base: "block/food/meal/liquid" },
+		ingredients: [
+			{ 
+				code: "water", 
+				validStacks: [ { type: "item",  code: "waterportion" } ],
+				minQuantity: 1,
+				maxQuantity: 1,
+				portionSizeLitres: 1,
+			},
+			{
+				code: "fennel", 
+				validStacks: [ { type: "item", code: "vegetable-fennel" }, { type: "item", code: "spice-licorice-raw" } ],
+				minQuantity: 1,
+				maxQuantity: 1
+			},
+			{
+				code: "meat", 
+				validStacks: [
+					{ type: "item", code: "fish-raw" },
+					{ type: "item", code: "fish-cooked" }
+				],
+				minQuantity: 1,
+				maxQuantity: 1
+			}
+		],
+		cooksInto: { type: "Item", code: "fishingbait-fishmeat", quantity: 3 }
+	},
+	{
+		code: "stinkbait-poultryx1",
+		perishableProps: {
+			freshHours: { avg: 36 },
+			transitionHours: { avg: 24 },
+			transitionRatio: 0.1,
+			transitionedStack: { type: "item", code: "rot" }
+		},
+		shape: { base: "block/food/meal/liquid" },
+		ingredients: [
+			{ 
+				code: "water", 
+				validStacks: [ { type: "item",  code: "waterportion" } ],
+				minQuantity: 1,
+				maxQuantity: 1,
+				portionSizeLitres: 1,
+			},
+			{
+				code: "fennel", 
+				validStacks: [ { type: "item", code: "vegetable-fennel" }, { type: "item", code: "spice-licorice-raw" } ],
+				minQuantity: 1,
+				maxQuantity: 1
+			},
+			{
+				code: "meat", 
+				validStacks: [
+					{ type: "item", code: "poultry-raw" },
+					{ type: "item", code: "poultry-cooked" }
+					],
+				minQuantity: 1,
+				maxQuantity: 1
+			}
+		],
+		cooksInto: { type: "Item", code: "fishingbait-poultry", quantity: 4 }
+	}
+]

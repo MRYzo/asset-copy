@@ -1,0 +1,48 @@
+{
+	code: "stonepathslab",
+	variantgroups: [
+		{ code: "cover", states: ["free", "snow"] }
+	],
+	shape: { base: "block/basic/slab/stonepath-slab-{cover}" },
+	textures: {
+		normal1: { base: "block/stone/path/normal*"	},
+		snowcover: { base: "block/stone/path/normal*"	}
+	},
+	attributes: {
+		reinforcable: true,
+		mapColorCode: "road",
+		liquidBarrierOnSides: [ 0.5, 0.5, 0.5, 0.5 ],
+		inContainerTexture: { base: "block/stone/path/normal1" }
+	},
+	creativeinventory: { "general": ["*-free"], "decorative": ["*-free"] },
+	blockmaterial: "Gravel",
+	replaceable: 900,
+	lightAbsorption: 99,
+	drops: [{ code: "stonepathslab-free" }],
+	resistance: 2.4,
+	walkspeedmultiplier: 1.30,
+	faceCullMode: "FlushExceptTop",
+	sideopaque: {
+		all: false,
+		down: true
+	},
+	sidesolid: {
+		all: false,
+		down: true
+	},
+	selectionbox: { x1: 0, y1: 0, z1:0, x2: 1, y2: 0.4375, z2: 1 },
+	collisionbox: { x1: 0, y1: 0, z1:0, x2: 1, y2: 0.4375, z2: 1 },
+	heldTpIdleAnimation: "holdbothhandslarge", heldRightReadyAnimation: "heldblockready", heldTpUseAnimation: "twohandplaceblock",
+	tpHandTransform: {
+		translation: { x: -1.49, y: -0.22, z: -0.7 },
+		rotation: { x: 6, y: 16, z: 98 },
+		origin: { x: 0.5, y: 0.25, z: 0.5 },
+		scale: 0.4
+	},
+	sounds: {
+		place: "block/gravel",
+		break: "block/gravel",
+		hit: "block/gravel",
+		walk: "walk/gravel"
+	}
+}

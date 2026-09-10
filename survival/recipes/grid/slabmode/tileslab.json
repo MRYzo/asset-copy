@@ -1,0 +1,30 @@
+[
+	{
+		// The OmniRotatable modifiers the output of this recipe to change the placement mode in the item stacks attributes
+		ingredientPattern: "L",
+		ingredients: {
+			"L": { type: "block", code: "tileslab-2x2-{pattern}-{color}-down-free" }
+		},
+		allowedVariants: {
+			color: ["blue", "fire", "black", "brown", "cream", "earthyorange", "gray", "orange", "red", "tan", "travertine"],
+			pattern: ["plain"]
+		},
+		width: 1,
+		height: 1,
+		output: { type: "block", code: "tileslab-2x2-{pattern}-{color}-down-free", quantity: 1 }
+	},
+	{
+		// The OmniRotatable modifiers the output of this recipe to change the placement mode in the item stacks attributes
+		ingredientPattern: "L",
+		ingredients: {
+			"L": { type: "block", code: "tileslab-2x2-{pattern}-{color}-down-free" }
+		},
+		allowedVariants: {
+			color: ["red"],
+			pattern: ["center", "circle"]
+		},
+		width: 1,
+		height: 1,
+		output: { type: "block", code: "tileslab-2x2-{pattern}-{color}-down-free", quantity: 1 }
+	}
+]

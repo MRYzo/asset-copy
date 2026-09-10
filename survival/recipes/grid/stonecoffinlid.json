@@ -1,0 +1,12 @@
+{
+	ingredientPattern: "_H_,_C_,_SF",
+	ingredients: {
+		"H": { type: "item", tags: ["tool-hammer"], isTool: true },
+		"C": { type: "item", tags: ["tool-chisel"], isTool: true },
+		"S": { type: "block", code: "rock-*", name: "rock", allowedVariants: ["andesite", "granite", "basalt", "peridotite"] },
+		"F": { type: "item", tags: ["flux"] }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "stonecoffinlid-{rock}", quantity: 1 }
+}

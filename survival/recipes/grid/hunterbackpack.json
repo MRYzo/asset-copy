@@ -1,0 +1,64 @@
+[
+	{
+		ingredientPattern: "CSC,CCC",
+		ingredients: {
+			"S": { type: "item", code: "hide-pelt-*", tags: ["size-small"], quantity: 3 },
+			"C": { type: "item", code: "*", allowedVariants: ["papyrustops", "cattailtops" ], quantity: 3 }
+		},
+		name: "hunterbackpack",
+		recipegroup: 1,
+		width: 3,
+		height: 2,
+		recipeGroup: 1,
+		output: { type: "item", code: "hunterbackpack"  }
+	},
+	{
+		ingredientPattern: "CPC,CCC",
+		ingredients: {
+			"P": { type: "item", code: "hide-pelt-*", tags: ["size-medium"], quantity: 1 },
+			"C": { type: "item", code: "*", allowedVariants: ["papyrustops", "cattailtops" ], quantity: 3 }
+		},
+		recipegroup: 2,
+		name: "hunterbackpack",
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "hunterbackpack"  }
+	},
+	{
+		ingredientPattern: "CPC,CCC",
+		ingredients: {
+			"P": { type: "item", code: "hide-pelt-*", tags: ["size-large"], quantity: 1 },
+			"C": { type: "item", code: "*", allowedVariants: ["papyrustops", "cattailtops" ], quantity: 3 }
+		},
+		recipegroup: 2,
+		name: "hunterbackpack",
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "hunterbackpack"  }
+	},
+	{
+		ingredientPattern: "CPC,CCC",
+		ingredients: {
+			"P": { type: "item", code: "hide-pelt-*", tags: ["size-huge"], quantity: 1, returnedStack: { type: "item", code: "hide-pelt-small" } },
+			"C": { type: "item", code: "*", allowedVariants: ["papyrustops", "cattailtops" ], quantity: 3 }
+		},
+		recipegroup: 3,
+		name: "hunterbackpack",
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "hunterbackpack", quantity: 1  }
+	},
+	{
+		ingredientPattern: "CPC,DDD,DDD",
+		ingredients: {
+			"P": { type: "item", code: "hide-pelt-*", tags: ["size-huge"], quantity: 1 },
+			"C": { type: "item", code: "*", allowedVariants: ["papyrustops", "cattailtops" ], quantity: 3 },
+			"D": { type: "item", code: "*", allowedVariants: ["papyrustops", "cattailtops" ], quantity: 4 }
+		},
+		recipegroup: 4,
+		name: "hunterbackpack",
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "hunterbackpack", quantity: 2  }
+	}
+]

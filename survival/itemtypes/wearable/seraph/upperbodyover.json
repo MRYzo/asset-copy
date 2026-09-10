@@ -1,0 +1,207 @@
+{
+	code: "clothes",
+	variantgroups: [
+		{ code: "category",  states: ["upperbodyover"] },
+		{ code: "upperbodyover", combine: "SelectiveMultiply", onVariant: "category", states: [
+			"cerise-embroidered-reindeer-herder-coat", "clockmaker-tunic", "cobalt-mantle", "commoner-coat",
+			"forgotten", "fur-coat", "furlinedvest", "great-steppe-mantle", "hunter-coat", "huntsmans-tunic", "king", 
+			"malefactor-tunic", "marketeer", "miner", "nomad-mantle", "reindeer-herder-fur-coat", 
+			"rottenking", "rotwalker", "spice-merchants-coat", "surgeon", "tailor-jacket", "travelers-earthrobe", "warm-robe",
+            "peliconburgundy", "peliconpurple", "quiltedcorsage", "quilteddoublet", "fortuneteller", "arctichunter", "embroideredfur",
+            "arcticfisher", "emeraldreindeerherder", "temptress", "hidetunic"
+		  ] },
+	],
+	storageFlags: 128,
+	shapeByType: {
+		"*-surgeon": { base: "entity/humanoid/seraph/clothing/upperbodyover/surgeon-apron" },
+		"@*-(cerise-embroidered-reindeer-herder-coat|nomad-mantle|travelers-earthrobe|reindeer-herder-fur-coat|warm-robe)": {
+			base: "entity/humanoid/seraph/clothing/upperbodyover/longsleeve",
+			overlays: [ { base: "entity/humanoid/seraph/clothing/upperbodyover/collar-longsleeve-fancy" }]
+		},
+		"@.*-(fur-coat|arctichunter|embroideredfur|arcticfisher)": {
+			base: "entity/humanoid/seraph/clothing/upperbodyover/longsleeve-hood",
+			overlays: [ { base: "entity/humanoid/seraph/clothing/upperbodyover/collar-longsleeve-fur" }]
+		},
+		"*-forgotten": {
+			base: "entity/humanoid/seraph/clothing/upperbodyover/longsleeve-hood",
+		},
+		"@*-(commoner-coat|tailor-jacket|quiltedcorsage|quilteddoublet|fortuneteller|temptress|furlinedvest|hidetunic)": { 
+			base: "entity/humanoid/seraph/clothing/upperbodyover/shortsleeve" },
+		"@*-(clockmaker-tunic|cobalt-mantle|hunter-coat|great-steppe-mantle|huntsmans-tunic|malefactor-tunic)": {
+			base: "entity/humanoid/seraph/clothing/upperbodyover/shortsleeve",
+			overlays: [ { base: "entity/humanoid/seraph/clothing/upperbodyover/collar-shortsleeve-fancy" }]
+		},
+		"@*-(marketeer|rotwalker|peliconburgundy|peliconpurple)": {
+			base: "entity/humanoid/seraph/clothing/upperbodyover/longsleeve-extended",
+			overlays: [ { base: "entity/humanoid/seraph/clothing/upperbodyover/collar-extended-full" }]
+		},
+		"*": { base: "entity/humanoid/seraph/clothing/upperbodyover/longsleeve" }
+	},
+	texturesByType: {
+		"*": {
+			"seraph": { base: "block/transparent" },
+			"uover": { base: "entity/humanoid/seraphclothes/upperbodyover/{upperbodyover}" }
+		}
+	},
+    behaviors: [
+        { "name": "Wearable" }
+    ],
+	attributes: {
+		clothescategory: "upperbodyover",
+		wearableAttachment: true,
+		wearableTexturePrefixCode: null,
+        isFoldable: true,
+		displayable: {
+			shelf: {
+				behavior: "Stacking",
+				category: "wearable-tops",
+				shape: { base: "entity/humanoid/seraph/clothing/upperbody-folded" },
+				size: { width: 11, height: 1.5, length: 7 }
+			}
+		}
+	},
+	attributesByType: {
+		"*-upperbodyover-fur-coat": {
+			disableElements: ["ponytailhigh", "hair-uncovered", "sidehigh", "sidelow", "bangs", "glovefrill-r", "glovefrill-l" ],
+			keepElements: ["hair-covered", "hoodtight"],
+			warmth: 3
+		},
+		"*-forgotten": {
+			disableElements: ["ponytailhigh", "hair-uncovered", "sidehigh", "sidelow", "bangs" ],
+			keepElements: ["hair-covered", "hoodtight"],
+			warmth: 2
+		},
+		"@.*-(cerise-embroidered-reindeer-herder-coat|reindeer-herder-fur-coat|emeraldreindeerherder)": {
+            warmth: 4
+		},
+        "@.*-(arctichunter|arcticfisher|embroideredfur)": {
+            disableElements: ["ponytailhigh", "hair-uncovered", "sidehigh", "sidelow", "bangs", "glovefrill-r", "glovefrill-l"],
+			keepElements: ["hair-covered", "hoodtight"],
+			warmth: 4
+		},
+        "@.*-(peliconpurple|peliconburgundy|furlinedvest)": {
+			warmth: 3
+		},
+		"*": {
+			warmth: 2
+		}
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "clothing": ["*"] },
+	renderAlphaTest: 0.25,
+	tpHandTransform: {
+		translation: { x: -0.3, y: -0.9, z: -0.7 },
+		rotation: { x: -71, y: 180, z: 83 },
+		scale: 0.55
+	},
+	guiTransformByType: {
+		"*-commoner-coat": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.28, z: 0.4 },
+			scale: 1.8		
+		},
+		"*-spice-merchants-coat": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.26, z: 0.4 },
+			scale: 1.5
+		},
+		"*-nomad-mantle": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.26, z: 0.4 },
+			scale: 1.5
+		},
+		"*-malefactor-tunic": {
+			rotate: false,
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.26, z: 0.45 },
+			scale: 1.65
+		},
+		"*-hunter-coat": {
+			rotate: false,
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.3, z: 0.45 },
+			scale: 1.8
+		},
+		"*-clockmaker-tunic": {
+			rotate: false,
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.36, z: 0.45 },
+			scale: 1.96
+		},
+		"*-tailor-jacket": {
+			rotate: false,
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.2, z: 0.45 },
+			scale: 1.55
+		},
+		"*-furlinedvest": {
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.27, z: 0.4 },
+			scale: 1.93
+		},
+		"*-reindeer-herder-fur-coat": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.15, y: 1.28, z: 0.34 },
+			scale: 1.55
+		},
+		"*-cerise-embroidered-reindeer-herder-coat": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.15, y: 1.28, z: 0.34 },
+			scale: 1.55
+		},
+		"*-warm-robe": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.15, y: 1.28, z: 0.34 },
+			scale: 1.55
+		},
+		"*-marketeer": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.27, z: 0.4 },
+			scale: 1.66
+		},
+		"*-rotwalker": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.36, z: 0.4 },
+			scale: 1.68
+		},
+		"@.*-(temptress|peliconpurple|peliconburgundy|emeraldreindeerherders)": {
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.26, z: 0.43 },
+			scale: 1.35
+		},
+		"@.*-(fortuneteller|quilteddoublet|quiltedcorsage)": {
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.36, z: 0.4 },
+			scale: 1.79
+		},
+        "clothes-upperbodyover-hidetunic": {
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.22, z: 0.4 },
+			scale: 1.35
+		},
+		"*": {
+			rotate: false,
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.36, z: 0.4 },
+			scale: 1.35
+		}
+	},
+	groundTransform: {
+		translation: { x: 0.05, y: 0.05, z: 0 },
+		rotation: { x: 0, y: 0, z: -87 },
+		origin: { x: 0.5, y: 0.5, z: 0.5299 },
+		scale: 2.19
+	}
+}

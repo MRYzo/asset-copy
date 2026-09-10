@@ -1,0 +1,412 @@
+[
+    {
+		ingredientPattern: "HKH,HCH,HHH",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"C": { type: "item", code: "cloth-red", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-arctichunter" }
+	},
+    {
+		ingredientPattern: "HKH,HHH,_C_",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-red", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-arctichunter" }
+	},
+	{
+		ingredientPattern: "HKH,_H_,_C_",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"]  },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-red", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-arctichunter" }
+	},
+	{
+		ingredientPattern: "KHC",
+		recipeGroup: 4,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-red", quantity: 1 },
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "clothes-upperbodyover-arctichunter" }
+	},
+    {
+		ingredientPattern: "HKH,HCH,HSH",
+		recipeGroup: 1,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"C": { type: "item", code: "cloth-blue", quantity: 1 },
+			"S": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-arcticfisher" }
+	},
+    {
+		ingredientPattern: "HKH,HSH,_C_",
+		recipeGroup: 2,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-blue", quantity: 1 },
+            "S": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-arcticfisher" }
+	},
+	{
+		ingredientPattern: "HKH,_S_,_C_",
+		recipeGroup: 3,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"]  },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-blue", quantity: 1 },
+            "S": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-arcticfisher" }
+	},
+	{
+		ingredientPattern: "KHC_S_",
+		recipeGroup: 4,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-blue", quantity: 1 },
+            "S": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-arcticfisher" }
+	},
+    {
+		ingredientPattern: "HKH,HCH,HSH",
+		recipeGroup: 1,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"C": { type: "item", code: "cloth-white", quantity: 1 },
+			"S": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-embroideredfur" }
+	},
+    {
+		ingredientPattern: "HKH,HSH,_C_",
+		recipeGroup: 2,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-white", quantity: 1 },
+            "S": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-embroideredfur" }
+	},
+	{
+		ingredientPattern: "HKH,_S_,_C_",
+		recipeGroup: 3,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"]  },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-white", quantity: 1 },
+            "S": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-embroideredfur" }
+	},
+	{
+		ingredientPattern: "KHC_S_",
+		recipeGroup: 4,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-white", quantity: 1 },
+            "S": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-embroideredfur" }
+	},
+    {
+		ingredientPattern: "BSB,BYB",
+		requiresTrait: "clothier",
+		ingredients: {
+			"B": { type: "item", code: "cloth-blue", quantity: 1 },
+			"Y": { type: "item", code: "cloth-yellow", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-cobalt-mantle"  }
+	},
+    {
+		ingredientPattern: "B_B,BHB",
+		ingredients: {
+			"B": { type: "item", code: "cloth-brown", quantity: 1 },
+			"H": { type: "item", code: "hide-pelt-*", tags: { anyOf:["size-medium", "size-large", "size-huge"]}}
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-warm-robe"  }
+	},
+	{
+		ingredientPattern: "B_B,BHB",
+		ingredients: {
+			"B": { type: "item", code: "cloth-brown", quantity: 1 },
+			"H": { type: "item", code: "hide-pelt-*", quantity: 2, tags: ["size-small"] }
+		},
+		recipegroup: 1,
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-warm-robe"  }
+	},
+    {
+		ingredientPattern: "PSP,GGG",
+		requiresTrait: "clothier",
+		ingredients: {
+			"G": { type: "item", code: "cloth-green", quantity: 1 },
+			"P": { type: "item", code: "cloth-plain", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-nomad-mantle"  }
+	},
+	{
+		ingredientPattern: "GSG,BGB",
+		requiresTrait: "clothier",
+		ingredients: {
+			"G": { type: "item", code: "cloth-green", quantity: 1 },
+			"B": { type: "item", code: "cloth-blue", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-spice-merchants-coat"  }
+	},
+    {
+		ingredientPattern: "HKH,HHH,HHH",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-fur-coat"  }
+	},
+	{
+		ingredientPattern: "HKH,HHH",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-fur-coat"  }
+	},
+	{
+		ingredientPattern: "HKH,_H_",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-fur-coat"  }
+	},
+	{
+		ingredientPattern: "KH",
+		recipeGroup: 4,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 2,
+		height: 1,
+		output: { type: "item", code: "clothes-upperbodyover-fur-coat"  }
+	},
+    {
+	    ingredientPattern: "O_O,YOY",
+	    ingredients: {
+		    "O": { type: "item", code: "cloth-orange", quantity: 1 },
+		    "Y": { type: "item", code: "cloth-yellow", quantity: 1 }
+	    },
+	    width: 3,
+	    height: 2,
+	    output: { type: "item", code: "clothes-upperbodyover-travelers-earthrobe"  }
+    },
+    {
+		ingredientPattern: "HRH,PBP,PSP",
+		requiresTrait: "clothier",
+		recipeGroup: 1,
+		ingredients: {
+			"P": { type: "item", code: "cloth-plain", quantity: 1 },
+			"R": { type: "item", code: "cloth-red", quantity: 2 },
+			"B": { type: "item", code: "cloth-blue", quantity: 2 },
+			"H": { type: "item", code: "hide-pelt-*", quantity: 2, tags: ["size-small"] },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-reindeer-herder-fur-coat"  }
+	},
+	{
+		ingredientPattern: "HRH,PBP,PSP",
+		requiresTrait: "clothier",
+		recipeGroup: 2,
+		ingredients: {
+			"P": { type: "item", code: "cloth-plain", quantity: 1 },
+			"R": { type: "item", code: "cloth-red", quantity: 2 },
+			"B": { type: "item", code: "cloth-blue", quantity: 2 },
+			"H": { type: "item", code: "hide-pelt-*", tags: { anyOf:["size-medium", "size-large"]}},
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-reindeer-herder-fur-coat"  }
+	},
+	{
+		ingredientPattern: "HR_,PBP,PSP",
+		requiresTrait: "clothier",
+		recipeGroup: 2,
+		ingredients: {
+			"P": { type: "item", code: "cloth-plain", quantity: 1 },
+			"R": { type: "item", code: "cloth-red", quantity: 2 },
+			"B": { type: "item", code: "cloth-blue", quantity: 2 },
+			"H": { type: "item", code: "hide-pelt-*", tags: ["size-huge"] },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		recipegroup: 3,
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-upperbodyover-reindeer-herder-fur-coat"  }
+	},
+    {
+		ingredientPattern: "HK,L_",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 2, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"L": { type: "item", code: "leather-normal-plain", quantity: 3 },
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-furlinedvest" }
+	},
+    {
+		ingredientPattern: "HK,L_",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "L": { type: "item", code: "leather-normal-plain", quantity: 3 },
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-furlinedvest" }
+	},
+	{
+		ingredientPattern: "HK,L_",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"], returnedStack: { type: "item", code: "hide-pelt-small" }  },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "L": { type: "item", code: "leather-normal-plain", quantity: 3 },
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-furlinedvest" }
+	},
+	{
+		ingredientPattern: "HK,L_",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"], returnedStack: { type: "item", code: "hide-pelt-medium" } },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "L": { type: "item", code: "leather-normal-plain", quantity: 3 },
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-furlinedvest" }
+	},
+    {
+		ingredientPattern: "HK,H_",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", quantity: 2, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-hidetunic" }
+	},
+    {
+		ingredientPattern: "HK,H_",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-hidetunic" }
+	},
+	{
+		ingredientPattern: "HK,H_",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", quantity: 1, tags: ["size-large"], returnedStack: { type: "item", code: "hide-raw-small" }  },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-hidetunic" }
+	},
+	{
+		ingredientPattern: "HK,H_",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", quantity: 1, tags: ["size-huge"], returnedStack: { type: "item", code: "hide-raw-medium" } },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+
+		},
+		width: 2,
+		height: 2,
+		output: { type: "item", code: "clothes-upperbodyover-hidetunic" }
+	},
+]

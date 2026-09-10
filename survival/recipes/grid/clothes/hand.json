@@ -1,0 +1,244 @@
+[
+	{
+		ingredientPattern: "HKH,_C_",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 2, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"C": { type: "item", code: "cloth-red", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-hand-arctichunter"  }
+	},
+	{
+		ingredientPattern: "HKH,_C_",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-red", quantity: 1 }
+
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-hand-arctichunter"  }
+	},
+	{
+		ingredientPattern: "HKC",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-red", quantity: 1 }
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "clothes-hand-arctichunter"  }
+	},
+	{
+		ingredientPattern: "HKC",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"], returnedStack: { type: "item", code: "hide-pelt-small" } },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-red", quantity: 1 }
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "clothes-hand-arctichunter"  }
+	},
+    {
+		ingredientPattern: "HKH,_C_,_S_",
+		recipeGroup: 1,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 2, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"C": { type: "item", code: "cloth-blue", quantity: 1 },
+			"S": { type: "item", code: "sewingkit", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-hand-arcticfisher"  }
+	},
+	{
+		ingredientPattern: "HKH,_C_,_S_",
+		recipeGroup: 2,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-blue", quantity: 1 },
+            "S": { type: "item", code: "sewingkit", quantity: 1 }
+
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-hand-arcticfisher"  }
+	},
+	{
+		ingredientPattern: "HKC,_S_",
+		recipeGroup: 3,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-blue", quantity: 1 },
+            "S": { type: "item", code: "sewingkit", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-hand-arcticfisher"  }
+	},
+	{
+		ingredientPattern: "HKC,_S_",
+		recipeGroup: 3,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"], returnedStack: { type: "item", code: "hide-pelt-small" } },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-blue", quantity: 1 },
+            "S": { type: "item", code: "sewingkit", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-hand-arcticfisher"  }
+	},
+    {
+		ingredientPattern: "HKH,_C_,_S_",
+		recipeGroup: 1,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 2, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+			"C": { type: "item", code: "cloth-brown", quantity: 1 },
+			"S": { type: "item", code: "sewingkit", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-hand-embroideredfur"  }
+	},
+	{
+		ingredientPattern: "HKH,_C_,_S_",
+		recipeGroup: 2,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-brown", quantity: 1 },
+            "S": { type: "item", code: "sewingkit", quantity: 1 }
+
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-hand-embroideredfur"  }
+	},
+	{
+		ingredientPattern: "HKC,_S_",
+		recipeGroup: 3,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-brown", quantity: 1 },
+            "S": { type: "item", code: "sewingkit", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-hand-embroideredfur"  }
+	},
+	{
+		ingredientPattern: "HKC,_S_",
+		recipeGroup: 3,
+        requiresTrait: "clothier",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"], returnedStack: { type: "item", code: "hide-pelt-small" } },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+            "C": { type: "item", code: "cloth-brown", quantity: 1 },
+            "S": { type: "item", code: "sewingkit", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-hand-embroideredfur"  }
+	},
+    {
+		ingredientPattern: "C_C",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-{color}", quantity: 1 }
+		},
+        skipVariants: {
+			color: ["mordant" ]
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "clothes-hand-cuffs{color}"  }
+	},
+    {
+		ingredientPattern: "HKH",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 2, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "clothes-hand-fur-gloves"  }
+	},
+	{
+		ingredientPattern: "HKH",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "clothes-hand-fur-gloves"  }
+	},
+	{
+		ingredientPattern: "HK",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 2,
+		height: 1,
+		output: { type: "item", code: "clothes-hand-fur-gloves"  }
+	},
+	{
+		ingredientPattern: "HK",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"], returnedStack: { type: "item", code: "hide-pelt-small" } },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 2,
+		height: 1,
+		output: { type: "item", code: "clothes-hand-fur-gloves"  }
+	},
+    {
+		ingredientPattern: "LTL,_T_",
+		recipeGroup: 1,
+		ingredients: {
+			"L": { type: "item", code: "leather-normal-plain", quantity: 3 },
+			"T": { type: "item", code: "flaxtwine" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-hand-heavy-leather-gloves"  }
+	},
+    {
+		ingredientPattern: "RSR",
+		requiresTrait: "clothier",
+		ingredients: {
+			"R": { type: "item", code: "cloth-red", quantity: 2 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "clothes-hand-minstrel-gloves"  }
+	},
+]

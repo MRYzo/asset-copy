@@ -1,0 +1,188 @@
+	{
+	code: "clothes",
+	variantgroups: [
+		{ code: "category",  states: ["upperbody"] },
+		{ code: "upperbody", combine: "SelectiveMultiply", onVariant: "category", states: [
+			"aristocrat-shirt", "azure-embroidered-shirt", "hunter-shirt", "great-steppe-shirt", "earth-toned-robe", "hunters-green", "jailor-tunic", "lackey-shirt", "linen-tunic",
+			"merchant-shirt", "messenger-shirt", "minstrel-shirt", "noble-shirt", "pearl-shirt", "peasent-shirt", "prince-tunic", "reindeer-herder-collared-shirt", "scarlet-ornate-linen-tunic", 
+			"shepherd-tunic", "squire-shirt", "tattered-crimson-tunic", "tattered-linen-shirt", "temptress-velvet-shirt", "woolen-shirt", "blackguard-shirt", "clockmaker-shirt", "malefactor-shirt",
+			"forlorn-tunic", "commoner-shirt", "tailor-blouse", "homespun-shirt", "pastoral-shirt", "chateau-blouse", "marketeer", "rottenking", "king", "surgeon", "miner",
+			"alchemist", "forgotten", "deep", "survivor", "scribe", "grass", "fortuneteller", "chemiselong", "chemiseshoulderlong", "chemiseshouldershort", "chemisescoop", "chemiseshort", "chemisesleeveless",
+            "classicaltunic", "arctichunter", "embroideredfur", "arcticfisher", "emeraldreindeerherder", "kirtleblack", "kirtleblue", "kirtlegray", "kirtlegreen", "kirtleorange", "kirtlepink", "kirtlepurple",
+            "kirtlered", "kirtlewhite", "kirtleyellow", "kirtlebrown", "acrobat", "jester", "beggar", "wanderer", "warrior", "ruralfarmer", "ruralhunter", "midsummer", "centurion", "popinjay",
+            "farmhand", "rawhidemantle"
+		  ] }
+	],
+	storageFlags: 128,
+    behaviors: [
+        { "name": "Wearable" }
+    ],
+	attributes: {
+		clothescategory: "upperbody",
+		wearableAttachment: true,
+		disableElementsByType: {
+			"@.*-(alchemist|surgeon|chateau-blouse|miner|tailor-blouse|marketeer|tattered-linen-shirt|reindeer-herder-collared-shirt|prince-tunic|peasent-shirt|noble-shirt|minstrel-shirt|merchant-shirt|lackey-shirt|great-steppe-shirt|hunter-shirt|azure-embroidered-shirt|jester|farmhand|rawhidemantle)": ["glovefrill-l", "glovefrill-r"],
+			"*-marketeer": ["glovefrill-l"],
+		},
+        isFoldable: true,
+		displayable: {
+			shelf: {
+				behavior: "Stacking",
+				category: "wearable-tops",
+				shape: { base: "entity/humanoid/seraph/clothing/upperbody-folded" },
+				size: { width: 11, height: 1.5, length: 7 }
+			}
+		}
+	},
+	attributesByType: {
+        "@.*-(arctichunter|arcticfisher|embroideredfur|emeraldreindeerherder|reindeer-herder-collared-shirt)": { warmth: 3.5 },
+        "@.*-(grass|beggar|classicaltunic)": { warmth: 1 },
+		"*": { warmth: 2 }
+	},
+	shapeByType: {
+		"@*-(lackey-shirt|merchant-shirt|messenger-shirt|scarlet-ornate-linen-tunic|hunter-shirt|reindeer-herder-collared-shirt|woolen-shirt|tailor-blouse)": { 
+			base: "entity/humanoid/seraph/clothing/upperbody/longsleeve",
+			overlays: [ { base: "entity/humanoid/seraph/clothing/upperbody/collar-longsleeve-fancy" }]
+		},
+		"@*-(clockmaker-shirt|hunters-green|homespun-shirt|linen-tunic|tattered-crimson-tunic|grass|classicaltunic|arctichunter|temptress|chemiseshouldershort|chemiseshort|chemisesleeveless|fortuneteller|beggar|ruralfarmer|ruralhunter|centurion)": {
+			base: "entity/humanoid/seraph/clothing/upperbody/shortsleeve" 
+		},
+		"@*-(commoner-shirt|temptress-velvet-shirt)": {
+			base: "entity/humanoid/seraph/clothing/upperbody/shortsleeve",
+			overlays: [ { base: "entity/humanoid/seraph/clothing/upperbody/collar-shortsleeve-fancy" }]
+		},
+		"@*-(miner|survivor)": { 
+			base: "entity/humanoid/seraph/clothing/upperbody/longsleeve",
+			overlays: [ { base: "entity/humanoid/seraph/clothing/upperbody/collar-longsleeve-full" }]
+		},
+		"@.*-(surgeon|popinjay)": { 
+			base: "entity/humanoid/seraph/clothing/upperbody/longsleeve-extended",
+			overlays: [ { base: "entity/humanoid/seraph/clothing/upperbody/collar-extended-full" }]
+		},
+		"*": {
+			base: "entity/humanoid/seraph/clothing/upperbody/longsleeve" 
+		}
+	},
+	texturesByType: {
+		"*": {
+			"seraph": { base: "block/transparent" },
+			"shirt": { base: "entity/humanoid/seraphclothes/upperbody/{upperbody}" },
+			"uover": { base: "entity/humanoid/seraphclothes/upperbody/{upperbody}" }
+		}
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "clothing": ["*"] },
+	renderAlphaTest: 0.25,
+	tpHandTransform: {
+		translation: { x: -0.3, y: -0.9, z: -0.7 },
+		rotation: { x: -71, y: 180, z: 83 },
+		scale: 0.55
+	},
+	guiTransformByType: {
+		"*-shepherd-tunic": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.5, y: 1.2, z: 0.5 },
+			scale: 1.8
+		},
+		"*-noble-shirt": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.9, y: 1.04, z: 0.7 },
+			scale: 1.5
+		},
+		"*-commoner-shirt": {
+			rotation: { x: -178, y: -61, z: 10 },
+			origin: { x: 0.88, y: 1.15, z: 0.73 },
+			scale: 1.8
+		},
+		"*-peasent-shirt*": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.9, y: 1.02, z: 0.7 },
+			scale: 1.5
+		},
+		"*-aristocrat-shirt*": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.9, y: 1.02, z: 0.7 },
+			scale: 1.5
+		},
+		"*-clockmaker-shirt": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.9, y: 1.15, z: 0.75 },
+			scale: 1.96
+		},
+		"*-blackguard-shirt": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.9, y: 1, z: 0.75 },
+			scale: 1.5
+		},
+		"*-temptress-velvet-shirt": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.9, y: 1.2, z: 0.7 },
+			scale: 1.9
+		},
+		"*-malefactor-shirt": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.43, y: 1.2, z: 0.55 },
+			scale: 1.69
+		},
+		"*-forlorn-tunic": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.43, y: 1.1, z: 0.5 },
+			scale: 1.51
+		},
+		"*-linen-tunic": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.43, y: 1.2, z: 0.5 },
+			scale: 1.75
+		},
+		"*-tattered-crimson-tunic": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.43, y: 1.2, z: 0.5 },
+			scale: 1.69
+		},
+		"*-homespun-shirt": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.9, y: 1.1, z: 0.75 },
+			scale: 1.8
+		},
+		"*-shirt*": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.9, y: 1.1, z: 0.7 },
+			scale: 1.5
+		},
+		"*-tailor-blouse": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.43, y: 1.2, z: 0.55 },
+			scale: 1.69
+		},
+		"*-marketeer": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.43, y: 1.2, z: 0.5 },
+			scale: 1.69
+		},
+		"*-alchemist": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.43, y: 1.21, z: 0.5 },
+			scale: 1.69
+		},
+		"@.*-(ruralfarmer|beggar)": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.43, y: 1.24, z: 0.57 },
+			scale: 1.69
+		},
+        "*-rawhidemantle": {
+			rotation: { x: -180, y: -66, z: 18 },
+			origin: { x: 0.2, y: 1.26, z: 0.4 },
+			scale: 1.5
+		},
+		"*": {
+			rotation: { x: -178, y: -65, z: 10 },
+			origin: { x: 0.43, y: 1.1, z: 0.5 },
+			scale: 1.69
+		}
+	},
+	groundTransform: {
+		translation: { x: 0.05, y: 0.05, z: 0 },
+		rotation: { x: 0, y: 0, z: -87 },
+		origin: { x: 0.5, y: 0.5, z: 0.5299 },
+		scale: 4
+	}
+}

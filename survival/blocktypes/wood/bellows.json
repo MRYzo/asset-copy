@@ -1,0 +1,121 @@
+{
+	code: "bellows",
+	class: "BlockBellows",
+	entityClassByType: {
+		"bellows-large-*": "MechPoweredBellows",
+		"*": "Bellows",
+	},
+	variantgroups: [
+		{ code: "material", states: ["crude", "small", "large"] },
+		{ code: "side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	behaviors: [ 
+		{ name: "HorizontalOrientable", properties: { "handleDrop": false } },
+		{ name: "UnstableFalling" } 
+	],
+	dropsByType: {
+		// Taken care of by the Durability behavior
+		"bellows-crude-*": [ ],
+		"*": [ { "type": "block", code: "bellows-{material}-north" } ]
+	},
+	durabilityByType: {
+		"bellows-crude-*": 500
+	},
+	entityBehaviorsByType: {
+		"bellows-crude-*": [ 
+			{ name: "Animatable" }, 
+			{ name: "Durability" } 
+		],
+		"*": [ { name: "Animatable" } ]
+	},
+	shapeByType: {
+		"*-north": { base: "block/wood/mechanics/bellows{material}", rotateY: 270 },
+		"*-east": { base: "block/wood/mechanics/bellows{material}", rotateY: 180 },
+		"*-south": { base: "block/wood/mechanics/bellows{material}", rotateY: 90 },
+		"*-west": { base: "block/wood/mechanics/bellows{material}", rotateY: 0 }
+	},
+	particlesTextureCodeByType: {
+		"bellows-crude-*": "wooden",
+		"bellows-small-*": "plainoak",
+		"bellows-large-*": "plainoak"
+	},
+	creativeinventoryByType: {
+		"bellows-large-*": { "general": ["*-north"], "decorative": ["*-north"], "mechanics": ["*-north"] },
+		"*": { "general": ["*-north"], "decorative": ["*-north"] },
+	},
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	maxStackSize: 1,
+	lightAbsorption: 1,
+	attributes: {
+		reinforcable: true,
+		partialAttachable: true,
+		bellowAnimation: { 
+			animation: "bellowing", 
+			code: "bellowing", 
+			animationSpeed: 1.5,
+			animationSoundsByType: {
+				"bellows-crude-*": [ { frame: 1, range: 15, location: "sounds/block/bellowslarge/bellowlarge-in*", pitch: { avg: 1.0, var: 0.3 } }, { frame: 30, range: 15, location: "sounds/block/bellowslarge/bellowlarge-out*", pitch: { avg: 1.0, var: 0.3 } } ],
+				"bellows-small-*": [ { frame: 1, range: 15, location: "sounds/block/bellowslarge/bellowlarge-in*", pitch: { avg: 1.0, var: 0.3 } }, { frame: 30, range: 15, location: "sounds/block/bellowslarge/bellowlarge-out*", pitch: { avg: 1.0, var: 0.3 } } ],
+				"bellows-large-*": [ { frame: 1, range: 15, location: "sounds/block/bellowslarge/bellowlarge-in*", pitch: { avg: 1.0, var: 0.3 } }, { frame: 30, range: 15, location: "sounds/block/bellowslarge/bellowlarge-out*", pitch: { avg: 1.0, var: 0.3 } } ],
+			}
+		},
+	},
+	sideao: { all: false },
+	sidesolid: { all: false },
+	emitsideao: { all: false },
+	sideopaque: { all: false },
+	collisionSelectionBoxByType: {
+		"*-small-north": { x1: 0.09375, y1: 0, z1: 0.125, x2: 0.84375, y2: 0.875, z2: 0.875, rotateY: 90 },
+		"*-small-east": { x1: 0.09375, y1: 0, z1: 0.125, x2: 0.84375, y2: 0.875, z2: 0.875, rotateY: 0 },
+		"*-small-south": { x1: 0.09375, y1: 0, z1: 0.125, x2: 0.84375, y2: 0.875, z2: 0.875, rotateY: 270 },
+		"*-small-west": { x1: 0.09375, y1: 0, z1: 0.125, x2: 0.84375, y2: 0.875, z2: 0.875, rotateY: 180 },
+		"bellows-large-*": { x1: 0, y1: 0.4375, z1: 0,	x2: 1, y2: 0.875, z2: 1 },
+		"*": { x1: 0, y1: 0.375, z1: 0,	x2: 1, y2: 0.8125, z2: 1 }
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 20,
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+	heldTpIdleAnimationByType: {
+		"bellows-large-*": "holdunderarm",
+		"*": "holdbothhandslarge"
+	},
+	heldRightReadyAnimation: "heldblockready", 
+	heldTpUseAnimation: "twohandplaceblock",
+	guiTransformByType: {
+		"bellows-large-*": {
+			scale: 1.39
+		},
+		"*": {
+			origin: { x: 0.5, y: 0.4, z: 0.5 },
+			scale: 1.39
+		}
+	},
+	tpHandTransformByType: {
+		"bellows-large-*": {
+			translation: { x: -1.6, y: -0.65, z: -0.75 },
+			rotation: { x: 3, y: -101, z: 88 },
+			scale: 0.6
+		},
+		"*": {
+			translation: { x: -0.3, y: 0.15, z: -0.59 },
+			rotation: { x: 101, y: 0, z: -78 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.6
+		}
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 4
+	}
+}

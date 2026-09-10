@@ -1,0 +1,74 @@
+{
+	code: "armorstand",
+    class: "EntityArmorStand",
+    tags: ["inanimate"],
+    variantgroups: [
+        { code: "wood", states: ["aged"] },
+    ],
+    hitboxSize: { x: 0.7, y: 2 },
+    eyeHeight: 1.8,
+    knockbackResistance: 1,
+    attributes: { useSlotPrefix: true },
+    texturesByType: {
+        "armorstand-aged": {
+            "normal-westeast": { base: "block/locustnest/cage/fabric-top" },
+            "oak": { base: "block/wood/planks/aged/generic1" },
+        },
+    },
+    behaviorConfigs: {
+        rideableaccessories: {
+            wearableSlots: [
+                { code: "head", forCategoryCodes: ["armorhead"], attachmentPointCode: "HeadAP" ,
+                    stepParentTo: { "": { elementName: "Head" } },
+                },
+                { code: "body", forCategoryCodes: ["armorbody"], attachmentPointCode: "BodyAP" ,
+                    stepParentTo: { "": { elementName: "ASUpperBody" } },
+                },
+                { code: "legs", forCategoryCodes: ["armorlegs"], attachmentPointCode: "LegsAP" ,
+                    stepParentTo: { "": { elementName: "Legs" } },
+                },
+                { code: "righthand", forCategoryCodes: ["toolholding", "utilities", "shield", "weaponfalx", "bowlong", "weapon1m", "bowshort", "oar"],
+                    attachmentPointCode: "RightHand",
+                    stepParentTo: {
+                        "": { elementName: "RightHandAP" },
+                        "OarStorage": { elementName: "LowerArmR_R_Oar" },
+                        "LowerArmL": { elementName: "LowerArmR_R" }
+                    },
+                },
+                { code: "lefthand", forCategoryCodes: ["toolholding", "utilities", "shield", "weaponfalx", "bowlong", "weapon1m", "bowshort", "oar"],
+                    attachmentPointCode: "LeftHand",
+                    stepParentTo: {
+                        "": { elementName: "LeftHandAP" },
+                        "OarStorage": { elementName: "LowerArmL_R_Oar" },
+                        "LowerArmR": { elementName: "LowerArmL" }
+                    }
+                },
+            ],
+            useShiftAttach: true
+        },
+        selectionboxes: {
+            selectionBoxes: ["HeadAP", "BodyAP", "LegsAP", "RightHand", "LeftHand"]
+        },
+    },
+    client: {
+        renderer: "Shape",
+        shape: { base: "entity/nonliving/armorstand-aged" },
+        behaviors: [
+            { code: "repulseagents" },
+            { code: "controlledphysics", stepHeight: 1.1251 },
+            { code: "selectionboxes" },
+            { code: "rideableaccessories" },
+        ],
+    },
+    server: {
+        behaviors: [
+            { code: "repulseagents" },
+            { code: "controlledphysics", stepHeight: 1.1251 },
+            { code: "selectionboxes" },
+            { code: "rideableaccessories" },
+        ]
+    },
+    sounds: {
+        hurt: "player/slap"
+    }
+}

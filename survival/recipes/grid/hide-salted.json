@@ -1,0 +1,46 @@
+[
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "salt", quantity: 1 },
+			"H": { type: "item", code: "hide-raw-*", name: "species", quantity: 1, tags: ["size-small"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-salted-{species}", quantity: 1 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "salt", quantity: 2 },
+			"H": { type: "item", code: "hide-raw-*", name: "species", quantity: 1, tags: ["size-medium"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-salted-{species}", quantity: 1 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "salt", quantity: 4 },
+			"H": { type: "item", code: "hide-raw-*", name: "species", quantity: 1, tags: ["size-large"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-salted-{species}", quantity: 1 }
+	},
+	{
+		ingredientPattern: "F,H",
+		ingredients: {
+			"F": { type: "item", code: "salt", quantity: 8 },
+			"H": { type: "item", code: "hide-raw-*", name: "species", quantity: 1, tags: ["size-huge"] },
+		},
+		shapeless: true,
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "hide-salted-{species}" }
+	}
+]

@@ -1,0 +1,64 @@
+{
+	code: "clothes",
+	variantgroups: [
+		{ code: "category",  states: ["head"] },
+		{ code: "head", states: ["furhattail", "furhatwide"] },
+		{ code: "animal",  states: ["generic", "fox", "raccoon"] },
+		{ code: "species",  states: [ "common", "red", "arctic", "white", "gray" ] }
+	],
+	allowedVariants: [
+		"clothes-head-furhattail-fox-red",
+		"clothes-head-furhattail-fox-arctic",
+		"clothes-head-furhattail-raccoon-common",
+		"clothes-head-furhatwide-fox-red",
+		"clothes-head-furhatwide-generic-white",
+		"clothes-head-furhatwide-generic-gray",
+	],
+	shape: { base: "entity/humanoid/seraph/clothing/head/{head}" },
+	textures: {
+		"furtexture": { base: "entity/humanoid/seraphclothes/head/{head}-{animal}-{species}" },
+		"seraph": { base: "block/transparent" } 
+	},
+    behaviors: [
+        { "name": "Wearable" }
+    ],
+	attributes: {
+		clothescategory: "head",
+		wearableAttachment: true
+	},
+	// 'keepElements names must also be added to game/entities/humanoid/player file, under the 'disableElements' attribute.
+	attributesByType: {
+		"*": { disableElements: ["sidelow", "bangs", "hoodshoulder" ], keepElements: ["hair-covered0", "hoodtight"], warmth: 2.5 }
+	},
+	storageFlags: 128,
+	creativeinventory: { "general": ["*"], "items": ["*"], "clothing": ["*"] },
+	guiTransformByType: {
+		"*": {
+			translation: { x: 0, y: 0, z: 19 },
+			rotation: { x: 174, y: -45, z: 23 },
+			origin: { x: 0.52, y: 1.9, z: 0.55 },
+			scale: 1.99
+		}
+	},
+	tpHandTransformByType: {
+		"*": {
+			translation: { x: -0.67, y: -1.7, z: 0.3 },
+			rotation: { x: -59, y: -80, z: 12 },
+			scale: 0.85
+		}
+	},
+	groundTransformByType: {
+		"clothes-head-furhattail-*": {
+			translation: { x: -0.02, y: -0.22, z: -0.03 },
+			rotation: { x: 0, y: 0, z: 0 },
+			origin: { x: 0.5, y: 1.5, z: 0.5299 },
+			scale: 4
+		},
+		"clothes-head-furhatwide-*": {
+			translation: { x: 0, y: -0.24, z: -0.01 },
+			rotation: { x: 0, y: 32, z: 0 },
+			origin: { x: 0.5, y: 1.5, z: 0.5299 },
+			scale: 4
+		}
+	}
+}

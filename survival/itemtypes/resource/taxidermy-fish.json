@@ -1,0 +1,662 @@
+{
+	code: "taxidermy-fish",
+	behaviors: [
+		{ name: "GroundStorable", properties: { layout: 'SingleCenter', collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.125, z2: 1 } } }
+	],
+	variantgroups: [
+		{ "code": "habitat", "states": ["freshwater", "saltwater", "reef"] },
+		{ "code": "type", 
+			"states": [ 
+				"angel", "butterfly", "clown", "puffer", "tang", "trigger", "wrasse",
+				"alewife", "bream", "chub", "gurnard", "haddock", "hake", "herring", "mackerel", "pollock", "perch", "crappie", "piranha", "trout",
+				"barracuda", "grouper", "salmon", "snapper", "tuna", "wolf", "bass", "carp", "catfish", "pickerel", "tilapia", "walleye",
+				"amberjack", "mahi-mahi", "wreckfish", "pike",
+				"coelacanth", "sturgeon", "arapaima", "sheatfish"
+			]
+		},
+		{ "code": "species", 
+			"states": [
+				"common", "banded", "bicolor", "black", "blackwedged", "copperband", "creole", "longspine", "powderblue", "titan", "yellowstripe",
+				"alaska", "atlantic", "bay", "cape", "pacific", "sea", "silver", "brown", "european", "rainbow", "river", "shad", "white", "yellow",
+				"bering", "great", "pink", "red", "skipjack", "blue", "chain", "channel", "coho", "grass", "largemouth", "nile", "smallmouth",
+				"yellowtail", "northern",
+				"arapaima", "gigas"
+			] 
+		},
+		{ "code": "age", "states": ["adult", "juvenile"] }
+	],
+	shape: { base: "entity/animal/fish/{habitat}/{type}-{age}" },
+	textures: { "skin": { base: "entity/animal/fish/{habitat}/{type}-{species}-adult*"} },
+	allowedVariants: [
+		"taxidermy-fish-reef-angel-bicolor-adult",
+		"taxidermy-fish-reef-butterfly-blackwedged-adult",
+		"taxidermy-fish-reef-butterfly-copperband-adult",
+		"taxidermy-fish-reef-clown-black-adult",
+		"taxidermy-fish-reef-clown-common-adult",
+		"taxidermy-fish-reef-clown-yellowstripe-adult",
+		"taxidermy-fish-reef-puffer-longspine-adult",
+		"taxidermy-fish-reef-tang-banded-adult",
+		"taxidermy-fish-reef-tang-powderblue-adult",
+		"taxidermy-fish-reef-trigger-titan-adult",
+		"taxidermy-fish-reef-wrasse-creole-adult",
+		
+		"taxidermy-fish-saltwater-bream-sea-adult",
+		"taxidermy-fish-saltwater-gurnard-cape-adult",
+		"taxidermy-fish-saltwater-haddock-common-adult",
+		"taxidermy-fish-saltwater-hake-silver-adult",
+		"taxidermy-fish-saltwater-herring-atlantic-adult",
+		"taxidermy-fish-saltwater-mackerel-atlantic-adult",
+		"taxidermy-fish-saltwater-pollock-alaska-adult",
+		"taxidermy-fish-saltwater-perch-pacific-adult",
+		
+		"taxidermy-fish-saltwater-barracuda-great-*",
+		"taxidermy-fish-saltwater-grouper-black-*",
+		"taxidermy-fish-saltwater-salmon-pink-*",
+		"taxidermy-fish-saltwater-snapper-red-*",
+		"taxidermy-fish-saltwater-tuna-skipjack-*",
+		"taxidermy-fish-saltwater-wolf-bering-*",
+
+		"taxidermy-fish-saltwater-amberjack-yellowtail-*",
+		"taxidermy-fish-saltwater-mahi-mahi-common-*",
+		"taxidermy-fish-saltwater-wreckfish-atlantic-*",
+
+		"taxidermy-fish-saltwater-coelacanth-common-*",
+		"taxidermy-fish-saltwater-sturgeon-atlantic-*",
+
+		"taxidermy-fish-freshwater-alewife-shad-adult",
+		"taxidermy-fish-freshwater-chub-river-adult",
+		"taxidermy-fish-freshwater-crappie-black-adult",
+		"taxidermy-fish-freshwater-crappie-white-adult",
+		"taxidermy-fish-freshwater-perch-european-adult",
+		"taxidermy-fish-freshwater-perch-yellow-adult",
+		"taxidermy-fish-freshwater-piranha-black-adult",
+		"taxidermy-fish-freshwater-piranha-red-adult",
+		"taxidermy-fish-freshwater-tilapia-nile-adult",
+		"taxidermy-fish-freshwater-tilapia-red-adult",
+		"taxidermy-fish-freshwater-trout-brown-adult",
+		"taxidermy-fish-freshwater-trout-rainbow-adult",
+		
+		"taxidermy-fish-freshwater-bass-largemouth-*",
+		"taxidermy-fish-freshwater-bass-smallmouth-*",
+		"taxidermy-fish-freshwater-carp-common-*",
+		"taxidermy-fish-freshwater-carp-grass-*",
+		"taxidermy-fish-freshwater-catfish-blue-*",
+		"taxidermy-fish-freshwater-catfish-channel-*",
+		"taxidermy-fish-freshwater-pickerel-chain-*",
+		"taxidermy-fish-freshwater-salmon-coho-*",
+		"taxidermy-fish-freshwater-walleye-common-*",
+
+		"taxidermy-fish-freshwater-pike-northern-*",
+
+		"taxidermy-fish-freshwater-arapaima-arapaima-*",
+		"taxidermy-fish-freshwater-arapaima-gigas-*",
+		"taxidermy-fish-freshwater-sheatfish-black-*",
+		"taxidermy-fish-freshwater-sheatfish-white-*"
+	],
+	attributes: {
+        handbook: {
+            groupBy: [ "taxidermy-fish-*" ]
+        },
+		groundStorageTransformByType: {
+			"*": {
+				translation: { x: 0, y: -0.16, z: 0 },
+				rotation: { x: -90, y: 1, z: 30 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			}
+		},
+		antlerMountable: true,
+		onAntlerMountTransformByType: {
+			"taxidermy-fish-reef-*": {
+				translation: { x: -0.367, y: 0.3, z: -0.05 },
+				rotation: { x: -92, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"taxidermy-fish-saltwater-anchovy-*": {
+				translation: { x: -0.36, y: 0.37, z: -0.08 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"@taxidermy-fish-saltwater-(menhaden|herring|mackerel|perch)-.*": {
+				translation: { x: -0.36, y: 0.34, z: -0.02 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"@taxidermy-fish-saltwater-(salmon|snapper|tuna|wolf|wreckfish)-.*-adult": {
+				translation: { x: -0.36, y: 0.3, z: 0.02 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"taxidermy-fish-saltwater-barracuda-*-adult": {
+				translation: { x: -0.36, y: 0.3, z: -0.02 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"taxidermy-fish-saltwater-sturgeon-*-adult": {
+				translation: { x: -0.36, y: 0.3, z: -0.02 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"taxidermy-fish-freshwater-alewife-*": {
+				translation: { x: -0.36, y: 0.37, z: -0.06 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"taxidermy-fish-freshwater-chub-*": {
+				translation: { x: -0.36, y: 0.37, z: -0.06 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"taxidermy-fish-freshwater-crappie-*": {
+				translation: { x: -0.36, y: 0.34, z: -0.02 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"taxidermy-fish-freshwater-perch-*": {
+				translation: { x: -0.36, y: 0.34, z: -0.02 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"taxidermy-fish-freshwater-tilapia-*": {
+				translation: { x: -0.36, y: 0.34, z: -0.02 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"taxidermy-fish-freshwater-pike-*-adult": {
+				translation: { x: -0.36, y: 0.3, z: -0.02 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"taxidermy-fish-freshwater-sheatfish-*-adult": {
+				translation: { x: -0.36, y: 0.3, z: -0.02 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"*-juvenile": {
+				translation: { x: -0.36, y: 0.36, z: -0.02 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			},
+			"*-adult": {
+				translation: { x: -0.36, y: 0.233, z: 0.02 },
+				rotation: { x: -90, y: -90, z: -90 },
+				origin: { x: 0.5, y: 0.2, z: 0.5 }
+			}			
+		},
+	},
+	storageFlags: 257,
+	maxstacksizeByType: {
+		"@taxidermy-fish-saltwater-(sturgeon|coelacanth|arapaima|sheatfish)-.*": 4,
+		"@taxidermy-fish-saltwater-(amberjack|mahi-mahi|wreckfish|pike)-.*": 8,
+		"@taxidermy-fish-saltwater-(barracude|grouper|salmon|snapper|tuna|wolf|bass|carp|catfish|pickerel|salmon|tilapia|walleye)-.*": 16,
+		"@taxidermy-fish-saltwater-(bream|gurnard|haddock|hake|herring|mackerel|pollock|perch|crappie|piranha|trout)-.*": 32,
+		"taxidermy-fish-freshwater-arapaima-*": 4,
+		"taxidermy-fish-freshwater-sheatfish-*": 4,
+		"taxidermy-fish-freshwater-pike-*": 8,
+		"@taxidermy-fish-freshwater-(bass|carp|catfish|pickerel|salmon|tilapia|walleye)-.*": 16,
+		"@taxidermy-fish-freshwater-(perch|crappie|piranha|trout)-.*": 32,
+		"*": 64
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	materialDensity: 600,
+	heldRightReadyAnimationByType: {
+		"@taxidermy-fish-saltwater-(amberjack|coelacanth|sturgeon|amberjack|mahi-mahi|barracuda|grouper)-.*-adult": "holdbothhandslarge",
+		"taxidermy-fish-freshwater-arapaima-*-adult": "holdbothhandslarge",
+		"taxidermy-fish-freshwater-pike-*-adult": "holdbothhandslarge",
+		"taxidermy-fish-freshwater-sheatfish-*-adult": "holdbothhandslarge",
+		"*": "holdinglanternrighthand"
+	},
+	heldTpIdleAnimationByType: {
+		"@taxidermy-fish-saltwater-(amberjack|coelacanth|sturgeon|amberjack|mahi-mahi|barracuda|grouper)-.*-adult": "holdbothhandslarge",
+		"taxidermy-fish-freshwater-arapaima-*-adult": "holdbothhandslarge",
+		"taxidermy-fish-freshwater-pike-*-adult": "holdbothhandslarge",
+		"taxidermy-fish-freshwater-sheatfish-*-adult": "holdbothhandslarge",
+		"*": "holdinglanternrighthand"
+	},
+	heldLeftTpIdleAnimationbyType: {
+		"*": "holdinglanternlefthand"
+	},
+	guiTransformByType: {
+		"taxidermy-fish-reef-wrasse-*": {
+			rotation: { x: -180, y: 180, z: 0 },
+			origin: { x: 0.6, y: 0.19, z: 0.44 },
+			scale: 2.64
+		},
+		"taxidermy-fish-reef-angel-*": {
+			rotation: { x: -180, y: 180, z: 0 },
+			origin: { x: 0.6, y: 0.19, z: 0.44 },
+			scale: 2.64
+		},
+		"taxidermy-fish-reef-trigger-*": {
+			rotation: { x: -180, y: 180, z: 0 },
+			origin: { x: 0.6, y: 0.19, z: 0.44 },
+			scale: 2.64
+		},
+		"taxidermy-fish-reef-*": {
+			rotation: { x: -180, y: 180, z: 0 },
+			origin: { x: 0.55, y: 0.19, z: 0.44 },
+			scale: 2.64
+		},
+		"@taxidermy-fish-saltwater-(anchovy|menhaden|herring|mackerel|perch)-.*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.57, y: 0.25, z: 0.51 },
+			scale: 2
+		},
+		"taxidermy-fish-saltwater-barracuda-*-juvenile": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.42, y: 0.15, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-saltwater-sturgeon-*-juvenile": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.4, y: 0.13, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-saltwater-coelacanth-*-juvenile": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.4, y: 0.23, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-saltwater-grouper-*-juvenile": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.4, y: 0.23, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-saltwater-mahi-mahi-*-juvenile": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.4, y: 0.23, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-saltwater-*-juvenile": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.51, y: 0.15, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-saltwater-wreckfish-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.33, y: 0.25, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-saltwater-amberjack-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.15, y: 0.25, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-saltwater-barracuda-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.05, y: 0.2, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-saltwater-sturgeon-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: -0.05, y: 0.2, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-saltwater-coelacanth-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.1, y: 0.38, z: 0.51 },
+			scale: 2
+		},
+		"taxidermy-fish-saltwater-grouper-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.1, y: 0.38, z: 0.51 },
+			scale: 2
+		},
+		"taxidermy-fish-saltwater-mahi-mahi-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.1, y: 0.38, z: 0.51 },
+			scale: 2
+		},
+		"taxidermy-fish-saltwater-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.27, y: 0.25, z: 0.51 },
+			scale: 3
+		},
+		
+		"@taxidermy-fish-freshwater-(catfish|pickerel|sheatfish)-.*-juvenile": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.45, y: 0.17, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-freshwater-pike-*-juvenile": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.4, y: 0.17, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-freshwater-arapaima-*-juvenile": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.17, y: 0.17, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-freshwater-walleye-*-juvenile": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.47, y: 0.15, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-freshwater-*-juvenile": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.51, y: 0.15, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-freshwater-alewife-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.6, y: 0.15, z: 0.51 },
+			scale: 2
+		},
+		"taxidermy-fish-freshwater-chub-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.6, y: 0.15, z: 0.51 },
+			scale: 2
+		},
+		"taxidermy-fish-freshwater-crappie-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.6, y: 0.23, z: 0.51 },
+			scale: 2
+		},
+		"taxidermy-fish-freshwater-perch-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.58, y: 0.23, z: 0.51 },
+			scale: 2
+		},
+		"taxidermy-fish-freshwater-tilapia-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.6, y: 0.23, z: 0.51 },
+			scale: 2
+		},
+		"taxidermy-fish-freshwater-piranha-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.35, y: 0.25, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-freshwater-trout-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.28, y: 0.25, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-freshwater-bass-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.26, y: 0.25, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-freshwater-walleye-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.17, y: 0.25, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-freshwater-pickerel-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.1, y: 0.25, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-freshwater-pike-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.04, y: 0.2, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-freshwater-sheatfish-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.08, y: 0.3, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-freshwater-arapaima-*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: -0.45, y: 0.3, z: 0.51 },
+			scale: 3
+		},
+		"taxidermy-fish-*-juvenile": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.5, y: 0.2, z: 0.51 },
+			scale: 3
+		},	
+		"*": {
+			rotation: { x: 180, y: 180, z: 0 },
+			origin: { x: 0.2, y: 0.25, z: 0.51 },
+			scale: 3
+		}
+	},	
+	tpHandTransformByType: {
+		"taxidermy-fish-reef-*": {
+			translation: { x: -0.26, y: -0.25, z: -0.42 },
+			rotation: { x: -86, y: 0, z: 174 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-*-juvenile": {
+			translation: { x: -0.2, y: -0.24, z: -0.38 },
+			rotation: { x: -90, y: -4, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-menhaden-*": {
+			translation: { x: -0.27, y: -0.25, z: -0.4 },
+			rotation: { x: -86, y: 0, z: 174 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-anchovy-*": {
+			translation: { x: -0.27, y: -0.25, z: -0.4 },
+			rotation: { x: -86, y: 0, z: 174 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-herring-*": {
+			translation: { x: -0.13, y: -0.25, z: -0.4 },
+			rotation: { x: -86, y: 0, z: 174 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-mackerel-*": {
+			translation: { x: -0.13, y: -0.25, z: -0.4 },
+			rotation: { x: -86, y: 0, z: 174 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-perch-*": {
+			translation: { x: -0.24, y: -0.25, z: -0.4 },
+			rotation: { x: -86, y: 0, z: 174 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"@taxidermy-fish-saltwater-(amberjack|coelacanth|grouper|mahi-mahi)-.*": {
+			translation: { x: -0.65, y: -0, z: -0.4 },
+			rotation: { x: 180, y: 75, z: -8 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-sturgeon-*": {
+			translation: { x: -0.6, y: -0.22, z: -0.4 },
+			rotation: { x: 178, y: 77, z: -11 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-barracuda-*": {
+			translation: { x: -0.6, y: -0.22, z: -0.4 },
+			rotation: { x: 178, y: 77, z: -11 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-freshwater-arapaima-*-juvenile": {
+			translation: { x: 0, y: -0.24, z: -0.41 },
+			rotation: { x: -90, y: -4, z: 173 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-freshwater-*-juvenile": {
+			translation: { x: -0.2, y: -0.22, z: -0.38 },
+			rotation: { x: -90, y: -4, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-freshwater-arapaima-*": {
+			translation: { x: -0.65, y: -0, z: -0.4 },
+			rotation: { x: 180, y: 75, z: -8 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-freshwater-sheatfish-*": {
+			translation: { x: -0.6, y: -0.1, z: -0.2 },
+			rotation: { x: 103, y: 0, z: -76 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-freshwater-piranha-*": {
+			translation: { x: -0.1, y: -0.24, z: -0.5 },
+			rotation: { x: -90, y: -4, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-freshwater-perch-*": {
+			translation: { x: -0.13, y: -0.25, z: -0.44 },
+			rotation: { x: -90, y: -4, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"@taxidermy-fish-freshwater-(alewife|chub|crappie|tilapia)-.*": {
+			translation: { x: -0.27, y: -0.25, z: -0.4 },
+			rotation: { x: -86, y: 0, z: 174 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-freshwater-pike-*": {
+			translation: { x: -0.6, y: -0.22, z: -0.4 },
+			rotation: { x: 178, y: 77, z: -11 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"*": {
+			translation: { x: 0, y: -0.24, z: -0.5 },
+			rotation: { x: -90, y: -4, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		}
+	},
+	tpOffHandTransformByType: {
+		"@taxidermy-fish-saltwater-(amberjack|grouper|mahi-mahi|coelacanth)-.*": {
+			translation: { x: -0, y: -0.15, z: -0.55 },
+			rotation: { x: 76, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-sturgeon-*": {
+			translation: { x: -0.1, y: -0.25, z: -0.55 },
+			rotation: { x: 76, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-barracuda-*": {
+			translation: { x: -0.1, y: -0.25, z: -0.55 },
+			rotation: { x: 76, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-herring-*": {
+			translation: { x: -0.12, y: -0.22, z: -0.58 },
+			rotation: { x: 85, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-mackerel-*": {
+			translation: { x: -0.12, y: -0.22, z: -0.58 },
+			rotation: { x: 85, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-perch-*": {
+			translation: { x: -0.23, y: -0.22, z: -0.59 },
+			rotation: { x: 86, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-anchovy-*": {
+			translation: { x: -0.27, y: -0.22, z: -0.58 },
+			rotation: { x: 85, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-saltwater-menhaden-*": {
+			translation: { x: -0.27, y: -0.22, z: -0.58 },
+			rotation: { x: 85, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-freshwater-arapaima-*": {
+			translation: { x: -0.5, y: -0.13, z: -0.6 },
+			rotation: { x: 76, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-freshwater-sheatfish-*": {
+			translation: { x: -0.2, y: -0.15, z: -0.55 },
+			rotation: { x: 89, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-freshwater-pike-*": {
+			translation: { x: -0.1, y: -0.25, z: -0.55 },
+			rotation: { x: 76, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-freshwater-perch-*": {
+			translation: { x: -0.12, y: -0.23, z: -0.56 },
+			rotation: { x: 85, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-freshwater-piranha-*": {
+			translation: { x: -0.07, y: -0.23, z: -0.5 },
+			rotation: { x: 85, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"@taxidermy-fish-freshwater-(alewife|chub|crappie|tilapia)-.*": {
+			translation: { x: -0.27, y: -0.22, z: -0.58 },
+			rotation: { x: 85, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"taxidermy-fish-reef-*": {
+			translation: { x: -0.27, y: -0.25, z: -0.58 },
+			rotation: { x: 90, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"*": {
+			translation: { x: -0, y: -0.25, z: -0.5 },
+			rotation: { x: 86, y: 0, z: 171 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		}
+	},
+	groundTransformByType: {
+		"@taxidermy-fish-saltwater-(amberjack|grouper|mahi-mahi|coelacanth)-.*": {
+			translation: { x: 0, y: 0.05, z: -0 },
+			rotation: { x: 90, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0.28125, z: 0.5 },
+			scale: 5
+		},
+		"taxidermy-fish-freshwater-arapaima-*": {
+			translation: { x: 0, y: 0.05, z: -0 },
+			rotation: { x: 90, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0.28125, z: 0.5 },
+			scale: 5
+		},
+		"taxidermy-fish-freshwater-pike-*": {
+			translation: { x: 0, y: 0.05, z: -0 },
+			rotation: { x: 90, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0.28125, z: 0.5 },
+			scale: 5
+		},
+		"taxidermy-fish-freshwater-sheatfish-*": {
+			translation: { x: 0, y: 0.05, z: -0 },
+			rotation: { x: 90, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0.28125, z: 0.5 },
+			scale: 5
+		},
+		"*": {
+			translation: { x: -0.05, y: 0.035, z: 0.07 },
+			rotation: { x: 90, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0.125, z: 0.5 },
+			scale: 5
+		}
+	}
+}

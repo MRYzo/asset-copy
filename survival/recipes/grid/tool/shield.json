@@ -1,0 +1,46 @@
+[
+	{
+		ingredientPattern: "SSS,BBB,SSS",
+		ingredients: {
+			"S": { type: "item", code: "stick" },
+			"B": { type: "item", code: "bamboostakes" }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "shield-crude", quantity: 1  }
+	},
+	{
+		ingredientPattern: "SSS,BBB,SSS",
+		ingredients: {
+			"S": { type: "item", code: "stick" },
+			"B": { type: "item", code: "cattailtops" }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "shield-crude", quantity: 1  }
+	},
+	{
+		ingredientPattern: "SSS,BBB,SSS",
+		ingredients: {
+			"S": { type: "item", code: "stick" },
+			"B": { type: "item", code: "papyrustops" }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "shield-crude", quantity: 1  }
+	},
+	{
+		ingredientPattern: "CPC,VBV,LVL",
+		requiresTrait: "merciless",
+		ingredients: {
+			"B": { type: "item", code: "boss-iron", quantity: 1 },
+			"P": { type: "item", code: "metalplate-iron", quantity: 1 },
+			"V": { type: "item", code: "plank-*", name: "wood", quantity: 1 },
+			"C": { type: "item", code: "charcoal" },
+			"L": { type: "item", code: "leather-normal-gray", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "shield-blackguard", quantity: 1  }
+	}
+]

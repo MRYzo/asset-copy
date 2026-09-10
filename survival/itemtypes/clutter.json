@@ -1,0 +1,385 @@
+{
+	code: "clutter",
+	maxstacksize: 8,
+	behaviors: [
+		{ name: "GroundStorable", properties: { layout: 'Quadrants', placeRemoveSound: 'sounds/player/build',	collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.3125, z2: 1 } } }
+	],
+	attributes: {
+		groundStorageTransform: {
+			rotation: { x: 0, y: 35, z: 0 }
+		},
+		onDisplayTransform: {
+			origin: { x: 0.5, y: 0, z: 0.5 }
+		},
+		displaycaseable: true,
+		displaycase: {
+			minHeight: 0.8
+		},
+		displayableByType: {
+			"*-army-tool": {
+				shelf: { size: { width: 13, height: 2, length: 7 } }
+			},
+			"*-art/bottle": {
+				shelf: { size: { width: 4, height: 10, length: 4 } }
+			},
+			"*-art/bronze-tablet": {
+				shelf: { 
+					size: { width: 6, height: 3, length: 8 },
+	                randYRotAngle: 5
+				}
+			},
+			"*-art/statuette-horus": {
+				shelf: { size: { width: 12, height: 15, length: 12 } }
+			},
+			"*-art/statuette-boddhisatva": {
+				shelf: { size: { width: 7, height: 14, length: 7 } }
+			},
+			"*-art/statuette-ife-head": {
+				shelf: { size: { width: 8, height: 16, length: 8 } }
+			},
+			"*-art/zoolite1": {
+				shelf: { 
+					size: { width: 14, height: 5, length: 4 },
+					transform: {
+						translation: { x: -0.03, y: -0.0724, z: 0 },
+						scale: 0.85
+					}
+				}
+			},
+			"*-art/zoolite2": {
+				shelf: { size: { width: 6, height: 2, length: 8 } }
+			},
+			"*-device1": {
+				shelf: { size: { width: 5, height: 10, length: 5 } }
+			},
+			"*-deviceproto": {
+				shelf: { size: { width: 12, height: 13, length: 4 } }
+			},
+			"*-gunbai": {
+				shelf: { 
+					size: { width: 13, height: 2, length: 8 },
+					transform: {
+						translation: { x: 0, y: -0.1, z: 0 },
+						scale: 0.82
+					}
+				}
+			},
+			"*-hourglass": {
+				shelf: { size: { width: 6, height: 10, length: 6 } }
+			},
+			"*-art/gear1": {
+				shelf: { size: { width: 6, height: 8, length: 5 } }
+			},
+			"*-art/gear2": {
+				shelf: { size: { width: 9, height: 2, length: 8 } }
+			},
+			"*-art/gear3": {
+				shelf: { size: { width: 4, height: 13, length: 4 } }
+			},
+			"*-skull/humanoid": {
+				shelf: { 
+					size: { width: 5, height: 5, length: 5 },
+					transform: {
+						rotation: { x: 0, y: 90, z: 0 }
+					},
+	                randYRotAngle: 7
+				}
+			},
+			"*-skull/human-crystal": {
+				shelf: { size: { width: 5, height: 5, length: 5 } }
+			},
+			"*-skull/mummified-head": {
+				shelf: { size: { width: 7, height: 8, length: 7 } }
+			},
+			"*-skull/humanoid-deformed": {
+				shelf: { 
+					size: { width: 6, height: 5, length: 6 },
+					transform: {
+						rotation: { x: 0, y: 90, z: 0 }
+					},
+	                randYRotAngle: 7
+				}
+			},
+			"*-amber-insect": {
+				shelf: { size: { width: 9, height: 5, length: 8 } }
+			},
+			"*-art/natufian-stone": {
+				shelf: { size: { width: 3, height: 1, length: 5 } }
+			},
+			"*-fishing/brokensword": {
+				shelf: { 
+					size: { width: 14, height: 2, length: 8 },
+					transform: {
+						translation: { x: -0.05, y: 0.033, z: 0 },
+						rotation: { x: 17, y: 0, z: -6 },
+						origin: { x: 0.5, y: 0.05, z: 0.5 },
+						scale: 0.82
+					}
+				}
+			},
+			"*-fishing/coprolite": {
+				shelf: { 
+					size: { width: 2, height: 2, length: 3 },
+					transform: {
+						rotation: { x: 0, y: 90, z: 0 }
+					}
+				}
+			},
+			"*-fishing/counterfeitgear": {
+				shelf: { size: { width: 6, height: 2, length: 6 } }
+			},
+			"*-fishing/heavilywornunderwear": {
+				shelf: { 
+					size: { width: 10, height: 1, length: 8 },
+					transform: {
+						translation: { x: 0, y: 0.006, z: 0 }
+					}
+				}
+			},
+			"*-fishing/oldboot": {
+				shelf: { size: { width: 3, height: 6, length: 4 } }
+			},
+			"*-fishing/redherring": {
+				shelf: { 
+					size: { width: 12, height: 4, length: 2 },
+					transform: {
+						translation: { x: 0, y: -0.06, z: 0 }
+					}
+				}
+			}
+		}
+	},
+	variantgroups: [
+		{ code: "type", states: [
+			"army-tool", "art/bottle", "art/bronze-tablet", "art/statuette-horus", "art/statuette-boddhisatva", "art/statuette-monkey", "art/statuette-ife-head", "art/zoolite1", "art/zoolite2", "device1", "deviceproto",
+			"gunbai", "hourglass", "art/gear1", "art/gear2", "art/gear3", "skull/humanoid", "skull/human-crystal", "skull/mummified-head", "skull/humanoid-deformed", "sabretooth", "amber-insect", "art/natufian-stone",
+			"fishing/brokensword", "fishing/coprolite", "fishing/counterfeitgear", "fishing/heavilywornunderwear", "fishing/oldboot", "fishing/oversizedspoon", "fishing/redherring"
+		] }
+	],
+	shapeByType: {
+		"clutter-fishing/redherring": { base: "entity/animal/fish/saltwater/herring-adult" },
+		"*": { base: "item/clutter/{type}" }
+	},
+	texturesByType: {
+		"clutter-fishing/redherring": {
+			"skin": { base: "entity/animal/fish/saltwater/herring-red-adult1" }
+		}
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	guiTransformByType: {
+		"clutter-fishing/brokensword": {
+			rotation: { x: 137, y: -62, z: -3 },
+			origin: { x: 0.5, y: 0.05, z: 0.5 },
+			scale: 1.7
+		},
+		"clutter-fishing/coprolite": {
+			rotation: { x: 137, y: 33, z: -3 },
+			origin: { x: 0.47, y: 0.06, z: 0.5 },
+			scale: 4.6
+		},
+		"clutter-fishing/counterfeitgear": {
+			rotation: { x: 137, y: 33, z: -3 },
+			origin: { x: 0.5, y: 0.12, z: 0.45 },
+			scale: 2.9
+		},
+		"clutter-fishing/heavilywornunderwear": {
+			rotation: { x: 140, y: 139, z: -3 },
+			origin: { x: 0.48, y: 0, z: 0.5 },
+			scale: 2.37
+		},
+		"clutter-fishing/oldboot": {
+			rotation: { x: 137, y: 142, z: 3 },
+			origin: { x: 0.49, y: 0.24, z: 0.43 },
+			scale: 2.37
+		},
+		"clutter-fishing/oversizedspoon": {
+			rotation: { x: 41, y: -20, z: -36 },
+			origin: { x: 1.59, y: -0.13, z: 0.41 },
+			scale: 2.36
+		},
+		"clutter-fishing/redherring": {
+			rotation: { x: 137, y: -54, z: 0 },
+			origin: { x: 0.5, y: 0.18, z: 0.5 },
+			scale: 2.89
+		},
+		"clutter-army-tool*": {
+			rotation: { x: 116, y: -118, z: -3 },
+			origin: { x: 0.44, y: 0.05, z: 0.6 },
+			scale: 2.54
+		},
+		"clutter-art/bottle": {
+			rotation: { x: 162, y: -135, z: -3 },
+			origin: { x: 0.44, y: 0.35, z: 0.5 },
+			scale: 2.21
+		},
+		"clutter-art/bronze-tablet": {
+			rotation: { x: 137, y: 33, z: -3 },
+			origin: { x: 0.4, y: 0.07, z: 0.6 },
+			scale: 2.36
+		},
+		"clutter-art/gear1": {
+			rotation: { x: 159, y: 33, z: -3 },
+			origin: { x: 0.44, y: 0.2, z: 0.6 },
+			scale: 2.65
+		},
+		"clutter-art/gear2": {
+			rotation: { x: 113, y: 33, z: -3 },
+			origin: { x: 0.44, y: -0.05, z: 0.6 },
+			scale: 1.99
+		},
+		"clutter-art/gear3": {
+			rotation: { x: 158, y: 33, z: -3 },
+			origin: { x: 0.44, y: 0.36, z: 0.6 },
+			scale: 1.8
+		},
+		"clutter-skull/human*": {
+			rotation: { x: 162, y: -135, z: -3 },
+			origin: { x: 0.54, y: 0.2, z: 0.5 },
+			scale: 3.17
+		},
+		"clutter-art/natufian-stone": {
+			rotation: { x: 103, y: 1, z: -3 },
+			origin: { x: 0.5, y: -0.08, z: 0.6 },
+			scale: 5
+		},
+		"clutter-art/statuette-boddhisatva": {
+			rotation: { x: 137, y: 130, z: -3 },
+			origin: { x: 0.52, y: 0.33, z: 0.48 },
+			scale: 2.21
+		},
+		"clutter-art/statuette-horus": {
+			rotation: { x: 162, y: -135, z: -3 },
+			origin: { x: 0.44, y: 0.45, z: 0.5 },
+			scale: 1.7
+		},
+		"clutter-art/statuette-ife-head": {
+			rotation: { x: 168, y: 135, z: -3 },
+			origin: { x: 0.54, y: 0.45, z: 0.6 },
+			scale: 1.8
+		},
+		"clutter-art/statuette-monkey": {
+			rotation: { x: 146, y: 146, z: -3 },
+			origin: { x: 0.54, y: 0.45, z: 0.6 },
+			scale: 2.23
+		},
+		"clutter-art/zoolite*": {
+			rotation: { x: 158, y: -135, z: 21 },
+			origin: { x: 0.5, y: 0.15, z: 0.5 },
+			scale: 1.97
+		},
+		"clutter-device1": {
+			rotation: { x: 162, y: -135, z: -3 },
+			origin: { x: 0.44, y: 0.3, z: 0.5 },
+			scale: 2.37
+		},
+		"clutter-deviceproto": {
+			rotation: { x: 162, y: -135, z: -3 },
+			origin: { x: 0.54, y: 0.25, z: 0.5 },
+			scale: 1.72
+		},
+		"clutter-gunbai": {
+			rotation: { x: 146, y: -135, z: 37 },
+			origin: { x: 0.44, y: 0.5, z: 0.8 },
+			scale: 1.66
+		},
+		"clutter-hourglass": {
+			rotation: { x: 162, y: -153, z: -3 },
+			origin: { x: 0.5, y: 0.3, z: 0.5 },
+			scale: 2.35
+		},
+		"clutter-sabretooth": {
+			rotation: { x: 156, y: -135, z: -3 },
+			origin: { x: 0.5, y: 0.15, z: 0.5 },
+			scale: 2.88
+		},
+		"*": {
+			rotation: { x: 137, y: 33, z: -3 },
+			origin: { x: 0.44, y: 0.15, z: 0.6 },
+			scale: 1.99
+		}
+	},
+	tpHandTransformByType: {
+		"clutter-fishing/brokensword": {
+			translation: { x: -0.92, y: -0.2, z: -0.48 },
+			rotation: { x: 79, y: 2, z: 21 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 0.65
+		},
+		"clutter-fishing/coprolite": {
+			translation: { x: -0.61, y: 0, z: -0.5 },
+			rotation: { x: 0, y: 2, z: 8 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1
+		},
+		"clutter-fishing/counterfeitgear": {
+			translation: { x: -1.17, y: -0.1, z: -0.9 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.51
+		},
+		"clutter-fishing/heavilywornunderwear": {
+			translation: { x: -0.88, y: -0.3, z: -0.52 },
+			rotation: { x: 89, y: 144, z: -1 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 0.73
+		},
+		"clutter-fishing/oldboot": {
+			translation: { x: -0.8, y: -0.3, z: -0.8 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 0.64
+		},
+		"clutter-fishing/oversizedspoon": {
+			translation: { x: -1.5, y: -1, z: -0.58 },
+			rotation: { x: 92, y: -5, z: 1 },
+			scale: 0.46
+		},
+		"clutter-fishing/redherring": {
+			translation: { x: -0.9, y: -0.2, z: -0.4 },
+			rotation: { x: 11, y: -155, z: 18 },
+			scale: 0.9
+		}
+	},
+	groundTransformByType: {
+		"clutter-fishing/brokensword": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 0, y: 0, z: 0 },
+			origin: { x: 0.5, y: -0, z: 0.5299 },
+			scale: 2.84
+		},
+		"clutter-fishing/oversizedspoon": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -90, y: 0, z: 3 },
+			origin: { x: 0.5, y: -0.1, z: 0.42 },
+			scale: 2.55
+		},
+		"clutter-fishing/heavilywornunderwear": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -1, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0, z: 0.53 },
+			scale: 3.8
+		},
+		"clutter-fishing/counterfeitgear": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 1, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0, z: 0.5299 },
+			scale: 2.33
+		},
+		"clutter-fishing/coprolite": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 0, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0, z: 0.5299 },
+			scale: 3.3
+		},
+		"clutter-fishing/oldboot": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 90, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0.3, z: 0.53 },
+			scale: 3
+		},
+		"clutter-fishing/redherring": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -90, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0.15, z: 0.48 },
+			scale: 3.62
+		}		
+	}
+}

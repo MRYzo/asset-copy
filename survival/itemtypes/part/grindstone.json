@@ -1,0 +1,48 @@
+{
+	code: "grindstone",
+	behaviors: [
+		{ name: "GroundStorable", properties: { layout: 'SingleCenter', collisionBox: { x1: 0.125, y1: 0, z1: 0.125, x2: 0.875, y2: 0.1875, z2: 0.875 } } }
+	],
+	variantgroups: [
+		{ code: "stone", states: ["sandstone", "claystone", "chert", "corundum", "coticule", "novaculite"] },
+	],
+	allowedVariants: [
+		"*-chert",
+		"*-claystone",
+		"*-sandstone"
+	],
+	shape: { base: "item/part/grindstone" },
+	textures: {
+		"stone": { base: "block/stone/grindstone/{stone}" },
+	},
+	attributes: {
+		groundStorageTransform: {
+			translation: { x: 0, y: -0.81, z: 0 },
+			rotation: { x: 180, y: 0, z: 0 }
+		},
+		handbook: {
+			groupBy: ["grindstone-*"]
+		}
+	},
+	maxstacksize: 4,
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	heldTpIdleAnimation: "holdbothhandslarge",
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 81, y: 135, z: -126 },
+		origin: { x: 0.5, y: 0.1, z: 0.45 },
+		scale: 2.01
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0.08, z: 0 },
+		rotation: { x: 0, y: 0, z: 180 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 5
+	},
+	tpHandTransform: {
+		translation: { x: -0.6, y: 0.05, z: -0.35 },
+		rotation: { x: 11, y: 16, z: -90 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.84
+	}
+}

@@ -1,0 +1,79 @@
+{
+	code: "burnedplanks",
+	behaviors: [
+		{ name: "Pillar" },
+		{
+			name: "WrenchOrientable",
+			properties: { "baseCode": "planks-{wood}" }
+		}
+	],
+	variantgroups: [
+		{ code: "wood",	states: [ "narrow", "normal" ] },
+		{ code: "type",	states: [ "blackened", "charred", "scorched"  ] },
+		{ code: "orientation",	states: [ "ns", "we", "ud" ] }
+	],
+	skipVariants: [
+		"burnedplanks-narrow-blackened-*",
+		"burnedplanks-normal-scorched-*"
+	],
+	creativeinventory: { general: [ "*-ud" ], construction: [ "*-ud" ] },
+	shape: { base: "block/basic/cube" },
+	blockmaterial: "Wood",
+	drawtype: "cube",
+	texturesByType: {
+		"*-ud": {
+			all: {
+				base: "block/wood/planks/burned/{type}/{wood}*",
+				rotation: 90
+			}
+		},
+		"*-we": {
+			all: {
+				base: "block/wood/planks/burned/{type}/{wood}*",
+				rotation: 0
+			}
+		},
+		"*-ns": {
+			all: {base: "block/wood/planks/burned/{type}/{wood}*" },
+			verticals: {
+				base: "block/wood/planks/burned/{type}/{wood}*",
+				rotation: 90
+			}
+		}
+	},
+	resistance: 3.5,
+	sounds: {
+		hit: "block/planks",
+		break: "block/planks",
+		place: "block/planks",
+		walk: "walk/wood"
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 20
+	},
+	maxStackSize: 32,
+	materialDensity: 600,
+	heldTpIdleAnimation: "holdbothhandslarge",
+	heldRightReadyAnimation: "heldblockready",
+	heldTpUseAnimation: "twohandplaceblock",
+	tpHandTransform: {
+		translation: {
+			x: -1.23,
+			y: -0.91,
+			z: -0.8
+		},
+		rotation: {
+			x: -2,
+			y: 25,
+			z: -78
+		},
+		scale: 0.4
+	},
+	drops: [
+		{
+			type: "block",
+			code: "burnedplanks-{wood}-{type}-ud"
+		}
+	]
+}

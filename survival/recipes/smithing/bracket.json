@@ -1,0 +1,19 @@
+{
+	ingredient: { type: "item", code: "ingot-*", name: "metal", allowedVariants: ["iron", "meteoriciron", "steel"] },
+	pattern: [[
+		"############",
+		"#_#_####_#_#",
+		"############",
+		"#_#_####_#_#",
+		"############",
+	],[
+		"############",
+		"____________",
+		"____________",
+		"____________",
+		"############",
+	]],
+	name: "HeavyBracket",
+	code: "heavybracket-{metal}",
+	output: { type: "item", code: "bracket-heavy-{metal}"  }
+}

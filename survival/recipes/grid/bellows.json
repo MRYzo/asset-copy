@@ -1,0 +1,57 @@
+[
+	{
+		ingredientPattern: "_S_,RHR,_S_",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"] },
+			"R": { type: "item", code: "rope", quantity: 1 },
+			"S": { type: "item", code: "stick", quantity: 4 }
+		},
+		width: 3,
+		height: 3,
+		name: "crude bellows",
+		output: { type: "block", code: "bellows-crude-north"  }
+	},
+	{
+		ingredientPattern: "_S_,RHR,_S_",
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"] },
+			"R": { type: "item", code: "rope", quantity: 1 },
+			"S": { type: "item", code: "stick", quantity: 4 }
+		},
+		width: 3,
+		height: 3,
+		name: "crude bellows",
+		output: { type: "block", code: "bellows-crude-north"  }
+	},
+	{
+		ingredientPattern: "NNN,LLL,P_P",
+		ingredients: {
+			"N": { type: "item", code: "metalnailsandstrips-{metal}", quantity: 1 },
+			"L": { type: "item", code: "leather-normal-plain", quantity: 2 },
+			"P": { type: "item", code: "plank-*", name: "wood", quantity: 3, skipVariants: ["agedebony", "rottenebony"] }
+		},
+		allowedVariants: {
+			metal: ["copper", "blackbronze", "tinbronze", "bismuthbronze", "iron", "silver", "gold", "meteoriciron", "steel", "electrum" ]
+		},
+		width: 3,
+		height: 3,
+		name: "small bellows",
+		output: { type: "block", code: "bellows-small-north"  }
+	},
+	{
+		ingredientPattern: "NNN,LLL,PPP",
+		ingredients: {
+			"N": { type: "item", code: "metalnailsandstrips-{metal}", quantity: 4 },
+			"L": { type: "item", code: "leather-normal-plain", quantity: 8 },
+			"P": { type: "item", code: "plank-*", name: "wood", quantity: 8, skipVariants: ["agedebony", "rottenebony"] }
+		},
+		allowedVariants: {
+			metal: ["copper", "blackbronze", "tinbronze", "bismuthbronze", "iron", "silver", "gold", "meteoriciron", "steel", "electrum" ]
+		},
+		width: 3,
+		height: 3,
+		name: "large bellows",
+		output: { type: "block", code: "bellows-large-north"  },
+		enabled: false
+	}
+]

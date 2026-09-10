@@ -1,0 +1,133 @@
+{
+	code: "mannequin",
+	class: "BlockGeneric",
+	behaviors: [
+		{ name: "BlockEntityInteract" },
+		{ name: "RotateablePlaceable", properties: {
+			intervalDeg: 22.5,
+			offsetDeg: 90
+		} },
+		{ name: "Multiblock", properties: {
+			sizex: 1,
+			sizeyByType: {
+				"*-head": 1,
+				"*-legs": 2,
+				"*-torso": 2,
+				"*-complete": 2
+			},
+			sizez: 1,
+			cposition: { x: 0, y: 0, z: 0 }
+		} },
+	],
+	entityBehaviors: [
+		{ name: "Mannequin", properties: {
+            heightByType: { "*-head": 1, "*-legs": 1.3, "*-torso": 1.40625, "*-complete": 2 },
+			dressableEntityShape: { base: "shapes/entity/humanoid/seraph-faceless" },
+			shapeOffsetByType: {
+				"*-head":  { x: 0, y: -1.375, z: 0 },
+				"*-legs":  { x: 0, y: 0.03125, z: 0 },
+				"*-torso":  { x: 0, y: -0.125, z: 0 },
+				"*-complete":  { x: 0, y: 0.03125, z: 0 }
+			}
+		} }
+	],
+	variantgroups: [
+		{ code: "material", states: ["reed"] },
+		{ code: "part", states: ["head", "legs", "torso", "complete"] },
+	],
+	shape: { base: "block/wood/mannequin/{part}", rotateY: 0 },
+	attributes: {
+		allowedDresstypesByType: {
+			"*-head": ["head", "face"],
+			"*-legs": ["lowerbody", "foot", "waist"],
+			"*-torso": ["neck", "shoulder", "upperbody", "upperbodyover", "hand", "emblem", "waist", "arm"],
+			"*-complete": ["neck", "shoulder", "upperbody", "upperbodyover", "lowerbody", "head", "face", "hand", "waist", "foot", "emblem", "face", "arm"]
+		}
+	},
+	creativeinventory: { "general": ["*"], "construction": ["*"] },
+	blockmaterial: "Wood",
+	resistance: 3.5,
+	sounds: {
+		"hit": "block/planks",
+		"break": "block/planks",
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	sideao: { all: true },
+	emitsideao: { all: false },
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 20,
+	},
+	maxStackSize: 8,
+	materialDensity: 600,
+	heldTpIdleAnimationByType: {
+		"*-head": "holdbothhandslarge",
+		"*-legs": "holdunderarm",
+		"*-torso": "holdunderarm",
+		"*-complete": "holdunderarm"
+	},
+	heldRightReadyAnimation: "heldblockready",
+	heldTpUseAnimation: "twohandplaceblock",
+	collisionboxByType: {
+		"*-head": {x1: 0.31125, y1: 0, z1: 0.31125, x2: 0.68875, y2: 0.5, z2: 0.68875},
+		"*-legs": {x1: 0.34, y1: 0, z1: 0.3, x2: 0.635, y2: 1.3, z2: 0.7},
+		"*-torso": {x1: 0.3125, y1: 0, z1: 0.28125, x2: 0.625, y2: 1.40625, z2: 0.71875},
+		"*-complete": {x1: 0.3125, y1: 0, z1: 0.28125, x2: 0.625, y2: 2, z2: 0.71875}
+	},
+	selectionboxByType: {
+		"*-head": {x1: 0.31125, y1: 0, z1: 0.31125, x2: 0.68875, y2: 0.5, z2: 0.68875},
+		"*-legs": { x1: 0.1875, y1: 0, z1: 0.3125, x2: 0.8125, y2: 1.3, z2: 0.625 },
+		"*-torso": { x1: 0.1875, y1: 0, z1: 0.3125, x2: 0.8125, y2: 1.40625, z2: 0.625 },
+		"*-complete": { x1: 0.1875, y1: 0, z1: 0.3125, x2: 0.8125, y2: 2, z2: 0.625 }
+	},
+	guiTransformByType: {
+		"*-complete": {
+			rotation: { x: -22.6, y: -91, z: 0 },
+			origin: { x: 0.5, y: 0.9, z: 0.5 },
+			scale: 0.83
+		},
+		"*-head": {
+			origin: { x: 0.5, y: 0.4, z: 0.5 },
+			scale: 1.6
+		},
+		"*": {
+			origin: { x: 0.5, y: 0.7, z: 0.5 },
+			scale: 1.07
+		}
+	},
+	tpHandTransformByType: {
+		"*-head": {
+			translation: { x: -0.5, y: -0.25, z: -0.29 },
+			rotation: { x: -80, y: 12, z: -104 },
+			origin: { x: 0.5, y: 0.3, z: 0.5 },
+			scale: 1
+		},
+		"*-legs": {
+			translation: { x: -0.9, y: -1, z: -0.5 },
+			rotation: { x: -91, y: -12, z: -87 },
+			origin: { x: 0.5, y: 1, z: 0.5 },
+			scale: 0.8
+		},
+		"*-torso": {
+			translation: { x: -0.8, y: -1, z: -0.5 },
+			rotation: { x: -88, y: -12, z: -80 },
+			origin: { x: 0.5, y: 1, z: 0.5 },
+			scale: 0.8
+		},
+		"*-complete": {
+			translation: { x: -0.6, y: -1, z: -0.5 },
+			rotation: { x: -88, y: -12, z: -80 },
+			origin: { x: 0.5, y: 1, z: 0.5 },
+			scale: 0.8
+		},
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: -45, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 4
+	}
+}

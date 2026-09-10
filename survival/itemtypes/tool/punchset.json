@@ -1,0 +1,123 @@
+{
+	code: "punchset",
+	enabled: false,
+	behaviors: [ 
+		{ name: "GroundStorable", properties: { layout: 'Quadrants', collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.125, z2: 1 } } },
+	],
+	variantgroups: [
+		{ code: "type", states: ["letters"] },
+		{ code: "form", states: ["loose", "cased"] },
+		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel" ] },
+	],
+	shape: { base: "item/tool/punchset-{type}-{form}" },
+	textures: {
+		metal: { base: "block/metal/ingot/{material}" }
+	},
+	attributes: {
+		handbook: {
+			groupBy: ["punchset-letters-*"]
+		},
+		groundStorageTransform: {
+			translation: { x: 0, y: -0.06, z: 0.025 },
+			scale: 0.88
+		},
+		onTongTransform: {
+			translation: { x: -1.1, y: -0.29, z: -0.56 },
+			rotation: { x: -100, y: 91, z: -13 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.9
+		},
+		shelvable: "True",
+		onshelfTransform: {
+			rotation: { x: 0, y: -6, z: 0 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.9
+		},
+		onMetalTongTransform: {
+			translation: { x: -1.1, y: -0.09, z: -0.6 },
+			rotation: { x: -100, y: 91, z: -13 },
+			origin: { x: 0.5, y: -0, z: 0.5 },
+			scale: 0.9
+		},
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	durabilitybytype: {
+		"*-copper": 600,
+		"*-tinbronze": 1000,
+		"*-bismuthbronze": 1200,
+		"*-blackbronze": 1400,
+		"*-iron": 2000,
+		"*-meteoriciron": 2800,
+		"*-steel": 6000,
+	},
+	heldTpIdleAnimation: "holdbothhands",
+	storageFlags: 257,
+	combustiblePropsByType: {
+		"*-copper": {
+			meltingPoint: 1084,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltedStack: { type: "item", code: "ingot-copper" }
+		},
+		"*-tinbronze": {
+			meltingPoint: 950,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltedStack: { type: "item", code: "ingot-tinbronze" }
+		},
+		"*-bismuthbronze": {
+			meltingPoint: 850,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltedStack: { type: "item", code: "ingot-bismuthbronze" }
+		},
+		"*-blackbronze": {
+			meltingPoint: 1020,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltedStack: { type: "item", code: "ingot-blackbronze" }
+		},
+		"*-iron": {
+			meltingPoint: 1482,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltedStack: { type: "item", code: "ingot-iron" }
+		},
+		"*-meteoriciron": {
+			meltingPoint: 1476,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltedStack: { type: "item", code: "ingot-meteoriciron" }
+		},
+		"*-steel": {
+			meltingPoint: 1502,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltedStack: { type: "item", code: "ingot-steel" }
+		}
+	},
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 140, y: -21, z: -2 },
+		origin: { x: 0.5, y: 0.15, z: 0.6 },
+		scale: 2.17
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 4.31
+	},
+	tpHandTransform: {
+		translation: { x: -0.7, y: 0.1, z: -0.5 },
+		rotation: { x: -52, y: 17, z: -109 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.8
+	},
+	tpOffHandTransform: {
+		translation: { x: -0.7, y: -0.02, z: -0.54 },
+		rotation: { x: -152, y: -17, z: -180 },
+		origin: { x: 0.25, y: 0, z: 0.5 },
+		scale: 0.8
+	}
+}

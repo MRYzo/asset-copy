@@ -1,0 +1,13 @@
+{
+	ingredientPattern: "WWW,WNW,WWW",
+	ingredients: {
+		"W": { type: "item", code: "plank-*" },
+		"N": { type: "item", code: "metalnailsandstrips-{metal}" }
+	},
+	allowedVariants: {
+		metal: ["copper", "blackbronze", "tinbronze", "bismuthbronze", "iron", "silver", "gold", "meteoriciron", "steel", "electrum" ]
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "chest-east", attributes: { type: "normal-generic" }  }
+}

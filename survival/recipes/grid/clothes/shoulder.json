@@ -1,0 +1,287 @@
+[
+    {
+		ingredientPattern: "HHH,_K_",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 2, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-furwrap" }
+	},
+    {
+		ingredientPattern: "HHH,_K_",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-furwrap" }
+	},
+	{
+		ingredientPattern: "HHH,_K_",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-large"], returnedStack: { type: "item", code: "hide-pelt-small" }  },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-furwrap" }
+	},
+	{
+		ingredientPattern: "HHH,_K_",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-pelt-*", quantity: 1, tags: ["size-huge"], returnedStack: { type: "item", code: "hide-pelt-medium" } },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-furwrap" }
+	},
+    {
+		ingredientPattern: "HHH,_K_",
+		recipeGroup: 1,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", quantity: 2, tags: ["size-small"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-rawhidewrap" }
+	},
+    {
+		ingredientPattern: "HHH,_K_",
+		recipeGroup: 2,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", quantity: 1, tags: ["size-medium"] },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  },
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-rawhidewrap" }
+	},
+	{
+		ingredientPattern: "HHH,_K_",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", quantity: 1, tags: ["size-large"], returnedStack: { type: "item", code: "hide-raw-small" }  },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-rawhidewrap" }
+	},
+	{
+		ingredientPattern: "HHH,_K_",
+		recipeGroup: 3,
+		ingredients: {
+			"H": { type: "item", code: "hide-raw-*", quantity: 1, tags: ["size-huge"], returnedStack: { type: "item", code: "hide-raw-medium" } },
+			"K": { type: "item", isTool: true, tags: ["tool-trimming"]  }
+
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-rawhidewrap" }
+	},
+    {
+		ingredientPattern: "_C_,C_C",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-purple", quantity: 1 },
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-midnightponcho" }
+	},
+    {
+		ingredientPattern: "CCC",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-green", quantity: 1 },
+		},
+		width: 3,
+		height: 1,
+		output: { type: "item", code: "clothes-shoulder-forestponcho" }
+	},
+    {
+		ingredientPattern: "BCW,_S_",
+		recipeGroup: 1,
+        requiresTrait: "clothier",
+		ingredients: {
+			"B": { type: "item", code: "cloth-brown", quantity: 1 },
+			"C": { type: "item", code: "cloth-black", quantity: 1 },
+			"W": { type: "item", code: "cloth-white", quantity: 1 },
+			"S": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-shawlmoth" }
+	},
+    {
+		ingredientPattern: "BCW,_S_",
+		recipeGroup: 1,
+        requiresTrait: "clothier",
+		ingredients: {
+			"B": { type: "item", code: "cloth-gray", quantity: 1 },
+			"C": { type: "item", code: "cloth-black", quantity: 1 },
+			"W": { type: "item", code: "cloth-white", quantity: 1 },
+			"S": { type: "item", code: "sewingkit", quantity: 1 },
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-shawlhawk" }
+	},
+    {
+		ingredientPattern: "TST,_C_,_C_",
+		recipeGroup: 1,
+        requiresTrait: "clothier",
+		ingredients: {
+			"C": { type: "item", code: "cloth-{color}", quantity: 1 },
+			"S": { type: "item", code: "sewingkit", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 },
+		},
+        skipVariants: {
+			color: ["mordant", "plain" ]
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-shoulder-apron{color}" }
+	},
+    {
+		ingredientPattern: "T_T,_C_,_C_",
+		recipeGroup: 1,
+		ingredients: {
+			"C": { type: "item", code: "cloth-plain", quantity: 1 },
+			"S": { type: "item", code: "sewingkit", quantity: 1 },
+			"T": { type: "item", code: "flaxtwine", quantity: 1 },
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-shoulder-apronplain" }
+	},
+    {
+		ingredientPattern: "BBB,B_B",
+		ingredients: {
+			"B": { type: "item", code: "cloth-blue", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-artisans-scarf"  }
+	},
+    {
+		ingredientPattern: "B_R,YSB,R_Y",
+		requiresTrait: "clothier",
+		ingredients: {
+			"B": { type: "item", code: "cloth-blue", quantity: 1 },
+			"Y": { type: "item", code: "cloth-yellow", quantity: 1 },
+			"R": { type: "item", code: "cloth-red", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-shoulder-embroidered-tartarean-scarf"  }
+	},
+	
+	{
+		ingredientPattern: "BPB,BPB,_S_",
+		requiresTrait: "clothier",
+		ingredients: {
+			"B": { type: "item", code: "cloth-blue", quantity: 1 },
+			"P": { type: "item", code: "cloth-purple", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-shoulder-mooncloth-robe"  }
+	},
+    {
+		ingredientPattern: "B_B,BBB",
+		ingredients: {
+			"B": { type: "item", code: "cloth-brown", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-jord-robe"  }
+	},
+	{
+		ingredientPattern: "BCB,_B_",
+		ingredients: {
+			"B": { type: "item", code: "cloth-brown", quantity: 1 },
+			"C": { type: "item", code: "cloth-blue", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-hooded-cape"  }
+	},
+    {
+		ingredientPattern: "LTL,_L_,_L_",
+		recipeGroup: 1,
+		ingredients: {
+			"L": { type: "item", code: "leather-normal-plain", quantity: 2 },
+			"T": { type: "item", code: "flaxtwine" }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-shoulder-blacksmith-apron"  }
+	},
+    {
+		ingredientPattern: "TL_,LLL",
+		ingredients: {
+			"L": { type: "item", code: "leather-normal-orange", quantity: 2 },
+			"T": { type: "item", code: "flaxtwine" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-stained-leather-poncho"  }
+	},
+    {
+		ingredientPattern: "P_P,PPP",
+		ingredients: {
+			"P": { type: "item", code: "cloth-pink", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-peasent-kaftan"  }
+	},
+    {
+		ingredientPattern: "CCC,CSC",
+		requiresTrait: "clothier",
+		ingredients: {
+			"C": { type: "item", code: "cloth-purple", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-longsleeve-pearl-moonrobe"  }
+	},
+	{
+		ingredientPattern: "CGC,SC_",
+		requiresTrait: "clothier",
+		ingredients: {
+			"C": { type: "item", code: "cloth-purple", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" },
+			"G": { type: "item", code: "nugget-nativegold", quantity: 4 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "clothes-shoulder-shortsleeve-pearl-moonrobe"  }
+	},
+    {
+		ingredientPattern: "RRR,SB_,_R_",
+		requiresTrait: "clothier",
+		ingredients: {
+			"R": { type: "item", code: "cloth-red", quantity: 1 },
+			"B": { type: "item", code: "cloth-blue", quantity: 1 },
+			"S": { type: "item", code: "sewingkit" }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "clothes-shoulder-minstrel-coat"  }
+	},
+]

@@ -1,0 +1,61 @@
+{
+	code: "coal",
+	class: "ItemCoal",
+	variantgroups: [
+		{ "code": "type", "states": ["contaminated"]}
+	],
+	shape: { base: "item/ore/ungraded/contaminatedcoal" },
+	textures: {	all: {base: "block/coal/{type}"}},	
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	maxstacksize: 64,
+	attributes: {
+		inContainerTexture: { base: "block/coal/contaminated" },
+		placeSound: "block/charcoal",
+		pigment: {
+			name: "Carbon black",
+			color: { red: 25, green: 24, blue: 22 },
+		},
+		inForge: {
+			tempGainDeg: -200,
+			durationMul: 0.7
+		},
+		displaycaseable: true,
+		shelvable: true,
+        displayable: {
+            shelf: {
+                size: { width: 4, height: 2, length: 6 }
+            }
+        }
+	},
+	behaviors: [{
+		name: "ArtPigment",
+		properties: {
+			decorBlockCodes: ["caveart-charcoal-1-*"],
+			paintableOnBlockMaterials: ["Stone", "Wood", "Brick", "Ceramic", "Metal", "Meta" ],
+			consumeChance: 0.066
+		}
+	}],
+	materialDensity: 600,
+	combustibleProps: {
+		burnTemperature: 900,
+		burnDuration: 25,
+	},
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 146, y: 50, z: 0 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 3.28
+	},
+	tpHandTransform: {
+		translation: { x: -0.93, y: -0.19, z: -0.77 },
+		rotation: { x: -48, y: -180, z: 23 },
+		origin: { x: 0.5, y: 0.12, z: 0.5 },
+		scale: 0.6
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 4.5
+	}
+}

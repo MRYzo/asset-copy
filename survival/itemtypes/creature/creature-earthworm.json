@@ -1,0 +1,49 @@
+{
+	code: "creature",
+	class: "ItemCreature",
+	heldRightReadyAnimation: null,
+	heldTpUseAnimation: null,
+	maxstacksize: 64,
+	variantgroups: [
+		{ code: "type", states: ["earthworm" ] }
+	],
+	shape: { base: "item/resource/bait-worm" },
+	attributes: {
+		baitTag: "bait-worm",
+		groundStorageTransform: {
+			rotation: { x: 0, y: -29, z: 0 },
+			origin: { x: 0.5, y: 0, z: 0.5 }
+		},
+		handbook: {
+			groupBy: ["fishingbait-*", "creature-earthworm", "creature-earthworm-dead"]
+		},
+		isFishBait: true
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "creatures": ["*"], "tools": ["*"] },
+	transitionableProps: [
+		{
+			type: "Perish",
+			freshHours: { avg: 24 },
+			transitionHours: { avg: 0 },
+			transitionedStack: { type: "item", code: "creature-earthworm-dead" },
+			transitionRatio: 1.0
+		}
+	],
+	guiTransform: {
+		rotation: { x: -52, y: 1, z: 4 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 6
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 5
+	},
+	tpHandTransform: {
+		translation: { x: -0.65, y: -0.05, z: -0.6 },
+		rotation: { x: 90, y: -37, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.85
+	}
+}

@@ -1,0 +1,200 @@
+{
+	code: "clothes",
+	variantgroups: [
+		{ code: "category",  states: ["face"] },
+		{ code: "face", states: [
+			"leather-reinforced-mask", "hunter-mask", "malefactor-mask", "forlorn-veil", "glasses", "tailor-mask", "sheepskull", "crow", "hummingbird", "corroded", "cat", "festivecat", 
+			"funeralmask1", "funeralmask2", "funeralmask3", "funeralmask4", "funeralmask5", "funeralmask6", "funeralmask7", "funeralmask8", 
+			"marketeer", "rotwalker", "rottenking", "surgeon", "surgeonhood", "miner", "forgotten", "survivor", "snow-goggles",
+			"glasses-clockmaker", "arctic", "bandageeyes", "bandageleft", "bandageright", "blindfold", "eyepatchleatherleft", "eyepatchleatherright",
+            "eyepatchstuddedleft", "eyepatchstuddedright", "headbandfabric", "headbandseashells", "headbandteeth", "headbandvine", "acrobat",
+            "linenveil"
+		  ] }
+	],
+	heldTpIdleAnimationByType: {  
+		"*-corroded": "holdunderarm"
+	},
+	shapeByType: { 
+		"*-acrobat": {	base: "entity/humanoid/seraph/clothing/face/hunter-mask" },
+		"*": {	base: "entity/humanoid/seraph/clothing/face/{face}" }
+	},
+	storageFlags: 128,
+    behaviors: [
+        { "name": "Wearable" }
+    ],
+	attributes: {
+		clothescategory: "face",
+		wearableAttachment: true,
+		warmthByType: {
+            "*-arctic": 0.5,
+            "*-glasses": 0,
+            "*": 0.25,
+		}
+	},
+	attributesByType: {
+		"@.*-(snow-goggles|rotwalker|rottenking|surgeon|glasses-clockmaker|arctic|funeralmask|glasses)": { eyeprotective: true },
+		"*-surgeonhood": { 
+			disableElements: ["Hair tile upper part", "ponytailhigh", "ponytaillow", "hair-uncovered", "Hair", "hidefacialhair", "sidehigh", "sidelow", "bangs"], 
+			keepElements: ["hair-covered"], 
+			eyeprotective: true,
+			warmth: 1 
+		},
+		"*-rottenking": { 
+			disableElements: ["Hair tile upper part", "ponytailhigh", "ponytaillow", "hair-uncovered", "Hair", "hidefacialhair", "sidehigh", "sidelow", "bangs"], 
+			keepElements: ["hair-covered"] 
+		},
+		"@.*-(miner|survivor|tailor-mask|hunter-mask|forlorn-veil|leather-reinforced-mask|acrobat)": {
+			disableElements: ["hidefacialhair"]
+		},
+        "clothes-face-linenveil": {
+            disableElements: ["Hair tile upper part", "ponytailhigh", "ponytaillow", "hair-uncovered", "Hair", "sidehigh", "sidelow", "bangs"], 
+            keepElements: ["hair-covered"] 
+        }
+	},
+	texturesByType: {
+        "*-acrobat": {
+            "mask": { base: "entity/humanoid/seraphclothes/face/acrobat"},
+			"seraph": { base: "block/transparent" }
+		},
+		"*": {
+			"seraph": { base: "block/transparent" }
+		}
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "clothing": ["*"] },
+	renderAlphaTest: 0.25,
+	guiTransformByType: {
+		"*-forlorn-veil": {
+			rotation: { x: 1, y: -121, z: -167 },
+			origin: { x: 0.5, y: 1.6, z: 0.5 },
+			scale: 2.75
+		},
+		"*-malefactor-mask": {
+			rotation: { x: 1, y: -121, z: -167 },
+			origin: { x: 0.45, y: 1.66, z: 0.5 },
+			scale: 3
+		},
+		"*-marketeer": {
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: 1, y: -121, z: -167 },
+			origin: { x: 0.5, y: 1.74, z: 0.6 },
+			scale: 3.23
+		},
+		"*-sheepskull": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 1, y: -90, z: -167 },
+			origin: { x: 0.5, y: 1.72, z: 0.55 },
+			scale: 2.18
+		},				
+		"@.*-(crow|corroded|marketeer|rotwalker|surgeon|forgotten)": {
+			rotation: { x: 1, y: -121, z: -167 },
+			origin: { x: 0.5, y: 1.62, z: 0.6 },
+			scale: 3.23
+		},
+		"@.*-(hummingbird|surgeonhood|rottenking)": {
+			rotation: { x: 1, y: -121, z: -167 },
+			origin: { x: 0.5, y: 1.64, z: 0.5 },
+			scale: 2.4
+		},
+		"@.*-(cat|festivecat)": {
+			rotation: { x: 1, y: -121, z: -167 },
+			origin: { x: 0.5, y: 1.68, z: 0.6 },
+			scale: 3.23
+		},
+		"*-corroded": {
+			rotation: { x: 1, y: -121, z: -167 },
+			origin: { x: 0.56, y: 1.68, z: 0.59 },
+			scale: 3.23
+		},
+		"*-glasses": {
+			rotate: false,
+			translation: { x: 0, y: 0, z: 19 },
+			rotation: { x: 174, y: -45, z: 23 },
+			origin: { x: 0.46, y: 1.7, z: 0.55 },
+			scale: 4.05
+		},
+		"*-snow-goggles": {
+			rotate: false,
+			translation: { x: 0, y: 0, z: 19 },
+			rotation: { x: -173, y: -54, z: 18 },
+			origin: { x: 0.46, y: 1.75, z: 0.5 },
+			scale: 3.11
+		},
+		"clothes-face-funeralmask*": {
+			rotate: false,
+			rotation: { x: 1, y: -63, z: 154 },
+			origin: { x: 0.3, y: 1.68, z: 0.5 },
+			scale: 3.7
+		},
+        "@.*-(blindfold|arctic|bandageeyes|bandageleft|bandageright|eyepatchleatherleft|eyepatchleatherright|eyepatchstuddedleft|eyepatchstuddedright)": {
+			rotation: { x: 1, y: -121, z: -167 },
+			origin: { x: 0.5, y: 1.7, z: 0.55 },
+			scale: 3.23
+		},
+        "@.*-(headbandfabric|headbandseashells|headbandteeth|headbandvine)": {
+			rotation: { x: -20, y: -122, z: -167 },
+			origin: { x: 0.5, y: 1.73, z: 0.54 },
+			scale: 3.23
+		},
+		"*": {
+			rotation: { x: 1, y: -121, z: -167 },
+			origin: { x: 0.5, y: 1.62, z: 0.5 },
+			scale: 3.23
+		}
+	},
+	tpHandTransformByType: {
+		"@.*-(malefactor-mask|sheepskull|crow|cat|festivecat|marketeer|rotwalker|surgeon|forgotten)": {
+			translation: { x: -0.55, y: -2.2, z: -0.94 },
+			rotation: { x: -89, y: 180, z: 102 },
+			origin: { x: 0.5, y: 1.5, z: 0.5 },
+			scale: 0.7
+		},
+		"@.*-(hummingbird|surgeonhood|rottenking)": {
+			translation: { x: -0.8, y: -2.7, z: -0.9 },
+			rotation: { x: 0, y: 148, z: 0 },
+			origin: { x: 0.3, y: 3.3, z: 0.9 },
+			scale: 0.8
+		},
+		"*-corroded": {
+			translation: { x: -0.82, y: -2.2, z: -0.5 },
+			rotation: { x: 18, y: 169, z: 30 },
+			origin: { x: 0.5, y: 1.7, z: 0.5 },
+			scale: 0.64
+		},
+		"@.*-(glasses|snow-goggles)": {
+			translation: { x: -0.74, y: -2.39, z: -0.97 },
+			rotation: { x: 87, y: 180, z: 0 },
+			origin: { x: 0.5, y: 1.5, z: 0.5 },
+			scale: 0.66
+		},
+		"clothes-face-funeralmask*": {
+			translation: { x: -0.5, y: -1.8, z: -0.3 },
+			rotation: { x: 41, y: 90, z: 41 },
+			scale: 1
+		},
+        "@.*-(blindfold|arctic|bandageeyes|bandageleft|bandageright|eyepatchleatherleft|eyepatchleatherright|eyepatchstuddedleft|eyepatchstuddedright|headbandfabric|headbandseashells|headbandteeth|headbandvine)": {
+			translation: { x: -0.9, y: -2.84, z: -0.63 },
+			rotation: { x: 31, y: 96, z: 105 },
+			origin: { x: 0.5, y: 1.5, z: 0.5 },
+			scale: 0.55
+		},
+		"*": {
+			translation: { x: -0.8, y: -2.7, z: -0.9 },
+			rotation: { x: 51, y: 149, z: 42 },
+			origin: { x: 0.5, y: 1.5, z: 0.5 },
+			scale: 0.55
+		},
+	},
+	groundTransformByType: {
+		"clothes-face-funeralmask*": {
+			translation: { x: -0.4, y: -0.1, z: -0.9 },
+			rotation: { x: 0, y: 0, z: -90 },
+			origin: { x: 0.5, y: 0.5, z: 0.5299 },
+			scale: 4
+		},
+		"*": {
+			rotation: { x: 0, y: 0, z: 0 },
+			origin: { x: 0.5, y: 1.5, z: 0.5299 },
+			scale: 2.58
+		}
+	}
+}

@@ -1,0 +1,20 @@
+[
+{
+	ingredientPattern: "L",
+	ingredients: {
+		"L": { type: "item", code: "leather-normal-plain", quantity: 1 },
+	},
+	width: 1,
+	height: 1,
+	output: { type: "block", code: "overlay-leather-stitch1-normal"  }
+},
+{
+	ingredientPattern: "L",
+	ingredients: {
+		"L": { type: "block", code: "overlay-leather-stitch1-normal" },
+	},
+	width: 1,
+	height: 1,
+	output: { type: "item", code: "leather-normal-plain", quantity: 1  }
+}
+]

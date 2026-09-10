@@ -1,0 +1,63 @@
+{
+	code: "tusk",
+	maxstacksize: 4,
+	variantgroups: [
+		{ code: "group", states: [ "pig" ] },
+		{ code: "type", states: [ "eurasian", "redriver", "warthog" ] },
+		{ code: "age", states: ["adult", "elder" ] },
+		{ code: "size", states: ["01", "02", "03", "04", "05" ] }
+	],
+	allowedVariants: [
+		"tusk-pig-eurasian-adult-01", "tusk-pig-eurasian-adult-02", "tusk-pig-eurasian-adult-03", "tusk-pig-eurasian-adult-04", "tusk-pig-eurasian-adult-05",
+		"tusk-pig-eurasian-elder-01", "tusk-pig-eurasian-elder-02", "tusk-pig-eurasian-elder-03", "tusk-pig-eurasian-elder-04", "tusk-pig-eurasian-elder-05",
+		"tusk-pig-redriver-adult-01", "tusk-pig-redriver-adult-02", "tusk-pig-redriver-adult-03", "tusk-pig-redriver-adult-04", "tusk-pig-redriver-adult-05",
+		"tusk-pig-warthog-adult-01", "tusk-pig-warthog-adult-02", "tusk-pig-warthog-adult-03", "tusk-pig-warthog-adult-04",
+	],
+	shapeByType: { 
+		"tusk-pig-redriver-*": { base: "entity/animal/mammal/hooved/{group}/eurasian/{age}-tusk-{size}" },
+		"*": { base: "entity/animal/mammal/hooved/{group}/{type}/{age}-tusk-{size}" }
+	},
+	attributes: {
+		wearableAttachment: true,
+		attachableToEntity: {
+			texturePrefixCode: "tusk",
+		},
+		handbook: {
+			exclude: true
+		}
+	},
+	creativeinventory: { "general": [""] },
+	guiTransformByType: {
+		"tusk-pig-*": {
+			rotation: { x: 140, y: -40, z: 4 },
+			origin: { x: 0.2, y: -0.04, z: 0.28 },
+			scale: 4.13
+		},
+		"*": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 140, y: -40, z: 4 },
+			origin: { x: 0.25, y: 0.26, z: 0.28 },
+			scale: 2.4
+		}
+	},
+	tpHandTransform: {
+		translation: { x: -0.15, y: -0.9, z: -0.26 },
+		rotation: { x: 0, y: -94, z: -144 },
+		origin: { x: 0.53, y: 0.42, z: 0.52 },
+		scale: 1
+	},
+	groundTransformByType: {
+		"tusk-pig-*": {
+			translation: { x: 0.5, y: 0.84, z: 0 },
+			rotation: { x: 0, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0.6, z: 0.5 },
+			scale: 5
+		},
+		"*": {
+			translation: { x: 0, y: 0.04, z: 0 },
+			rotation: { x: 0, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0.6, z: 0.5 },
+			scale: 5
+		}
+	}
+}
